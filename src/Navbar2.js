@@ -72,6 +72,12 @@ function classNames(...classes) {
 
 export default function Example() {
     const [open, setOpen] = useState(false)
+    const [isSearchOpen, setIsSearchOpen] = useState(false); // Add this line
+
+    const toggleSearch = () => { // Add this function
+        setIsSearchOpen(!isSearchOpen);
+    };
+
 
     return (
         <div className="bg-white">
@@ -327,19 +333,23 @@ export default function Example() {
 
                                 {/* Search */}
                                 <div className="flex lg:ml-6">
-                                    <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                                    <a href="#" className="p-2 text-gray-400 hover:text-gray-500"
+                                       onClick={toggleSearch}>
                                         <span className="sr-only">Search</span>
-                                        <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
+                                        <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true"/>
                                     </a>
+                                    {isSearchOpen && (
+                                        <div className="transition-all duration-500 ease-in-out">
+                                            <input
+                                                type="text"
+                                                className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"
+                                                placeholder="Search..."
+                                            />
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Notifications */}
-                                <div className="ml-4 flow-root lg:ml-6">
-                                    <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                                        <span className="sr-only">View notifications</span>
-                                        <HeartIcon className="h-6 w-6" aria-hidden="true" />
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
