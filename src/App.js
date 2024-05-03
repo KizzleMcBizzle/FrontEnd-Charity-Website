@@ -8,7 +8,7 @@ import AdminNav from "./AdminNav";
 function App() {
   return (
       <div className="App">
-        <AdminNav />
+        <Navbar2 />
         <div className="content">
             <Home />
         </div>
