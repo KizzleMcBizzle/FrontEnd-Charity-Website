@@ -3,15 +3,14 @@ import Navbar from './Navbar';
 import Home from './Home';
 import SignIn from './SignIn';
 import Footer from "./Footer";
+import FilterSideBar from "./FilterSideBar";
 import AdminNav from "./AdminNav";
 
 function App() {
   return (
       <div className="App">
         <Navbar2 />
-        <div className="content">
-            <Home />
-        </div>
+          <FilterSideBar />
           <Footer />
       </div>
   );
