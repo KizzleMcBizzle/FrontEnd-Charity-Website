@@ -1,0 +1,414 @@
+{
+  "orgs": [
+    {
+      "id": "1",
+      "name": "Charity A",
+      "verified": true,
+      "firstName": "John",
+      "lastName": "Doe",
+      "gender": "male",
+      "email": "john.doe@example.com",
+      "password": "1234",
+      "contactNumber": "1234567890",
+      "organizationName": "Charity A",
+      "organizationType": "non-profit",
+      "organizationAddress": {
+        "area": "Example Area",
+        "governorate": "Example Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Charity C",
+      "verified": true,
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "gender": "female",
+      "email": "alice.johnson@example.com",
+      "password": "1234",
+      "contactNumber": "4567890123",
+      "organizationName": "Charity C",
+      "organizationType": "hospital",
+      "organizationAddress": {
+        "area": "Hospital Area",
+        "governorate": "Hospital Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Charity D",
+      "verified": true,
+      "firstName": "Bob",
+      "lastName": "Williams",
+      "gender": "male",
+      "email": "bob.williams@example.com",
+      "password": "1234",
+      "contactNumber": "8765432109",
+      "organizationName": "Charity D",
+      "organizationType": "church",
+      "organizationAddress": {
+        "area": "Church Street",
+        "governorate": "Church Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Charity E",
+      "verified": true,
+      "firstName": "Eve",
+      "lastName": "Brown",
+      "gender": "female",
+      "email": "eve.brown@example.com",
+      "password": "1234",
+      "contactNumber": "2345678901",
+      "organizationName": "Charity E",
+      "organizationType": "mosque",
+      "organizationAddress": {
+        "area": "Mosque Road",
+        "governorate": "Mosque Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Charity F",
+      "verified": false,
+      "firstName": "Charlie",
+      "lastName": "Davis",
+      "gender": "male",
+      "email": "charlie.davis@example.com",
+      "password": "1234",
+      "contactNumber": "7654321098",
+      "organizationName": "Charity F",
+      "organizationType": "orphanage",
+      "organizationAddress": {
+        "area": "Orphanage Lane",
+        "governorate": "Orphanage Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "7",
+      "name": "Charity G",
+      "verified": false,
+      "firstName": "Grace",
+      "lastName": "Taylor",
+      "gender": "female",
+      "email": "grace.taylor@example.com",
+      "password": "1234",
+      "contactNumber": "3456789012",
+      "organizationName": "Charity G",
+      "organizationType": "school",
+      "organizationAddress": {
+        "area": "School Street",
+        "governorate": "School Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Charity H",
+      "verified": true,
+      "firstName": "Henry",
+      "lastName": "Clark",
+      "gender": "male",
+      "email": "henry.clark@example.com",
+      "password": "1234",
+      "contactNumber": "4567890123",
+      "organizationName": "Charity H",
+      "organizationType": "community_center",
+      "organizationAddress": {
+        "area": "Community Center Avenue",
+        "governorate": "Community Center Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Charity I",
+      "verified": true,
+      "firstName": "Ivy",
+      "lastName": "Wilson",
+      "gender": "female",
+      "email": "ivy.wilson@example.com",
+      "password": "1234",
+      "contactNumber": "5678901234",
+      "organizationName": "Charity I",
+      "organizationType": "animal_shelter",
+      "organizationAddress": {
+        "area": "Animal Shelter Lane",
+        "governorate": "Animal Shelter Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "11",
+      "name": "Charity K",
+      "verified": false,
+      "firstName": "Kevin",
+      "lastName": "Lee",
+      "gender": "male",
+      "email": "kevin.lee@example.com",
+      "password": "1234",
+      "contactNumber": "7890123456",
+      "organizationName": "Charity K",
+      "organizationType": "food_bank",
+      "organizationAddress": {
+        "area": "Food Bank Street",
+        "governorate": "Food Bank Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "12",
+      "name": "Charity L",
+      "verified": false,
+      "firstName": "Laura",
+      "lastName": "Smith",
+      "gender": "female",
+      "email": "laura.smith@example.com",
+      "password": "1234",
+      "contactNumber": "8901234567",
+      "organizationName": "Charity L",
+      "organizationType": "community_garden",
+      "organizationAddress": {
+        "area": "Community Garden Lane",
+        "governorate": "Community Garden Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "13",
+      "name": "Charity M",
+      "verified": false,
+      "firstName": "Michael",
+      "lastName": "Brown",
+      "gender": "male",
+      "email": "michael.brown@example.com",
+      "password": "1234",
+      "contactNumber": "9012345678",
+      "organizationName": "Charity M",
+      "organizationType": "community_center",
+      "organizationAddress": {
+        "area": "Community Center Road",
+        "governorate": "Community Center Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "14",
+      "name": "Charity N",
+      "verified": false,
+      "firstName": "Nancy",
+      "lastName": "Wilson",
+      "gender": "female",
+      "email": "nancy.wilson@example.com",
+      "password": "1234",
+      "contactNumber": "0123456789",
+      "organizationName": "Charity N",
+      "organizationType": "library",
+      "organizationAddress": {
+        "area": "Library Avenue",
+        "governorate": "Library Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "15",
+      "name": "Charity O",
+      "verified": false,
+      "firstName": "Olivia",
+      "lastName": "Jones",
+      "gender": "female",
+      "email": "olivia.jones@example.com",
+      "password": "1234",
+      "contactNumber": "3456789012",
+      "organizationName": "Charity O",
+      "organizationType": "animal_shelter",
+      "organizationAddress": {
+        "area": "Animal Shelter Road",
+        "governorate": "Animal Shelter Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "16",
+      "name": "Charity P",
+      "verified": true,
+      "firstName": "Peter",
+      "lastName": "Garcia",
+      "gender": "male",
+      "email": "peter.garcia@example.com",
+      "password": "1234",
+      "contactNumber": "4567890123",
+      "organizationName": "Charity P",
+      "organizationType": "school",
+      "organizationAddress": {
+        "area": "School Avenue",
+        "governorate": "School Governorate"
+      },
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    }
+  ],
+  "donors": [
+    {
+      "id": "1",
+      "name": "Donor A",
+      "role": "doctor",
+      "verified": true,
+      "firstName": "Alice",
+      "lastName": "Smith",
+      "gender": "female",
+      "email": "alice.smith@example.com",
+      "contactNumber": "9876543210",
+      "password": "1234",
+      "address": "123 Main St",
+      "area": "Some Area",
+      "governorate": "Some Governorate",
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Donor B",
+      "role": "teacher",
+      "verified": true,
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "gender": "male",
+      "email": "bob.johnson@example.com",
+      "contactNumber": "5678901234",
+      "password": "1234",
+      "address": "456 Elm St",
+      "area": "Another Area",
+      "governorate": "Another Governorate",
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Donor C",
+      "role": "doctor",
+      "verified": true,
+      "firstName": "Charlie",
+      "lastName": "Brown",
+      "gender": "male",
+      "email": "charlie.brown@example.com",
+      "contactNumber": "4567890123",
+      "password": "1234",
+      "address": "789 Oak St",
+      "area": "Some Other Area",
+      "governorate": "Some Other Governorate",
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Donor D",
+      "role": "teacher",
+      "verified": false,
+      "firstName": "Diana",
+      "lastName": "Williams",
+      "gender": "female",
+      "email": "diana.williams@example.com",
+      "contactNumber": "3456789012",
+      "password": "1234",
+      "address": "101 Pine St",
+      "area": "Yet Another Area",
+      "governorate": "Yet Another Governorate",
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Donor E",
+      "role": "doctor",
+      "verified": true,
+      "firstName": "Eva",
+      "lastName": "Davis",
+      "gender": "female",
+      "email": "eva.davis@example.com",
+      "contactNumber": "2345678901",
+      "password": "1234",
+      "address": "222 Maple St",
+      "area": "Maple Area",
+      "governorate": "Maple Governorate",
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Donor F",
+      "role": "teacher",
+      "verified": false,
+      "firstName": "Frank",
+      "lastName": "Martinez",
+      "gender": "male",
+      "email": "frank.martinez@example.com",
+      "contactNumber": "8765432109",
+      "password": "1234",
+      "address": "333 Oak St",
+      "area": "Oak Area",
+      "governorate": "Oak Governorate",
+      "document": {
+        "type": "qualification_proof",
+        "url": "http://example.com/qualification_proof.pdf"
+      }
+    }
+  ]
+}

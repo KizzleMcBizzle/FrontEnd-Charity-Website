@@ -16,8 +16,8 @@ const navigation = {
                     id: 'Applications ',
                     name: 'Applications',
                     items: [
-                        { name: 'Donors', href: '#' },
-                        { name: 'Organizations', href: '#' },
+                        { name: 'Donors', href: '/admin/donorReq' },
+                        { name: 'Organizations', href: '/admin/orgReq' },
                     ],
                 },
             ],

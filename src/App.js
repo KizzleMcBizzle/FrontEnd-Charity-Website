@@ -5,14 +5,29 @@ import SignIn from './SignIn';
 import Footer from "./Footer";
 import FilterSideBar from "./FilterSideBar";
 import AdminNav from "./AdminNav";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import OrgReqFetch from './OrgReqFetch';
+import PendingOrg from './PendingOrg';
+import OrgReq from './OrgReq.js';
 
 function App() {
   return (
+    <Router>
       <div className="App">
-        <Navbar2 />
-          <FilterSideBar />
-          <Footer />
+        <AdminNav />
+        <div className="content">
+          <Switch>
+            <Route exact path = "/admin/orgReq">
+              <OrgReq />
+            </Route>
+            <Route path="/admin/orgReq/:id">
+              <PendingOrg />
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
       </div>
+    </Router>
   );
 }
 
