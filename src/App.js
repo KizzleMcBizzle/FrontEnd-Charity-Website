@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import OrgReqFetch from './OrgReqFetch';
 import PendingOrg from './PendingOrg';
 import OrgReq from './OrgReq.js';
+import DonorReq from './DonorReq.js';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/admin/orgReq/:id">
               <PendingOrg />
+            </Route>
+            <Route exact path = "/admin/donorReq">
+              <DonorReq />
             </Route>
           </Switch>
         </div>
