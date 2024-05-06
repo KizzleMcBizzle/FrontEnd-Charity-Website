@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon, UserIcon } from '@heroicons/react/24/outline'
 import {BellIcon, XMarkIcon} from "@heroicons/react/16/solid";
 import logo from './Logo.png'
 
@@ -278,7 +278,7 @@ export default function Example() {
                             </Popover.Group>
 
                             <div className="ml-auto flex items-center">
-                                
+
 
                                 {/* Search */}
 
@@ -294,9 +294,35 @@ export default function Example() {
                                     </button>
                                 </div>
 
-
                                 {/* Profile dropdown */}
-                                
+                                <Popover className="relative ml-4">
+                                    {({ open }) => (
+                                        <>
+                                            <Popover.Button className="rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-custom-green focus:ring-white">
+                                                <span className="sr-only">Open user menu</span>
+                                                <UserIcon className="h-8 w-8 rounded-full" aria-hidden="true" />
+                                            </Popover.Button>
+                                            <Transition
+                                                as={Fragment}
+                                                enter="transition ease-out duration-200"
+                                                enterFrom="transform opacity-0 scale-95"
+                                                enterTo="transform opacity-100 scale-100"
+                                                leave="transition ease-in duration-75"
+                                                leaveFrom="transform opacity-100 scale-100"
+                                                leaveTo="transform opacity-0 scale-95"
+                                            >
+                                                <Popover.Panel className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                                    <div className="py-1">
+                                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                                                    </div>
+                                                </Popover.Panel>
+                                            </Transition>
+                                        </>
+                                    )}
+                                </Popover>
+
 
 
                             </div>
