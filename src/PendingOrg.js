@@ -54,26 +54,86 @@ const PendingOrg = () => {
     };
 
     return (
-        
-        
-        <div className="organization-details">
-            { isPending && <div>Loading...</div> }
-            { error && <div>{ error }</div> }
+
+
+        <div className="organization-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
+            {isPending && <div>Loading...</div>}
+            {error && <div>{error}</div>}
             {org && (
-                <article>
-                    <h2>{org.organizationName}</h2>
-                    <p><strong>Name:</strong> {org.firstName} {org.lastName}</p>
-                    <p><strong>Email:</strong> {org.email}</p>
-                    <p><strong>Contact Number:</strong> {org.contactNumber}</p>
-                    <p><strong>Organization Type:</strong> {org.organizationType}</p>
-                    <p><strong>Organization Address:</strong> {org.organizationAddress.area}, {org.organizationAddress.governorate}</p>
-                    <div className="buttons">
-                        <button onClick={handleAccept}>Accept</button>
-                        <button onClick={handleReject}>Reject</button>
-                        <button onClick={handleDownload}>Download</button>
+                <div className="bg-white overflow-hidden shadow rounded-lg border">
+                    <div className="px-4 py-5 sm:px-6">
+                        <h3 className="text-lg leading-6 font-medium text-gray-900">
+                            Organization Details
+                        </h3>
+                        <p className="mt-1 max-w-2xl text-sm text-gray-500">
+                            Organization details and contact information.
+                        </p>
                     </div>
-                </article>
+                    <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
+                        <dl className="sm:divide-y sm:divide-gray-200">
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Organization Name
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    {org.organizationName}
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Name
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    {org.firstName} {org.lastName}
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Email
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    {org.email}
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Contact Number
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    {org.contactNumber}
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Organization Type
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    {org.organizationType}
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Organization Address
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    {org.organizationAddress.area}, {org.organizationAddress.governorate}
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
             )}
+            <div className="buttons mt-4 px-4 py-5 sm:px-6">
+                <button onClick={handleAccept}
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Accept
+                </button>
+                <button onClick={handleReject}
+                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Reject
+                </button>
+                <button onClick={handleDownload}
+                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Download
+                </button>
+            </div>
         </div>
     );
 }
