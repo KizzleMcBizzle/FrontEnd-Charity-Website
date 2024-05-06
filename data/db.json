@@ -87,7 +87,7 @@
     {
       "id": "6",
       "name": "Charity F",
-      "verified": false,
+      "verified": true,
       "firstName": "Charlie",
       "lastName": "Davis",
       "gender": "male",
@@ -108,7 +108,7 @@
     {
       "id": "7",
       "name": "Charity G",
-      "verified": false,
+      "verified": true,
       "firstName": "Grace",
       "lastName": "Taylor",
       "gender": "female",
@@ -171,7 +171,7 @@
     {
       "id": "11",
       "name": "Charity K",
-      "verified": false,
+      "verified": true,
       "firstName": "Kevin",
       "lastName": "Lee",
       "gender": "male",
@@ -409,6 +409,15 @@
         "type": "qualification_proof",
         "url": "http://example.com/qualification_proof.pdf"
       }
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "John doe",
+      "username": "admin",
+      "email": "admin@hopeunity.com",
+      "password": "1234"
     }
   ]
 }

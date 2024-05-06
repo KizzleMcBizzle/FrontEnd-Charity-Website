@@ -16,8 +16,8 @@ const navigation = {
                     id: 'Applications ',
                     name: 'Applications',
                     items: [
-                        { name: 'Donors', href: '/admin/donorReq' },
-                        { name: 'Organizations', href: '/admin/orgReq' },
+                        { name: 'Donors', href: '/admin/req/donors' },
+                        { name: 'Organizations', href: '/admin/req/orgs' },
                     ],
                 },
             ],
@@ -314,7 +314,7 @@ export default function Example() {
                                             >
                                                 <Popover.Panel className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                     <div className="py-1">
-                                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                                                        <a href="/admin/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
                                                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
                                                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                                                     </div>

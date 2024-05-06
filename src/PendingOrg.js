@@ -19,7 +19,7 @@ const PendingOrg = () => {
             body: JSON.stringify({ ...org, verified: true }) // Update the status field to 'accepted'
         }).then(() => {
             console.log('Organization accepted!');
-            history.push('/admin/orgReq');
+            history.push('/admin/req/orgs');
         });
     };
 
@@ -28,7 +28,7 @@ const PendingOrg = () => {
             method: 'DELETE',
         }).then(() => {
             console.log('Organization deleted!') 
-            history.push('/admin/orgReq');
+            history.push('/admin/req/orgs');
         });
     };
 

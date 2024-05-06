@@ -61,7 +61,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example({title , page}) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     return (
@@ -169,7 +169,7 @@ export default function Example() {
 
                 <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">{ title }</h1>
 
                         <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">
@@ -292,9 +292,9 @@ export default function Example() {
                             </form>
 
                             {/* Product grid */}
-                            <div className="lg:col-span-3">{
-                                <OrgReqFetch />
-                            }</div>
+                            <div className="lg:col-span-3">
+                                { page }
+                            </div>
                         </div>
                     </section>
                 </main>

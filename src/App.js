@@ -8,8 +8,12 @@ import AdminNav from "./AdminNav";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import OrgReqFetch from './OrgReqFetch';
 import PendingOrg from './PendingOrg';
-import OrgReq from './OrgReq.js';
-import DonorReq from './DonorReq.js';
+import PendingDonor from './PendingDonor';
+import DonorReqFetch from './DonorReqFetch.js';
+import AdminProfile from './AdminProfile.js';
+import AdminFetch from './AdminFetch.js';
+import ChangePassword from './ChangePassword.js';
+import AdminPassFetch from './AdminPassFetch.js'
 
 function App() {
   return (
@@ -18,14 +22,23 @@ function App() {
         <AdminNav />
         <div className="content">
           <Switch>
-            <Route exact path = "/admin/orgReq">
-              <OrgReq />
+            <Route exact path="/admin/changepass">
+              <AdminPassFetch />
             </Route>
-            <Route path="/admin/orgReq/:id">
+            <Route exact path ="/admin/profile">
+              <AdminFetch />
+            </Route>
+            <Route exact path= "/admin/req/donors">
+              <FilterSideBar title="Donors Requests" page = {<DonorReqFetch />}/>
+            </Route>
+            <Route exact path = "/admin/req/donors/:id">
+              <PendingDonor />
+            </Route>
+            <Route exact path= "/admin/req/orgs">
+              <FilterSideBar title="Organizations Requests" page = {<OrgReqFetch />}/>
+            </Route>
+            <Route exact path = "/admin/req/orgs/:id">
               <PendingOrg />
-            </Route>
-            <Route exact path = "/admin/donorReq">
-              <DonorReq />
             </Route>
           </Switch>
         </div>

@@ -17,7 +17,7 @@ const PendingDonor = () => {
             body: JSON.stringify({ ...donor, verified: true }) // Update the status field to 'accepted'
         }).then(() => {
             console.log('Donor accepted!');
-            history.push('/donors');
+            history.push('/admin/req/donors');
         });
     };
 
@@ -26,23 +26,29 @@ const PendingDonor = () => {
         method: 'DELETE',
     }).then(() => {
         console.log('Donor deleted!') 
-        history.push('/donors');
+        history.push('/admin/req/donors');
     })
     };
 
     const handleDownload = () => {
         // Assuming the document URL is stored in the donor object under the 'document' field
-    const documentUrl = donor.document.url;
-    
-    // Use the saveAs function from file-saver to initiate the download
-    fetch(documentUrl)
-        .then(response => response.blob())
-        .then(blob => {
-            saveAs(blob, 'qualification_proof.pdf');
-        })
-        .catch(error => {
-            console.error('Error downloading document:', error);
-        });
+        const documentUrl = "/resources/org_qualification_proof.pdf";
+        const anchorElement = document.createElement('a');
+        anchorElement.href = documentUrl;
+        anchorElement.download = 'org_qualification_proof.pdf'; // Name of the downloaded file
+
+        // Check if the file exists on the server (optional)
+        fetch(documentUrl, { method: 'HEAD' })
+        .then(response => {
+        if (response.ok) {
+        anchorElement.click();
+        } else {
+        console.error(`Error: File not found at ${documentUrl}`);
+        }
+    })
+   .catch(error => {
+      console.error(`Error: ${error.message}`);
+    });
     };
 
     return (

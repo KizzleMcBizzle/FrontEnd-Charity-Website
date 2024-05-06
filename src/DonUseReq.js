@@ -6,12 +6,11 @@ const DonUseReq = ({donors, title}) => {
     
     return (  
         <div className="donor-use-req-list">
-            <h2>{ title }</h2>
             {nonVerifiedDonors.map( donor => (
-                <div className="bg-white p-4 my-5 border-b border-gray-200 text-left shadow-md hover:shadow-lg" key = {donor.id}>
-                    <Link to={`/donors/${donor.id}`} className="no-underline">
-                        <h2 className="text-xl text-pink-600 mb-2">{ donor.name }</h2>
-                        <p>{ donor.role }</p>
+                <div className="bg-gray-100 p-6 my-5 border-b border-gray-200 text-left shadow-md hover:shadow-lg rounded-lg transition-all duration-200 ease-in-out" key = {donor.id}>
+                    <Link to={`/admin/req/donors/${donor.id}`} className="no-underline">
+                        <h2 className="mt-2 text-center text-2xl leading-9 tracking-tight text-gray-800 font-semibold hover:text-custom-green">{ donor.name }</h2>
+                        <p className="mt-2 text-center text-l leading-9 tracking-tight text-gray-800">{ donor.role }</p>
                     </Link>
                 </div>
             ))}
