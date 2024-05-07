@@ -29,13 +29,13 @@ function App() {
               <AdminFetch />
             </Route>
             <Route exact path= "/admin/req/donors">
-              <FilterSideBar title="Donors Requests" page = {<DonorReqFetch />}/>
+              <DonorReqFetch/>
             </Route>
             <Route exact path = "/admin/req/donors/:id">
               <PendingDonor />
             </Route>
             <Route exact path= "/admin/req/orgs">
-              <FilterSideBar title="Organizations Requests" page = {<OrgReqFetch />}/>
+              <OrgReqFetch />
             </Route>
             <Route exact path = "/admin/req/orgs/:id">
               <PendingOrg />

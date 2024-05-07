@@ -2,8 +2,10 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon } from '@heroicons/react/24/outline'
 import Home from './Home'
 import OrgReqFetch from './OrgReqFetch'
+import { Link } from 'react-router-dom';
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -61,8 +63,43 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({title , page}) {
+export default function Example({title , page , results}) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+    const [open, setOpen] = useState(false)
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+    const [searchItem, setSearchItem] = useState('');
+    const [filteredResults, setFilteredResults] = useState(results);
+
+    let url = ``;
+  
+    if (Array.isArray(results) && results.length > 0) {
+      const firstResult = results[0];
+      
+      if (firstResult.hasOwnProperty("organizationName") && firstResult.hasOwnProperty("organizationType")) {
+        url = "/admin/req/orgs/";
+      } else if (firstResult.hasOwnProperty("role")) {
+        url = "/admin/req/donors/";
+      }
+    }
+
+
+    const handleInputChange = (e) => { 
+        const searchTerm = e.target.value;
+        setSearchItem(searchTerm);
+
+        const filteredItems = results.filter((result) =>
+            result.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        
+            setFilteredResults(filteredItems);
+    }
+
+
+
+    const toggleSearch = () => { // Add this function
+        setIsSearchOpen(!isSearchOpen);
+    };
 
     return (
         <div className="bg-white">
@@ -172,48 +209,31 @@ export default function Example({title , page}) {
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900">{ title }</h1>
 
                         <div className="flex items-center">
-                            <Menu as="div" className="relative inline-block text-left">
-                                <div>
-                                    <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                                        Sort
-                                        <ChevronDownIcon
-                                            className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                                            aria-hidden="true"
-                                        />
-                                    </Menu.Button>
-                                </div>
-
-                                <Transition
-                                    as={Fragment}
-                                    enter="transition ease-out duration-100"
-                                    enterFrom="transform opacity-0 scale-95"
-                                    enterTo="transform opacity-100 scale-100"
-                                    leave="transition ease-in duration-75"
-                                    leaveFrom="transform opacity-100 scale-100"
-                                    leaveTo="transform opacity-0 scale-95"
-                                >
-                                    <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                        <div className="py-1">
-                                            {sortOptions.map((option) => (
-                                                <Menu.Item key={option.name}>
-                                                    {({ active }) => (
-                                                        <a
-                                                            href={option.href}
-                                                            className={classNames(
-                                                                option.current ? 'font-medium text-gray-900' : 'text-gray-500',
-                                                                active ? 'bg-gray-100' : '',
-                                                                'block px-4 py-2 text-sm'
-                                                            )}
-                                                        >
-                                                            {option.name}
-                                                        </a>
-                                                    )}
-                                                </Menu.Item>
-                                            ))}
+                            {/* Search */}
+                            <div className="flex lg:ml-6">
+                                    <a href="#" className="p-2 text-gray-400 hover:text-gray-500"
+                                       onClick={toggleSearch}>
+                                        <span className="sr-only">Search</span>
+                                        <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true"/>
+                                    </a>
+                                    {isSearchOpen && (
+                                        <div className="transition-all duration-500 ease-in-out">
+                                            <input
+                                                type="text"
+                                                className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"
+                                                placeholder="Search by charity name"
+                                                value = {searchItem}
+                                                onChange={handleInputChange}
+                                            />
+                                            {filteredResults.length === 0
+                                            ? <p>No users found</p>
+                                            :<ul>
+                                                {filteredResults.map(result => <Link to={url + result.id} className="bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"><li key={result.id}>{result.name}</li></Link>)}
+                                            </ul>
+                                            } {/*Apply css here for the search results*/}                  
                                         </div>
-                                    </Menu.Items>
-                                </Transition>
-                            </Menu>
+                                    )}
+                            </div>
 
                             <button type="button" className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
                                 <span className="sr-only">View grid</span>

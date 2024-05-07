@@ -1,5 +1,6 @@
 import DonUseReq from "./DonUseReq";
 import useFetch from "./useFetch";
+import FilterSideBar from "./FilterSideBar";
 
 const DonorReqFetch = () => {
     //custom hook, check useFetch.js
@@ -10,7 +11,12 @@ const DonorReqFetch = () => {
     <div className="home">
         {error && <div>{error}</div>}
         {isPending && <div>Loading...</div>}
-        {donors && <DonUseReq donors = {donors} title='Users applications for pro-bono services' />}
+        {donors && <FilterSideBar 
+                    results = {donors.filter(donor => !donor.verified)}
+                    title='Users applications for pro-bono services'
+                    page = {<DonUseReq donors = {donors.filter(donor => !donor.verified)}/>}
+
+                    />}
     </div>
   );
 }
