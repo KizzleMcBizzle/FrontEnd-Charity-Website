@@ -14,8 +14,6 @@ const DonorReqFetch = () => {
         {donors && <FilterSideBar 
                     results = {donors.filter(donor => !donor.verified)}
                     title='Pro-bono Donors Requests'
-                    page = {<DonUseReq donors = {donors.filter(donor => !donor.verified)}/>}
-
                     />}
     </div>
   );

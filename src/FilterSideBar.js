@@ -6,21 +6,11 @@ import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon } from '@
 import Home from './Home'
 import OrgReqFetch from './OrgReqFetch'
 import { Link } from 'react-router-dom';
+import OrgUseReq from './OrgUseReq'
+import DonUseReq from './DonUseReq'
 
-const sortOptions = [
-    { name: 'Most Popular', href: '#', current: true },
-    { name: 'Best Rating', href: '#', current: false },
-    { name: 'Newest', href: '#', current: false },
-    { name: 'Price: Low to High', href: '#', current: false },
-    { name: 'Price: High to Low', href: '#', current: false },
-]
-const subCategories = [
-    { name: 'Totes', href: '#' },
-    { name: 'Backpacks', href: '#' },
-    { name: 'Travel Bags', href: '#' },
-    { name: 'Hip Bags', href: '#' },
-    { name: 'Laptop Sleeves', href: '#' },
-]
+
+
 const filters = [
     {
         id: 'color',
@@ -63,36 +53,61 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({title , page , results}) {
+export default function Example({title , results}) {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [open, setOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const [searchItem, setSearchItem] = useState('');
     const [filteredResults, setFilteredResults] = useState(results);
+    
 
     let url = ``;
+    let page = <></>;
+    let subCategories =[];
+
+    const addNameToOrganizationTypes = (organizationTypes) => {
+        const uniqueOrganizationTypes = [...new Set(organizationTypes)];
+        return uniqueOrganizationTypes.map(type => ({ name: type }));
+    };
   
     if (Array.isArray(results) && results.length > 0) {
       const firstResult = results[0];
       
       if (firstResult.hasOwnProperty("organizationName") && firstResult.hasOwnProperty("organizationType")) {
         url = "/admin/req/orgs/";
+        page =<OrgUseReq
+               orgs ={filteredResults}
+               />;
+
+        const uniqueCategories = [...new Set(results.map(org => org.organizationType))];
+        subCategories = addNameToOrganizationTypes(uniqueCategories);
+
       } else if (firstResult.hasOwnProperty("role")) {
         url = "/admin/req/donors/";
+        page = <DonUseReq donors = {filteredResults}/>;
       }
     }
 
+    const filterByCategory = (categoryName) => {
+        const filteredItems = filteredResults.filter(result => result.organizationType === categoryName);
+        setFilteredResults(filteredItems);
+    };
 
     const handleInputChange = (e) => { 
-        const searchTerm = e.target.value;
+        const searchTerm = e.target.value; // Convert search term to lowercase for case-insensitive search
         setSearchItem(searchTerm);
 
         const filteredItems = results.filter((result) =>
-            result.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-        
-            setFilteredResults(filteredItems);
+        result.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+    setFilteredResults(filteredItems);
+            
+    }
+
+    const removeFilter = () => {
+        setFilteredResults(results);
     }
 
 
@@ -148,9 +163,9 @@ export default function Example({title , page , results}) {
                                         <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                                             {subCategories.map((category) => (
                                                 <li key={category.name}>
-                                                    <a href={category.href} className="block px-2 py-3">
+                                                    <button type="button" onClick={() => filterByCategory(category.name)} className="block px-2 py-3">
                                                         {category.name}
-                                                    </a>
+                                                    </button>
                                                 </li>
                                             ))}
                                         </ul>
@@ -211,11 +226,11 @@ export default function Example({title , page , results}) {
                         <div className="flex items-center">
                             {/* Search */}
                             <div className="flex lg:ml-6">
-                                    <a href="#" className="p-2 text-gray-400 hover:text-gray-500"
+                                    <button className="p-2 text-gray-400 hover:text-gray-500"
                                        onClick={toggleSearch}>
                                         <span className="sr-only">Search</span>
                                         <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true"/>
-                                    </a>
+                                    </button>
                                     {isSearchOpen && (
                                         <div className="transition-all duration-500 ease-in-out">
                                             <input
@@ -224,19 +239,13 @@ export default function Example({title , page , results}) {
                                                 placeholder="Search by charity name"
                                                 value = {searchItem}
                                                 onChange={handleInputChange}
-                                            />
-                                            {filteredResults.length === 0
-                                            ? <p>No users found</p>
-                                            :<ul>
-                                                {filteredResults.map(result => <Link to={url + result.id} className="bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"><li key={result.id}>{result.name}</li></Link>)}
-                                            </ul>
-                                            } {/*Apply css here for the search results*/}                  
+                                            />                 
                                         </div>
                                     )}
                             </div>
 
-                            <button type="button" className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
-                                <span className="sr-only">View grid</span>
+                            <button type="button" onClick={removeFilter} className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
+                                <span className="sr-only">Remove Filter</span>
                                 <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
                             </button>
                             <button
@@ -262,7 +271,9 @@ export default function Example({title , page , results}) {
                                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                     {subCategories.map((category) => (
                                         <li key={category.name}>
-                                            <a href={category.href}>{category.name}</a>
+                                            <button type="button" onClick={() => filterByCategory(category.name)} className="block px-2 ">
+                                                {category.name}
+                                            </button>
                                         </li>
                                     ))}
                                 </ul>
