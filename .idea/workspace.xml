@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b6e74b-51ab-4594-8cb1-39a1f050f267" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/org_qualification_proof.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/resources/org_qualification_proof.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPassFetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPassFetch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChangePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChangePassword.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Seif-Nassar-Patch-2",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Omar/AppData/Roaming/JetBrains/WebStorm2024.1/node/node-v18.15.0-win-x64/node_modules",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -91,6 +86,7 @@
       <workItem from="1715019846548" duration="3472000" />
       <workItem from="1715025450381" duration="1092000" />
       <workItem from="1715094366852" duration="6482000" />
+      <workItem from="1715169361535" duration="492000" />
     </task>
     <servers />
   </component>
