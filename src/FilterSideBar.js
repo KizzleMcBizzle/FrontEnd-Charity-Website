@@ -8,7 +8,8 @@ import OrgReqFetch from './OrgReqFetch'
 import { Link } from 'react-router-dom';
 import OrgUseReq from './OrgUseReq'
 import DonUseReq from './DonUseReq'
-
+import {XCircleIcon} from "@heroicons/react/16/solid";
+import styled from 'styled-components';
 
 
 const filters = [
@@ -233,22 +234,22 @@ export default function Example({title , results}) {
                                         <span className="sr-only">Search</span>
                                         <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true"/>
                                     </button>
-                                    {isSearchOpen && (
-                                        <div className="transition-all duration-500 ease-in-out">
-                                            <input
-                                                type="text"
-                                                className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"
-                                                placeholder="Search by charity name"
-                                                value = {searchItem}
-                                                onChange={handleInputChange}
-                                            />                 
-                                        </div>
-                                    )}
+                                {isSearchOpen && (
+                                    <div>
+                                        <input
+                                            type="text"
+                                            className="transition-all duration-500 ease-in-out border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"
+                                            placeholder="Search by charity name"
+                                            value = {searchItem}
+                                            onChange={handleInputChange}
+                                        />
+                                    </div>
+                                )}
                             </div>
 
                             <button type="button" onClick={removeFilter} className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
                                 <span className="sr-only">Remove Filter</span>
-                                <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
+                                <XCircleIcon className="h-6 w-6" aria-hidden="true" />
                             </button>
                             <button
                                 type="button"
