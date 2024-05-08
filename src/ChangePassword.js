@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ChangePassword = ({user, url}) => {  
+const ChangePassword = ({user, url, onPasswordChange}) => {
     const [oldPassword, setOldPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -37,7 +37,8 @@ const ChangePassword = ({user, url}) => {
             }).then(()=>{
                 setError(null);
                 setSuccess('Password changed successfully!');
-                 
+                // fire an event to parent component
+                onPasswordChange()
             })
             .catch(() =>{
                 setSuccess(null);
@@ -50,7 +51,9 @@ const ChangePassword = ({user, url}) => {
     return (
         <div className="bg-inherit min-h-screen flex items-center">
             <div className="w-full">
-                <h2 className="text-center text-custom-green font-bold text-2xl uppercase mb-10">Fill out our form</h2>
+                <h2 className="text-center text-custom-green font-bold text-2xl uppercase mb-10">Fill out our form
+                    {user.password}
+                </h2>
                 <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-5">
