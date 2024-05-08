@@ -13,7 +13,7 @@ const DonorReqFetch = () => {
         {isPending && <div>Loading...</div>}
         {donors && <FilterSideBar 
                     results = {donors.filter(donor => !donor.verified)}
-                    title='Users applications for pro-bono services'
+                    title='Pro-bono Donors Requests'
                     page = {<DonUseReq donors = {donors.filter(donor => !donor.verified)}/>}
 
                     />}
