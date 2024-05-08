@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="48b6e74b-51ab-4594-8cb1-39a1f050f267" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChangePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChangePassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DonorReg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DonorReg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,9 @@
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -53,6 +54,23 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\Omar\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="2382ef4a-18cc-4092-9268-c7a816030e30" />
+        <option name="reportName" value="Angry-Monkeys/qodana/2024-05-08" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\Omar\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="2382ef4a-18cc-4092-9268-c7a816030e30" reportId="Angry-Monkeys/qodana/2024-05-08" />
+    </option>
+  </component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -90,7 +108,7 @@
       <workItem from="1715025450381" duration="1092000" />
       <workItem from="1715094366852" duration="6482000" />
       <workItem from="1715169361535" duration="492000" />
-      <workItem from="1715169903145" duration="613000" />
+      <workItem from="1715169903145" duration="17189000" />
     </task>
     <servers />
   </component>
