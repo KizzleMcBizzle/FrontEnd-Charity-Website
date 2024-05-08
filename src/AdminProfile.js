@@ -50,7 +50,7 @@ const AdminProfile = ({admin}) => {
                     <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 flex justify-between items-center">
                         <span>{ passwordEncrypted }</span> 
                         <Link to="/admin/changepass">
-                            <button className="mr-14 relative">Change Password</button>
+                            <button className="mr-14 relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-green transition duration-200 ease-in-out transform hover:-translate-y-0.5 hover:scale-102">Change Password</button>
                         </Link>
                     </dd>
                 </div>
