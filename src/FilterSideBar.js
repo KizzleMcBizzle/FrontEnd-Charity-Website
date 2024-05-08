@@ -90,7 +90,9 @@ export default function Example({title , results}) {
     }
 
     const filterByCategory = (categoryName) => {
-        const filteredItems = filteredResults.filter(result => result.organizationType === categoryName);
+        
+
+        const filteredItems = results.filter(result => result.organizationType === categoryName);
         setFilteredResults(filteredItems);
     };
 
