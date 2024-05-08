@@ -51,7 +51,6 @@ const ChangePassword = ({user, url, onPasswordChange}) => {
         <div className="bg-inherit min-h-screen flex items-center">
             <div className="w-full">
                 <h2 className="text-center text-custom-green font-bold text-2xl uppercase mb-10">Fill out our form
-                    {user.password}
                 </h2>
                 <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
                     <form onSubmit={handleSubmit}>
