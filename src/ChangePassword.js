@@ -37,7 +37,6 @@ const ChangePassword = ({user, url, onPasswordChange}) => {
             }).then(()=>{
                 setError(null);
                 setSuccess('Password changed successfully!');
-                // fire an event to parent component
                 onPasswordChange()
             })
             .catch(() =>{
