@@ -131,9 +131,12 @@ export default function DonorReg() {
                         <input id="governorate" name="governorate" type="text" required
                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
                     </div>
-                    <div>
-                        <input type="checkbox" id="volunteer" name="volunteer" checked={volunteer} onChange={(e) => setVolunteer(e.target.checked)} />
-                        <label htmlFor="volunteer"> I want to volunteer for a role</label>
+                    <div className="flex items-center">
+                        <input type="checkbox" id="volunteer" name="volunteer" checked={volunteer}
+                               onChange={(e) => setVolunteer(e.target.checked)}
+                               className="form-checkbox h-5 w-5 text-custom-green"/>
+                        <label htmlFor="volunteer" className="ml-2 text-sm text-gray-900">I want to volunteer for a
+                            role</label>
                     </div>
                     {volunteer && (
                         <div>
@@ -168,7 +171,7 @@ export default function DonorReg() {
             <label htmlFor="proBonoCases" className="block text-sm font-medium leading-6 text-gray-900">
                 Number of Pro-Bono Cases
             </label>
-            <input id="proBonoCases" name="proBonoCases" type="number" required
+            <input id="proBonoCases" name="proBonoCases" type="number" min="0" required
                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
         {mapLoaded && (
@@ -211,14 +214,14 @@ export default function DonorReg() {
             <label htmlFor="proBonoClasses" className="block text-sm font-medium leading-6 text-gray-900">
                 Number of Pro-Bono Classes
             </label>
-            <input id="proBonoClasses" name="proBonoClasses" type="number" required
+            <input id="proBonoClasses" name="proBonoClasses" type="number" min="0" required
                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
         <div>
             <label htmlFor="proBonoStudents" className="block text-sm font-medium leading-6 text-gray-900">
                 Number of Pro-Bono Students
             </label>
-            <input id="proBonoStudents" name="proBonoStudents" type="number" required
+            <input id="proBonoStudents" name="proBonoStudents" type="number" min="0" required
                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
     </>
