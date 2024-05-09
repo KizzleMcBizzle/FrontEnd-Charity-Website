@@ -13,6 +13,7 @@ import styled from 'styled-components';
 import { useEffect } from 'react'
 import ViewOrgs from './ViewOrgs'
 import ViewDonors from './ViewDonors'
+import BloodList from './BloodList'
 
 
 
@@ -88,6 +89,31 @@ export default function Example({title , results , type}) {
 
             subCategories = Array.from(new Set(results.map(item => item.role))).map(role => ({ name: role }));    
       }
+      else if(type === "bloodDonations" ){
+        page =<BloodList bloods={filteredResults}></BloodList>
+
+        const areaOptions = Array.from(new Set(results.map(item => item.hospital_area))).map(area => ({ value: area, checked: false }));
+        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false}));
+        const nameOptions = Array.from(new Set(results.map(item => item.hospital_name))).map(name => ({ value: name, checked: false}));
+        
+        filters = [
+                {
+                    id: 'area',
+                    name: 'Area',
+                    options: areaOptions
+                },
+                {
+                    id: 'governorate',
+                    name: 'Governorate',
+                    options: governorateOptions
+                },
+                {
+                    id: 'name',
+                    name: 'Hospital Name',
+                    options: nameOptions
+                }
+        ]
+      }
     }
 
 
@@ -117,10 +143,17 @@ export default function Example({title , results , type}) {
     const handleInputChange = (e) => { 
         const searchTerm = e.target.value; // Convert search term to lowercase for case-insensitive search
         setSearchItem(searchTerm);
-
-        const filteredItems = results.filter((result) =>
+        let filteredItems;
+        if(type ==="bloodDonations"){
+             filteredItems = results.filter((result) =>
+                result.blood_type.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+        else{
+         filteredItems = results.filter((result) =>
             result.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
+    }
 
     setFilteredResults(filteredItems);
             
@@ -158,6 +191,17 @@ export default function Example({title , results , type}) {
             } else {
             setFilteredResults([...results]);
             }
+        }
+        else if(type ==="bloodDonations"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.hospital_area === selectedCategory || item.governorate === selectedCategory || item.hospital_name === selectedCategory);
+                    return temp;
+                });
+                setFilteredResults(tempItems.flat());
+                } else {
+                setFilteredResults([...results]);
+                }
         }
 
 

@@ -416,5 +416,221 @@
       "email": "admin@hopeunity.com",
       "password": "admin"
     }
+  ],
+  "donations": [
+    {
+      "title": "Medication Requests",
+      "name": "medication",
+      "id": "1"
+    },
+    {
+      "title": "Blood Donation Requests",
+      "name": "blood",
+      "id": "2"
+    },
+    {
+      "title": "Teaching Posts",
+      "name": "teaching",
+      "id": "3"
+    },
+    {
+      "title": "Medical Supplies",
+      "name": "medSupp",
+      "id": "4"
+    },
+    {
+      "title": "Medical Cases",
+      "name": "medCase",
+      "id": "5"
+    }
+  ],
+  "medication": [
+    {
+      "id": "1",
+      "name": "Fluoxetine",
+      "use": "Treatment of depression, anxiety, OCD",
+      "disease":"OCD"
+    },
+    {
+      "id": "2",
+      "name": "Sertraline",
+      "use": "Treatment of depression, anxiety, OCD",
+      "disease":"OCD"
+    },
+    {
+      "id": "3",
+      "name": "Escitalopram",
+      "use": "Treatment of depression, anxiety",
+      "disease":"Anxiety"
+    },
+    {
+      "id": "4",
+      "name": "Citalopram",
+      "use": "Treatment of depression, anxiety",
+      "disease":"Anxiety"
+    },
+    {
+      "id": "5",
+      "name": "Mirtazapine",
+      "use": "Treatment of depression, anxiety, insomnia",
+      "disease":"Insomnia"
+    }
+  ],
+  "blood": [
+    {
+      "id": "1",
+      "patient_name": "John Doe",
+      "blood_type": "O+",
+      "hospital_name": "City Hospital",
+      "hospital_area": "Downtown",
+      "governorate": "New York",
+      "hospital_address": "123 Main Street, New York, NY",
+      "location": "https://www.google.com/maps/place/40.7902,-73.9597"
+    },
+    {
+      "id": "2",
+      "patient_name": "Jane Smith",
+      "blood_type": "AB-",
+      "hospital_name": "General Hospital",
+      "hospital_area": "Midtown",
+      "governorate": "New York",
+      "hospital_address": "456 Broadway, New York, NY",
+      "location": "https://www.google.com/maps/place/40.7580,-73.9854"
+    },
+    {
+      "id": "3",
+      "patient_name": "Alice Johnson",
+      "blood_type": "A+",
+      "hospital_name": "St. Mary's Hospital",
+      "hospital_area": "Uptown",
+      "governorate": "New York",
+      "hospital_address": "789 Elm Street, New York, NY",
+      "location": "https://www.google.com/maps/place/40.7902,-73.9597"
+    },
+    {
+      "id": "4",
+      "patient_name": "Bob Brown",
+      "blood_type": "B-",
+      "hospital_name": "Mercy Hospital",
+      "hospital_area": "Downtown",
+      "governorate": "New York",
+      "hospital_address": "321 Oak Street, New York, NY",
+      "location": "https://www.google.com/maps/place/40.7056,-74.0118" 
+    }
+  ],
+  "medicalSupp": [
+    {
+      "type": "Gloves",
+      "use": "Protection for hands during medical procedures",
+      "image": "https://m.media-amazon.com/images/I/51GwvFEpPhL._AC_UF894,1000_QL80_.jpg",
+      "quantity": "200",
+      "id": "1"
+    },
+    {
+      "type": "Gown",
+      "use": "Protection against bodily fluids",
+      "image": "https://m.media-amazon.com/images/I/31xJ0T-EzZL._AC_SY580_.jpg",
+      "quantity": "50",
+      "id": "2"
+    },
+    {
+      "type": "Face Shield",
+      "use": "Protection for face and eyes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqISnQNOYJcki13Ex_js5sj75iwkr-dH9FVziCgt79rA&s",
+      "quantity": "30",
+      "id": "3"
+    },
+    {
+      "type": "Thermometer",
+      "use": "Measuring body temperature",
+      "image": "https://elveniaregenerative.com/wp-content/uploads/2022/07/3.jpg",
+      "quantity": "20",
+      "id": "4"
+    }
+  ],
+  "teaching": [
+    {
+      "title": "Introduction to Mathematics",
+      "id": "1",
+      "number_of_students": 25,
+      "address": "123 Main Street, Cityville, State, Country",
+      "google_map_marker": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
+      "subjects": [
+        "Mathematics",
+        "Algebra",
+        "Geometry"
+      ]
+    },
+    {
+      "title": "Basic English Language Skills",
+      "id": "2",
+      "number_of_students": 20,
+      "address": "456 Elm Street, Townsville, State, Country",
+      "google_map_marker": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
+      "subjects": [
+        "English",
+        "Grammar",
+        "Vocabulary"
+      ]
+    },
+    {
+      "title": "Introduction to Physics",
+      "id": "3",
+      "number_of_students": 18,
+      "address": "456 Maple Street, Cityville, State, Country",
+      "google_map_marker": "https://maps.google.com/?q=456+Maple+Street+Cityville+State+Country",
+      "subjects": [
+        "Physics",
+        "Mechanics",
+        "Electromagnetism"
+      ]
+    },
+    {
+      "title": "Basic Spanish Language Skills",
+      "id": "4",
+      "number_of_students": 22,
+      "address": "987 Birch Street, Townsville, State, Country",
+      "google_map_marker": "https://maps.google.com/?q=987+Birch+Street+Townsville+State+Country",
+      "subjects": [
+        "Spanish",
+        "Grammar",
+        "Vocabulary"
+      ]
+    }
+  ],
+  "medCase": [
+    {
+      "patientName": "John Doe",
+      "age": 30,
+      "gender": "Male",
+      "weight": "70kg",
+      "location": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
+      "address": "123 Main Street, Cityville, State, Country",
+      "organizationName": "Medical Care Organization",
+      "medicalSpecialty": "General Surgery",
+      "id": "1"
+    },
+    {
+      "patientName": "Jane Doe",
+      "age": 25,
+      "gender": "Female",
+      "weight": "60kg",
+      "location": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
+      "address": "456 Elm Street, Townsville, State, Country",
+      "organizationName": "Healthcare Services",
+      "medicalSpecialty": "Cardiology",
+      "id": "2"
+    },
+    {
+      "patientName": "Bob Smith",
+      "age": 40,
+      "gender": "Male",
+      "weight": "80kg",
+      "location": "https://maps.google.com/?q=789+Oak+Street+Cityville+State+Country",
+      "address": "789 Oak Street, Cityville, State, Country",
+      "organizationName": "Medical Care Organization",
+      "medicalSpecialty": "Neurology",
+      "id": "3"
+    }
   ]
 }

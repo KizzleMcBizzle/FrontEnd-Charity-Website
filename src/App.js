@@ -19,7 +19,18 @@ import DonorReg from './DonorReg';
 import OrgReg from './OrgReg';
 import ViewOrgsFetch from './ViewOrgsFetch.js';
 import ViewDonorsFetch from './ViewDonorsFetch.js';
-import OrgDetails from './OrgDetails.js'
+import OrgDetails from './OrgDetails.js';
+import Medication from './Medication';
+import MedSupp from './MedSupp';
+import Teaching from './Teaching';
+import Blood from './Blood';
+import MedCase from './MedCase';
+import MedSuppDetails from './MedSuppDetails';
+import BloodDetails from './BloodDetails';
+import MedicationDetails from './MedicationDetails';
+import TeachingDetails from './TeachingDetails';
+import MedCaseDetails from './MedCaseDetails';
+import Donor from './Donor';
 
 function App() {
   return (
@@ -82,6 +93,41 @@ function App() {
               <AdminNav />
               <OrgDetails flag={true}/>
             </Route>
+
+            <Route exact path="/donor">
+              <Donor></Donor>
+          </Route>
+            <Route path="/blood">
+              <Blood></Blood>
+          </Route>
+          <Route path='/medSupp'>
+            <MedSupp></MedSupp>
+          </Route>
+          <Route path='/medCase'>
+            <MedCase></MedCase>
+          </Route>
+          <Route path='/medication'>
+            <Medication></Medication>
+          </Route>
+          <Route path='/teaching'>
+            <Teaching></Teaching>
+          </Route>
+          <Route path="/medSupps/:id">
+              <MedSuppDetails />
+            </Route>
+           <Route path="/medCases/:id">
+              <MedCaseDetails />
+           </Route>
+            <Route path="/bloods/:id">
+              <BloodDetails></BloodDetails>
+            </Route>
+            <Route path="/medications/:id">
+              <MedicationDetails></MedicationDetails>
+            </Route>
+            <Route path="/teachings/:id">
+              <TeachingDetails></TeachingDetails>
+            </Route>
+
             
           </Switch>
         </div>
