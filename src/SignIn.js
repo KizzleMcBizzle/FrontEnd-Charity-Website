@@ -53,7 +53,7 @@ export default function Example() {
                                     Password
                                 </label>
                                 <div className="text-sm">
-                                    <a href="#" className="font-semibold text-custom-green hover:text-custom-green-light">
+                                    <a href="#" className="font-semibold text-custom-green hover:text-green-600">
                                         Forgot password?
                                     </a>
                                 </div>
@@ -73,7 +73,7 @@ export default function Example() {
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Sign in
                             </button>
@@ -83,7 +83,7 @@ export default function Example() {
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Not a member?{' '}
                         <button type="button" onClick={openModal}
-                                className="font-semibold leading-6 text-custom-green hover:text-custom-green-light">
+                                className="font-semibold leading-6 text-custom-green hover:text-green-600">
                             Register Here!
                         </button>
                     </p>

@@ -3,6 +3,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon, UserIcon } from '@heroicons/react/24/outline'
 import {BellIcon, XMarkIcon} from "@heroicons/react/16/solid";
 import logo from './Logo.png'
+import {Link} from "react-router-dom";
 
 const navigation = {
     categories: [
@@ -171,14 +172,14 @@ export default function Example() {
 
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
-                                <a href="#">
+                                <Link to="/">
                                     <span className="sr-only">HopeUnity</span>
                                     <img
                                         className="h-10 w-auto"
                                         src={logo}
                                         alt="HopeUnity Logo"
                                     />
-                                </a>
+                                </Link>
                             </div>
 
 

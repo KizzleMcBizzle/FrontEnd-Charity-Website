@@ -62,7 +62,7 @@ const navigation = {
         },
     ],
     pages: [
-        { name: 'About Us', href: '#' },
+        { name: 'About Us', href: '/' },
         { name: 'Contact', href: '#' },
     ],
 }
@@ -73,11 +73,6 @@ function classNames(...classes) {
 
 export default function Example() {
     const [open, setOpen] = useState(false)
-    const [isSearchOpen, setIsSearchOpen] = useState(false); // Add this line
-
-    const toggleSearch = () => { // Add this function
-        setIsSearchOpen(!isSearchOpen);
-    };
 
 
     return (
@@ -182,10 +177,10 @@ export default function Example() {
 
                                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                                     {navigation.pages.map((page) => (
-                                        <div key={page.name} className="flow-root">
-                                            <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                                        <div key={page.name} className="flow-root ">
+                                            <Link to={page.href} className="-m-2 block p-2 font-medium text-gray-900">
                                                 {page.name}
-                                            </a>
+                                            </Link>
                                         </div>
                                     ))}
                                 </div>
@@ -237,7 +232,7 @@ export default function Example() {
                                                             className={classNames(
                                                                 open
                                                                     ? 'border-custom-green text-custom-green'
-                                                                    : 'border-transparent text-gray-700 hover:text-custom-green',
+                                                                    : 'border-transparent text-gray-700 hover:text-green-600',
                                                                 'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out'
                                                             )}
                                                         >
@@ -313,7 +308,7 @@ export default function Example() {
                                         <a
                                             key={page.name}
                                             href={page.href}
-                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-custom-green"
+                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-green-600"
                                         >
                                             {page.name}
                                         </a>
@@ -324,14 +319,14 @@ export default function Example() {
                             <div className="ml-auto flex items-center">
                                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                                     <Link to="/signin"
-                                          className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                          className="text-sm font-medium text-gray-700 hover:text-green-600">
                                         Sign in
                                     </Link>
                                     <span className="h-6 w-px bg-gray-200" aria-hidden="true"/>
                                     <Popover className="relative">
                                         {({ open }) => (
                                             <>
-                                                <Popover.Button className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                                <Popover.Button className="text-sm font-medium text-gray-700 hover:text-green-600">
                                                     Create account
                                                 </Popover.Button>
                                                 <Transition
@@ -360,22 +355,6 @@ export default function Example() {
                                 </div>
 
                                 {/* Search */}
-                                <div className="flex lg:ml-6">
-                                    <a href="#" className="p-2 text-gray-400 hover:text-gray-500"
-                                       onClick={toggleSearch}>
-                                        <span className="sr-only">Search</span>
-                                        <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true"/>
-                                    </a>
-                                    {isSearchOpen && (
-                                        <div className="transition-all duration-500 ease-in-out">
-                                            <input
-                                                type="text"
-                                                className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"
-                                                placeholder="Search..."
-                                            />
-                                        </div>
-                                    )}
-                                </div>
 
                                 {/* Notifications */}
                             </div>

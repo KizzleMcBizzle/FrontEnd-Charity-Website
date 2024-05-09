@@ -39,25 +39,28 @@ function App() {
                 <Navbar2 />
                 <OrgReg />
             </Route>
-            <Route path="/admin">
-                <AdminNav />
-            </Route>
             <Route exact path="/admin/changepass">
+                <AdminNav />
               <AdminPassFetch />
             </Route>
             <Route exact path ="/admin/profile">
+                <AdminNav />
               <AdminFetch />
             </Route>
             <Route exact path= "/admin/req/donors">
+                <AdminNav />
               <DonorReqFetch/>
             </Route>
             <Route exact path = "/admin/req/donors/:id">
+                <AdminNav />
               <PendingDonor />
             </Route>
             <Route exact path= "/admin/req/orgs">
+                <AdminNav />
               <OrgReqFetch />
             </Route>
             <Route exact path = "/admin/req/orgs/:id">
+                <AdminNav />
               <PendingOrg />
             </Route>
           </Switch>
