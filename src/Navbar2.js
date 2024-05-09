@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon } from '@heroicons/react/24/outline'
 import {XMarkIcon} from "@heroicons/react/16/solid";
+import { Link } from 'react-router-dom'
 import logo from './Logo.png'
 
 const navigation = {
@@ -214,14 +215,14 @@ export default function Example() {
 
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
-                                <a href="#">
+                                <Link to="/">
                                     <span className="sr-only">HopeUnity</span>
                                     <img
                                         className="h-10 w-auto"
                                         src={logo}
                                         alt="HopeUnity Logo"
                                     />
-                                </a>
+                                </Link>
                             </div>
 
                             {/* Flyout menus */}
@@ -322,13 +323,40 @@ export default function Example() {
 
                             <div className="ml-auto flex items-center">
                                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                                    <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                    <Link to="/signin"
+                                          className="text-sm font-medium text-gray-700 hover:text-gray-800">
                                         Sign in
-                                    </a>
-                                    <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                                    <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                                        Create account
-                                    </a>
+                                    </Link>
+                                    <span className="h-6 w-px bg-gray-200" aria-hidden="true"/>
+                                    <Popover className="relative">
+                                        {({ open }) => (
+                                            <>
+                                                <Popover.Button className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                                                    Create account
+                                                </Popover.Button>
+                                                <Transition
+                                                    as={Fragment}
+                                                    enter="transition ease-out duration-200"
+                                                    enterFrom="opacity-0"
+                                                    enterTo="opacity-100"
+                                                    leave="transition ease-in duration-150"
+                                                    leaveFrom="opacity-100"
+                                                    leaveTo="opacity-0"
+                                                >
+                                                    <Popover.Panel className="absolute z-10 w-48 mt-2 right-0 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                                        <div className="py-1">
+                                                            <Link to="/donor-register" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                                                As a Donor
+                                                            </Link>
+                                                            <Link to="/org-register" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                                                As an Organization
+                                                            </Link>
+                                                        </div>
+                                                    </Popover.Panel>
+                                                </Transition>
+                                            </>
+                                        )}
+                                    </Popover>
                                 </div>
 
                                 {/* Search */}

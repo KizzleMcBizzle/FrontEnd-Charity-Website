@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar2 from './Navbar2';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -14,14 +15,33 @@ import AdminProfile from './AdminProfile.js';
 import AdminFetch from './AdminFetch.js';
 import ChangePassword from './ChangePassword.js';
 import AdminPassFetch from './AdminPassFetch.js'
+import DonorReg from './DonorReg';
+import OrgReg from './OrgReg';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <AdminNav />
-        <div className="content">
-          <Switch>
+        <Switch>
+            <Route exact path="/">
+                <Navbar2 />
+                <Home />
+            </Route>
+            <Route path="/signin">
+                <Navbar2 />
+                <SignIn />
+            </Route>
+            <Route path="/donor-register">
+                <Navbar2 />
+                <DonorReg />
+            </Route>
+            <Route path="/org-register">
+                <Navbar2 />
+                <OrgReg />
+            </Route>
+            <Route path="/admin">
+                <AdminNav />
+            </Route>
             <Route exact path="/admin/changepass">
               <AdminPassFetch />
             </Route>
@@ -43,7 +63,6 @@ function App() {
           </Switch>
         </div>
         <Footer />
-      </div>
     </Router>
   );
 }
