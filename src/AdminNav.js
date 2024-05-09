@@ -333,7 +333,7 @@ export default function Example() {
                                                     <div className="py-1">
                                                         <a href="/admin/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
                                                         <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                                                        <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                                                     </div>
                                                 </Popover.Panel>
                                             </Transition>
