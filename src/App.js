@@ -17,6 +17,9 @@ import ChangePassword from './ChangePassword.js';
 import AdminPassFetch from './AdminPassFetch.js'
 import DonorReg from './DonorReg';
 import OrgReg from './OrgReg';
+import ViewOrgsFetch from './ViewOrgsFetch.js';
+import ViewDonorsFetch from './ViewDonorsFetch.js';
+import OrgDetails from './OrgDetails.js'
 
 function App() {
   return (
@@ -43,8 +46,12 @@ function App() {
                 <AdminNav />
               <AdminPassFetch />
             </Route>
+            <Route exact path ="/admin/">
+              <AdminNav />
+              <Home /> {/*will be changed*/}
+            </Route>
             <Route exact path ="/admin/profile">
-                <AdminNav />
+              <AdminNav />
               <AdminFetch />
             </Route>
             <Route exact path= "/admin/req/donors">
@@ -56,13 +63,26 @@ function App() {
               <PendingDonor />
             </Route>
             <Route exact path= "/admin/req/orgs">
-                <AdminNav />
+              <AdminNav />
               <OrgReqFetch />
             </Route>
+            <Route exact path= "/admin/view/orgs">
+              <AdminNav />
+              <ViewOrgsFetch />
+            </Route>
+            <Route exact path= "/admin/view/donors">
+              <AdminNav />
+              <ViewDonorsFetch />
+            </Route>
             <Route exact path = "/admin/req/orgs/:id">
-                <AdminNav />
+              <AdminNav />
               <PendingOrg />
             </Route>
+            <Route exact path = "/admin/view/orgs/:id">
+              <AdminNav />
+              <OrgDetails flag={true}/>
+            </Route>
+            
           </Switch>
         </div>
         <Footer />

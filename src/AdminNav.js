@@ -14,7 +14,7 @@ const navigation = {
             ],
             sections: [
                 {
-                    id: 'Applications ',
+                    id: 'Applications',
                     name: 'Applications',
                     items: [
                         { name: 'Donors', href: '/admin/req/donors' },
@@ -23,9 +23,25 @@ const navigation = {
                 },
             ],
         },
+        {
+            id: 'View',
+            name: 'View',
+            featured: [
+            ],
+            sections: [
+                {
+                    id: 'Registered',
+                    name: 'Registered',
+                    items: [
+                        { name: 'Donors', href: '/admin/view/donors' },
+                        { name: 'Organizations', href: '/admin/view/orgs' },
+                    ],
+                },
+            ],
+        },
     ],
     pages: [
-        { name: 'About Us', href: '#' },
+        { name: 'About Us', href: '/admin/' },
         { name: 'Contact', href: '#' },
     ],
 }

@@ -2,7 +2,7 @@ import useFetch from "./useFetch";
 import FilterSideBar from "./FilterSideBar";
 
 
-const OrgReqFetch = () => {
+const ViewOrgsFetch = () => {
     
   const {data : orgs, isPending, error} = useFetch('http://localhost:4000/orgs');
     
@@ -16,13 +16,13 @@ const OrgReqFetch = () => {
             </div>
         }
         {orgs && <FilterSideBar 
-                  results = {orgs.filter(org => !org.verified)} 
-                  title='Organizations Requests'
-                  type = 'adminReqOrgs'
+                  results = {orgs.filter(org => org.verified)} 
+                  title='Registered Organizations'
+                  type = 'adminViewOrgs'
                  />}
         
     </div>
   );
 }
  
-export default OrgReqFetch;
+export default ViewOrgsFetch;

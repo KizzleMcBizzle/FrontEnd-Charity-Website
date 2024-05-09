@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Resala",
-      "verified": false,
+      "verified": true,
       "firstName": "John",
       "lastName": "Doe",
       "gender": "male",
@@ -375,7 +375,7 @@
     {
       "id": "5",
       "name": "Donor E",
-      "role": "doctor",
+      "role": "Regular",
       "verified": true,
       "firstName": "Eva",
       "lastName": "Davis",
@@ -386,10 +386,7 @@
       "address": "222 Maple St",
       "area": "Maple Area",
       "governorate": "Maple Governorate",
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "document": null
     },
     {
       "id": "6",
