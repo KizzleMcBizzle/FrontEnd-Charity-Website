@@ -10,7 +10,11 @@ const DonorReqFetch = () => {
   return (
     <div className="home">
         {error && <div>{error}</div>}
-        {isPending && <div>Loading...</div>}
+        {isPending &&
+            <div className="flex justify-center items-center h-screen">
+                <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
+            </div>
+        }
         {donors && <FilterSideBar 
                     results = {donors.filter(donor => !donor.verified)}
                     title='Pro-bono Donors Requests'
