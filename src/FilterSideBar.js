@@ -54,7 +54,8 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({title , results}) {
+export default function Example({title , results , type}) {
+    
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [open, setOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -63,7 +64,7 @@ export default function Example({title , results}) {
     const [filteredResults, setFilteredResults] = useState(results);
     
 
-    let url = ``;
+    
     let page = <></>;
     let subCategories =[];
 
@@ -73,27 +74,35 @@ export default function Example({title , results}) {
     };
   
     if (Array.isArray(results) && results.length > 0) {
-      const firstResult = results[0];
-      
-      if (firstResult.hasOwnProperty("organizationName") && firstResult.hasOwnProperty("organizationType")) {
-        url = "/admin/req/orgs/";
+      if (type === 'adminReqOrgs') {
+        
         page =<OrgUseReq
                orgs ={filteredResults}
                />;
 
+
+        /*fetches all subcategories from the result*/
         const uniqueCategories = [...new Set(results.map(org => org.organizationType))];
         subCategories = addNameToOrganizationTypes(uniqueCategories);
-
-      } else if (firstResult.hasOwnProperty("role")) {
-        url = "/admin/req/donors/";
-        page = <DonUseReq donors = {filteredResults}/>;
+      } 
+      else if (type === 'donorApplicationProBono') {
+           
+            page = <DonUseReq donors = {filteredResults}/>;
+            subCategories = [
+                            {name :'Teacher'},
+                            {name:'Doctor'}
+                            ];
       }
     }
 
     const filterByCategory = (categoryName) => {
-        
-
-        const filteredItems = results.filter(result => result.organizationType === categoryName);
+        let filteredItems = [];
+        if(type === 'adminReqOrgs'){
+            filteredItems = results.filter(result => result.organizationType === categoryName);
+        }
+        else if(type === 'donorApplicationProBono'){
+            filteredItems = results.filter(result => result.role.toLowerCase() === categoryName.toLowerCase());
+        }
         setFilteredResults(filteredItems);
     };
 
@@ -102,7 +111,7 @@ export default function Example({title , results}) {
         setSearchItem(searchTerm);
 
         const filteredItems = results.filter((result) =>
-        result.name.toLowerCase().includes(searchTerm.toLowerCase())
+            result.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
     setFilteredResults(filteredItems);

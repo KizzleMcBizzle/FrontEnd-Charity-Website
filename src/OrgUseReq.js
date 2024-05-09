@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const OrgUseReq = ({orgs }) => {
+const OrgUseReq = ({ orgs }) => {
 
     const [currOrgs, setCurrOrgs] = useState(orgs);
 

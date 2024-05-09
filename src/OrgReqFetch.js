@@ -5,7 +5,7 @@ import FilterSideBar from "./FilterSideBar";
 
 const OrgReqFetch = () => {
     
-    const {data : orgs, isPending, error} = useFetch('http://localhost:4000/orgs');
+  const {data : orgs, isPending, error} = useFetch('http://localhost:4000/orgs');
     
    
   return (
@@ -19,7 +19,9 @@ const OrgReqFetch = () => {
         {orgs && <FilterSideBar 
                   results = {orgs.filter(org => !org.verified)} 
                   title='Organizations Requests'
+                  type = 'adminReqOrgs'
                  />}
+        
     </div>
   );
 }
