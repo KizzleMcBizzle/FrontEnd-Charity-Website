@@ -9,6 +9,7 @@ export default function Example() {
 
     const closeModal = () => {
         setIsOpen(false);
+        
     };
 
     const openModal = () => {
