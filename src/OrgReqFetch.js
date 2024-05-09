@@ -11,7 +11,11 @@ const OrgReqFetch = () => {
   return (
     <div className="home">
         {error && <div>{ error }</div>}
-        {isPending && <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>}
+        {isPending &&
+            <div className="flex justify-center items-center h-screen">
+                <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
+            </div>
+        }
         {orgs && <FilterSideBar 
                   results = {orgs.filter(org => !org.verified)} 
                   title='Organizations Requests'
