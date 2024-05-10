@@ -14,6 +14,8 @@ import { useEffect } from 'react'
 import ViewOrgs from './ViewOrgs'
 import ViewDonors from './ViewDonors'
 import BloodList from './BloodList'
+import MedicationList from './MedicationList'
+import MedCaseList from './MedCaseList'
 
 
 
@@ -89,6 +91,50 @@ export default function Example({title , results , type}) {
 
             subCategories = Array.from(new Set(results.map(item => item.role))).map(role => ({ name: role }));    
       }
+      else if(type === "medicationReq" ){
+        page =<MedicationList medications={filteredResults}></MedicationList>
+
+        const diseaseOptions = Array.from(new Set(results.map(item => item.disease))).map(dis => ({ value: dis, checked: false }));
+        
+        filters = [
+                {
+                    id: 'disease',
+                    name: 'Disease',
+                    options: diseaseOptions
+                }
+        ]
+      }
+      else if(type === "medicalCase" ){
+        page =<MedCaseList medCases={filteredResults}></MedCaseList>
+
+        const specialityOptions = Array.from(new Set(results.map(item => item.medicalSpecialty))).map(speciality => ({ value: speciality, checked: false }));
+        const organizationOptions = Array.from(new Set(results.map(item => item.organizationName))).map(organization => ({ value: organization, checked: false}));
+        const areaOptions = Array.from(new Set(results.map(item => item.area))).map(area => ({ value: area, checked: false}));
+        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false}));
+        
+        filters = [
+                {
+                    id: 'area',
+                    name: 'Area',
+                    options: areaOptions
+                },
+                {
+                    id: 'governorate',
+                    name: 'Governorate',
+                    options: governorateOptions
+                },
+                {
+                    id: 'organizationName',
+                    name: 'Organization Name',
+                    options: organizationOptions
+                },
+                {
+                    id: 'medicalSpecialty',
+                    name: 'Medical Speciality',
+                    options: specialityOptions
+                },
+        ]
+      }
       else if(type === "bloodDonations" ){
         page =<BloodList bloods={filteredResults}></BloodList>
 
@@ -114,15 +160,8 @@ export default function Example({title , results , type}) {
                 }
         ]
       }
+      
     }
-
-
-    
-  
-
-   
-    
-        
 
     const filterByCategory = (categoryName) => {
         
@@ -196,6 +235,28 @@ export default function Example({title , results , type}) {
             if (selectedFilters.length > 0) {
                 let tempItems = selectedFilters.map((selectedCategory) => {
                     let temp = results.filter((item) => item.hospital_area === selectedCategory || item.governorate === selectedCategory || item.hospital_name === selectedCategory);
+                    return temp;
+                });
+                setFilteredResults(tempItems.flat());
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        else if(type ==="medicationReq"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.disease === selectedCategory);
+                    return temp;
+                });
+                setFilteredResults(tempItems.flat());
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        else if(type ==="medicalCase"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.organizationName === selectedCategory || item.medicalSpecialty === selectedCategory || item.governorate === selectedCategory || item.area === selectedCategory);
                     return temp;
                 });
                 setFilteredResults(tempItems.flat());
