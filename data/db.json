@@ -126,8 +126,6 @@
       "role": "admin",
       "id": "admin@hopeunity.com"
     }
-    
-    
   ],
   "orgs": [
     {
@@ -482,6 +480,88 @@
         "type": "qualification_proof",
         "url": "http://example.com/qualification_proof.pdf"
       }
+    },
+    {
+      "id": "8370",
+      "firstName": "Omar",
+      "lastName": "Ahmed",
+      "verified": false,
+      "email": "omarelhussein03@gmail.com",
+      "password": "dqwdwq",
+      "contactNumber": "01028106688",
+      "address": "Some Random Address",
+      "area": "dqwdq",
+      "governorate": "dqwqdw",
+      "volunteer": false,
+      "role": "Regular",
+      "clinicLocation": "",
+      "specialty": "",
+      "proBonoCases": "",
+      "subjects": "",
+      "proBonoClasses": "",
+      "proBonoStudents": "",
+      "fileName": ""
+    },
+    {
+      "id": "951d",
+      "firstName": "Omar",
+      "lastName": "Ahmed",
+      "verified": false,
+      "email": "omarelhussein03@gmail.com",
+      "password": "dqw",
+      "contactNumber": "01028106688",
+      "address": "Some Random Address",
+      "area": "qwd",
+      "governorate": "dqw",
+      "volunteer": true,
+      "role": "doctor",
+      "clinicLocation": "qwd",
+      "specialty": "dqwdqw",
+      "proBonoCases": "",
+      "subjects": "",
+      "proBonoClasses": "",
+      "proBonoStudents": "",
+      "document": "Omar_document"
+    },
+    {
+      "id": "fae3",
+      "firstName": "Omar",
+      "lastName": "Ahmed",
+      "verified": false,
+      "email": "omarelhussein03@gmail.com",
+      "password": "dwqdwq",
+      "contactNumber": "01028106688",
+      "address": "Some Random Address",
+      "area": "dqwdqw",
+      "governorate": "dwqqdw",
+      "role": "teacher",
+      "clinicLocation": "",
+      "specialty": "",
+      "proBonoCases": "",
+      "subjects": "dwq",
+      "proBonoClasses": "12",
+      "proBonoStudents": "21",
+      "document": "Omar_document"
+    },
+    {
+      "id": "bee9",
+      "firstName": "Omar",
+      "lastName": "Ahmed",
+      "verified": false,
+      "email": "omarelhussein03@gmail.com",
+      "password": "321312",
+      "contactNumber": "01028106688",
+      "address": "Some Random Address",
+      "area": "dwqqdw",
+      "governorate": "dwq",
+      "role": "doctor",
+      "clinicLocation": "dqwdwq",
+      "specialty": "dqwdqw",
+      "proBonoCases": "2133",
+      "subjects": "",
+      "proBonoClasses": "",
+      "proBonoStudents": "",
+      "document": "Omar_document"
     }
   ],
   "admin": [
@@ -720,141 +800,116 @@
       "area": "Suburbs"
     }
   ],
-
-    "toys": [
-      {
-        "id": "1",
-        "name": "Toy 1",
-        "age_range": "3-5",
-        "gender": "Any",
-        "category": "Board Games"
-        
-      },
-      {
-        "id": "2",
-        "name": "Toy 2",
-        "age_range": "6-8",
-        "gender": "Male",
-        "category": "Sports"
-        
-      },
-      {
-        "id": "3",
-        "name": "Toy 3",
-        "age_range": "3-5",
-        "gender": "Female",
-        "category": "Dolls"
-        
-      },
-      {
-        "id":"4",
-        "name": "Toy 4",
-        "age_range": "8-10",
-        "gender": "Any",
-        "category": "Stuffed Toys"
-        
-      },
-      {
-        "id":"5",
-        "name": "Toy 5",
-        "age_range": "6-8",
-        "gender": "Female",
-        "category": "Outdoor"
-      },
-      {
-        "id":"6",
-        "name": "Toy 6",
-        "age_range": "8-10",
-        "gender": "Male",
-        "category": "Cars"
-      },
-      {
-        "id":"7",
-        "name": "Toy 7",
-        "age_range": "3-5",
-        "gender": "Any",
-        "category": "Stuffed Toys"
-      },
-      {
-        "id":"8",
-        "name": "Toy 8",
-        "age_range": "8-10",
-        "gender": "Female",
-        "category": "Board Games"
-      }
-    ],
-
-    "food": [
-     
-      {
-        "id": "1",
-        "type": "Fruits and Vegetables",
-        "name": "Apples"
-        
-      },
-      {
-        "id": "2",
-        "type": "Canned Foods",
-        "name": "Canned Soup"
-      },
-      {
-        "id":"3",
-        "type": "Fresh Meals",
-        "name": "Prepared Sandwiches"
-        
-      },
-      {
-        "id": "4",
-        "type": "Baked Goods",
-        "name": "Bread"
-      }
-
-    ],
-
-    
-      "books": [
-        {
-          "id": 1,
-          "bookName": "To Kill a Mockingbird",
-          "author": "Harper Lee",
-          "language": "English",
-          "edition": "1st Edition",
-          "summary": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature. The plot and characters are loosely based on the author's observations of her family, her neighbors and an event that occurred near her hometown of Monroeville, Alabama, in 1936, when she was 10 years old.",
-          "image": "https://example.com/to-kill-a-mockingbird.jpg",
-          "quantityRequired": 10
-        },
-        {
-          "id": 2,
-          "bookName": "1984",
-          "author": "George Orwell",
-          "language": "English",
-          "edition": "Revised Edition",
-          "summary": "1984 is a dystopian novel by George Orwell published in 1949. The story takes place in an imagined future, the year 1984, when much of the world has fallen victim to perpetual war, omnipresent government surveillance, historical negationism, and propaganda. Great Britain, known as Airstrip One, has become a province of a totalitarian superstate named Oceania that is ruled by the Party who employ the Thought Police to persecute individuality and independent thinking.",
-          "image": "https://example.com/1984.jpg",
-          "quantityRequired": 15
-        },
-        {
-          "id": 3,
-          "bookName": "Pride and Prejudice",
-          "author": "Jane Austen",
-          "language": "English",
-          "edition": "Vintage Classics",
-          "summary": "Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.",
-          "image": "https://example.com/pride-and-prejudice.jpg",
-          "quantityRequired": 20
-        }
-      ]
-    
-    
-
-
-  }
-  
-  
-      
-    
-  
-
-    
-  
-  
+  "toys": [
+    {
+      "name": "Toy 1",
+      "age_range": "3-5",
+      "gender": "Any",
+      "category": "Board Games",
+      "id": "0be9"
+    },
+    {
+      "name": "Toy 2",
+      "age_range": "6-8",
+      "gender": "Male",
+      "category": "Sports",
+      "id": "2bfc"
+    },
+    {
+      "name": "Toy 3",
+      "age_range": "3-5",
+      "gender": "Female",
+      "category": "Dolls",
+      "id": "dd07"
+    },
+    {
+      "name": "Toy 4",
+      "age_range": "8-10",
+      "gender": "Any",
+      "category": "Stuffed Toys",
+      "id": "79e3"
+    },
+    {
+      "name": "Toy 5",
+      "age_range": "6-8",
+      "gender": "Female",
+      "category": "Outdoor",
+      "id": "0155"
+    },
+    {
+      "name": "Toy 6",
+      "age_range": "8-10",
+      "gender": "Male",
+      "category": "Cars",
+      "id": "c215"
+    },
+    {
+      "name": "Toy 7",
+      "age_range": "3-5",
+      "gender": "Any",
+      "category": "Stuffed Toys",
+      "id": "1b43"
+    },
+    {
+      "name": "Toy 8",
+      "age_range": "8-10",
+      "gender": "Female",
+      "category": "Board Games",
+      "id": "f7fc"
+    }
+  ],
+  "food": [
+    {
+      "type": "Fruits and Vegetables",
+      "name": "Apples",
+      "id": "70f4"
+    },
+    {
+      "type": "Canned Foods",
+      "name": "Canned Soup",
+      "id": "738a"
+    },
+    {
+      "type": "Fresh Meals",
+      "name": "Prepared Sandwiches",
+      "id": "8692"
+    },
+    {
+      "type": "Baked Goods",
+      "name": "Bread",
+      "id": "9cdf"
+    }
+  ],
+  "books": [
+    {
+      "id": "1",
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "language": "English",
+      "edition": "1st Edition",
+      "summary": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature. The plot and characters are loosely based on the author's observations of her family, her neighbors and an event that occurred near her hometown of Monroeville, Alabama, in 1936, when she was 10 years old.",
+      "image": "https://example.com/to-kill-a-mockingbird.jpg",
+      "quantityRequired": 10
+    },
+    {
+      "id": "2",
+      "bookName": "1984",
+      "author": "George Orwell",
+      "language": "English",
+      "edition": "Revised Edition",
+      "summary": "1984 is a dystopian novel by George Orwell published in 1949. The story takes place in an imagined future, the year 1984, when much of the world has fallen victim to perpetual war, omnipresent government surveillance, historical negationism, and propaganda. Great Britain, known as Airstrip One, has become a province of a totalitarian superstate named Oceania that is ruled by the Party who employ the Thought Police to persecute individuality and independent thinking.",
+      "image": "https://example.com/1984.jpg",
+      "quantityRequired": 15
+    },
+    {
+      "id": "3",
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "language": "English",
+      "edition": "Vintage Classics",
+      "summary": "Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.",
+      "image": "https://example.com/pride-and-prejudice.jpg",
+      "quantityRequired": 20
+    }
+  ]
+}
