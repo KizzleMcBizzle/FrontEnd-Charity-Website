@@ -1,4 +1,112 @@
 {
+  "login": [
+    {
+      "email": "john.doe@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "alice.johnson@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "bob.williams@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "eve.brown@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "charlie.davis@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "grace.taylor@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "henry.clark@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "ivy.wilson@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "kevin.lee@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "laura.smith@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "michael.brown@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "nancy.wilson@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "olivia.jones@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "peter.garcia@example.com",
+      "password": "1234",
+      "role": "organization"
+    },
+    {
+      "email": "alice.smith@example.com",
+      "password": "1234",
+      "role": "doctor"
+    },
+    {
+      "email": "bob.johnson@example.com",
+      "password": "1234",
+      "role": "teacher"
+    },
+    {
+      "email": "charlie.brown@example.com",
+      "password": "1234",
+      "role": "doctor"
+    },
+    {
+      "email": "diana.williams@example.com",
+      "password": "1234",
+      "role": "teacher"
+    },
+    {
+      "email": "eva.davis@example.com",
+      "password": "1234",
+      "role": "Regular"
+    },
+    {
+      "email": "frank.martinez@example.com",
+      "password": "1234",
+      "role": "teacher"
+    },
+    {
+      "email": "admin@hopeunity.com",
+      "password": "admin",
+      "role": "admin"
+    }
+  ],
+  
   "orgs": [
     {
       "id": "1",
@@ -643,5 +751,61 @@
       "governorate": "Cityville",
       "area": "Suburbs"
     }
-  ]
-}
+  ],
+
+    "toys": [
+      {
+        "name": "Toy 1",
+        "age_range": "3-5",
+        "gender": "Any",
+        "category": "Board Games"
+        
+      },
+      {
+        "name": "Toy 2",
+        "age_range": "6-8",
+        "gender": "Male",
+        "category": "Sports"
+        
+      },
+      {
+        "name": "Toy 3",
+        "age_range": "3-5",
+        "gender": "Female",
+        "category": "Dolls"
+        
+      },
+      {
+        "name": "Toy 4",
+        "age_range": "8-10",
+        "gender": "Any",
+        "category": "Stuffed Toys"
+        
+      },
+      {
+        "name": "Toy 5",
+        "age_range": "6-8",
+        "gender": "Female",
+        "category": "Outdoor"
+      },
+      {
+        "name": "Toy 6",
+        "age_range": "8-10",
+        "gender": "Male",
+        "category": "Cars"
+      },
+      {
+        "name": "Toy 7",
+        "age_range": "3-5",
+        "gender": "Any",
+        "category": "Stuffed Toys"
+      },
+      {
+        "name": "Toy 8",
+        "age_range": "8-10",
+        "gender": "Female",
+        "category": "Board Games"
+      }
+    ]
+  }
+  
