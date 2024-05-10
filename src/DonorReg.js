@@ -37,7 +37,7 @@ export default function DonorReg() {
 
     useEffect(() => {
         const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w&libraries=places`;
         script.async = true;
         script.onload = () => setMapLoaded(true);
         document.body.appendChild(script);
@@ -180,12 +180,11 @@ export default function DonorReg() {
                     Google Marker
                 </label>
                 <div className="relative h-64 w-full rounded-md overflow-hidden">
-                    <LoadScript googleMapsApiKey="AIzaSyCUJWRIxsDjUetd8qHzIOXEsD6CUUJJS9Q">
+                    <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
                         <GoogleMap
                             mapContainerStyle={{height: "100%", width: "100%"}}
                             center={{lat: -34.397, lng: 150.644}}
                             zoom={8}
-                            className="absolute top-0 left-0 w-full h-full"
                         >
                             <Marker
                                 position={markerPosition}

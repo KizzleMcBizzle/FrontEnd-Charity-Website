@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Logo from './Logo.png';
 import './index.css';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api';
 import { ClipLoader } from 'react-spinners';
 
 export default function OrgReg() {
@@ -18,13 +18,16 @@ export default function OrgReg() {
         }, 2000);
     };
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCUJWRIxsDjUetd8qHzIOXEsD6CUUJJS9Q&libraries=places`;
-        script.async = true;
-        script.onload = () => setMapLoaded(true);
-        document.body.appendChild(script);
-    }, []);
+useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w&libraries=places`;
+    script.async = true;
+    script.onload = () => {
+        setMapLoaded(true);
+        console.log('Google Maps API script loaded');
+    };
+    document.body.appendChild(script);
+}, []);
 
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" id="org-reg">
@@ -130,12 +133,11 @@ export default function OrgReg() {
                                 Google Marker
                             </label>
                             <div className="relative h-64 w-full rounded-md overflow-hidden">
-                                <LoadScript googleMapsApiKey="AIzaSyCUJWRIxsDjUetd8qHzIOXEsD6CUUJJS9Q">
+                                <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
                                     <GoogleMap
                                         mapContainerStyle={{height: "100%", width: "100%"}}
                                         center={{lat: -34.397, lng: 150.644}}
                                         zoom={8}
-                                        className="absolute top-0 left-0 w-full h-full"
                                     >
                                         <Marker
                                             position={markerPosition}
