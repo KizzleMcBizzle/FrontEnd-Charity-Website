@@ -32,6 +32,7 @@ import TeachingDetails from './TeachingDetails';
 import MedCaseDetails from './MedCaseDetails';
 import Donor from './Donor';
 import ToyDonReqFetch from './ToyDonReqFetch.js'
+import FoodDonReqFetch from './FoodDonReqFetch.js';
 import AuthProvider from "./AuthProvider";
 import PrivateRoute from "./PrivateRoute.js";
 
@@ -113,6 +114,7 @@ function App() {
         <Route path="/medications/:id" element={<MedicationDetails />} />
         <Route path="/teachings/:id" element={<TeachingDetails />} />
         <Route path="/toys" element={<ToyDonReqFetch />} />
+        <Route path="/food" element={<FoodDonReqFetch />} />
       </Routes>
     </AuthProvider>
     </div>

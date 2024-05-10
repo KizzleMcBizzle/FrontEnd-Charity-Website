@@ -15,6 +15,7 @@ import ViewOrgs from './ViewOrgs'
 import ViewDonors from './ViewDonors'
 import BloodList from './BloodList';    
 import ToyDonReq from './ToyDonReq'
+import FoodDonReq from './FoodDonReq'
 
 import MedicationList from './MedicationList'
 import MedCaseList from './MedCaseList'
@@ -201,18 +202,36 @@ export default function Example({title , results , type}) {
 
     ]
 
+    } else if(type==='FoodDonReq'){
+        page = <FoodDonReq
+               food ={filteredResults}
+              />;
+    
+
+    /*fetches all subcategories from the result*/
+    
+   // const foodName = Array.from(new Set(results.map(item => item.name))).map(name => ({ value: name, checked: false }));
+    const foodType = Array.from(new Set(results.map(item => item.type))).map(type=> ({ value: type, checked: false}));
+    
+    
+    filters = [
+         /*   {
+                id: 'name',
+                name: 'Food Name',
+                options: foodName
+            },*/
+            {
+                id: 'type',
+                name: 'Food Type',
+                options: foodType
+            }
+            
+    ]
+
     }
 
 
-
-
-
-
-
-
-
-    }
-
+}
      const filterByCategory = (categoryName) => {
         
         let filteredItems = [];
@@ -328,6 +347,19 @@ export default function Example({title , results , type}) {
             if (selectedFilters.length > 0) {
                 let tempItems = selectedFilters.map((selectedCategory) => {
                     let temp = results.filter((item) => item.organizationName === selectedCategory || item.medicalSpecialty === selectedCategory || item.governorate === selectedCategory || item.area === selectedCategory);
+                    return temp;
+                });
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        else if(type==='FoodDonReq'){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.type === selectedCategory || item.name === selectedCategory);
                     return temp;
                 });
                 let merged = [].concat.apply([], tempItems);
