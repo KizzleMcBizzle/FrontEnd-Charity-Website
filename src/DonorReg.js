@@ -9,6 +9,7 @@ import {useNavigate} from "react-router-dom";
 export default function DonorReg() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [name, setName] = useState('');
     const [gender, setGender] = useState('');
     const [email, setEmail] = useState('');
     const [contactNumber, setContactNumber] = useState('');
@@ -57,9 +58,10 @@ export default function DonorReg() {
     const navigate = useNavigate();
 
     const handlesubmit = (e) => {
+        setName(firstName + " " + lastName);
         e.preventDefault();
         let regobj = {
-            firstName, lastName, verified, email, password, contactNumber, address, area, governorate,
+            firstName, lastName, name: firstName + " " + lastName, verified, email, password, contactNumber, address, area, governorate,
             role, clinicLocation, specialty, proBonoCases, subjects, proBonoClasses,
             proBonoStudents, document
         };
