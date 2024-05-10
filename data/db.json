@@ -126,8 +126,6 @@
       "role": "admin",
       "id": "admin@hopeunity.com"
     }
-    
-    
   ],
   "orgs": [
     {
@@ -487,14 +485,13 @@
       "id": "8370",
       "firstName": "Omar",
       "lastName": "Ahmed",
-      "verified": false,
+      "verified": true,
       "email": "omarelhussein03@gmail.com",
       "password": "dqwdwq",
       "contactNumber": "01028106688",
       "address": "Some Random Address",
       "area": "dqwdq",
       "governorate": "dqwqdw",
-      "volunteer": false,
       "role": "Regular",
       "clinicLocation": "",
       "specialty": "",
@@ -508,7 +505,7 @@
       "id": "951d",
       "firstName": "Omar",
       "lastName": "Ahmed",
-      "verified": false,
+      "verified": true,
       "email": "omarelhussein03@gmail.com",
       "password": "dqw",
       "contactNumber": "01028106688",
@@ -526,44 +523,25 @@
       "document": "Omar_document"
     },
     {
-      "id": "fae3",
+      "id": "c36f",
       "firstName": "Omar",
       "lastName": "Ahmed",
-      "verified": false,
+      "name": "Omar Ahmed",
+      "verified": true,
       "email": "omarelhussein03@gmail.com",
-      "password": "dwqdwq",
+      "password": "dwqqd",
       "contactNumber": "01028106688",
-      "address": "Some Random Address",
-      "area": "dqwdqw",
-      "governorate": "dwqqdw",
-      "role": "teacher",
+      "address": "Market El-Zahraa Street, Burj Aliaa 3, 5th Floor apartment number 12, Same District as Wadi Degla Club",
+      "area": "dqw",
+      "governorate": "dqwwdq",
+      "role": "Regular",
       "clinicLocation": "",
       "specialty": "",
       "proBonoCases": "",
-      "subjects": "dwq",
-      "proBonoClasses": "12",
-      "proBonoStudents": "21",
-      "document": "Omar_document"
-    },
-    {
-      "id": "bee9",
-      "firstName": "Omar",
-      "lastName": "Ahmed",
-      "verified": false,
-      "email": "omarelhussein03@gmail.com",
-      "password": "321312",
-      "contactNumber": "01028106688",
-      "address": "Some Random Address",
-      "area": "dwqqdw",
-      "governorate": "dwq",
-      "role": "doctor",
-      "clinicLocation": "dqwdwq",
-      "specialty": "dqwdqw",
-      "proBonoCases": "2133",
       "subjects": "",
       "proBonoClasses": "",
       "proBonoStudents": "",
-      "document": "Omar_document"
+      "document": ""
     }
   ],
   "admin": [
@@ -938,5 +916,6 @@
   
 
     
+  
   
   

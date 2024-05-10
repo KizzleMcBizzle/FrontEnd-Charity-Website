@@ -38,7 +38,8 @@ import PrivateRoute from "./PrivateRoute.js";
 import DonorPrivateRoute from './DonorPrivateRoute.js'
 import BookDetails from './ViewBookDetails.js';
 import BookDonReqFetch from './BookDonReqFetch.js';
-import ViewBookDetails from './ViewBookDetails.js';
+import ViewBookDetails from './ViewBookDetails.js';import DonorDetails from './DonorDetails.js'
+
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
                 <Route path="orgs" element={<ViewOrgsFetch />} />
                 <Route path="donors" element={<ViewDonorsFetch />} />
                 <Route path="orgs/:id" element={<OrgDetails flag={true} />} />
+                <Route path="donors/:id" element={<DonorDetails />} />
               </Routes>
             </>} />
           </Routes>
