@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from './useFetch'; // Assuming this is the correct import for useFetch
 
 
@@ -7,7 +7,7 @@ import useFetch from './useFetch'; // Assuming this is the correct import for us
 const OrgDetails = ({flag}) => {
     const { id } = useParams();
     const { data: org, error, isPending } = useFetch('http://localhost:4000/orgs/' + id);
-    const history = useHistory();
+    const navigate = useNavigate();
 
 
 
@@ -16,7 +16,7 @@ const OrgDetails = ({flag}) => {
             method: 'DELETE',
         }).then(() => {
             console.log('Organization deleted!') 
-            history.push('/admin/req/orgs');
+            navigate('/admin/req/orgs');
         });
     };
 

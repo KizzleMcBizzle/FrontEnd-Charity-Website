@@ -6,7 +6,7 @@ import SignIn from './SignIn';
 import Footer from "./Footer";
 import FilterSideBar from "./FilterSideBar";
 import AdminNav from "./AdminNav";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import OrgReqFetch from './OrgReqFetch';
 import PendingOrg from './PendingOrg';
 import PendingDonor from './PendingDonor';
@@ -38,121 +38,87 @@ import PrivateRoute from "./PrivateRoute.js";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <AuthProvider>{
-        <Switch>
-            <Route exact path="/">
-                <Navbar2 />
-                <Home />
-            </Route>
-            <Route path="/signin">
-                <Navbar2 />
-                <SignIn />
-            </Route>
-            <Route path="/donor-register">
-                <Navbar2 />
-                <DonorReg />
-            </Route>
-            <Route path="/org-register">
-                <Navbar2 />
-                <OrgReg />
-            </Route>
-            <Route exact path="/admin/changepass">
-                <AdminNav />
-              <AdminPassFetch />
-            </Route>
-            <Route exact path ="/admin/">
-              <AdminNav />
-              <Home /> {/*will be changed*/}
-            </Route>
-            <Route exact path ="/admin/profile">
-              <AdminNav />
-              <AdminFetch />
-            </Route>
-            <Route exact path= "/admin/req/donors">
-                <AdminNav />
-              <DonorReqFetch/>
-            </Route>
-            <Route exact path = "/admin/req/donors/:id">
-                <AdminNav />
-              <PendingDonor />
-            </Route>
-            <Route exact path= "/admin/req/orgs">
-              <AdminNav />
-              <OrgReqFetch />
-            </Route>
-            <Route exact path= "/admin/view/orgs">
-              <AdminNav />
-              <ViewOrgsFetch />
-            </Route>
-            <Route exact path= "/admin/view/donors">
-              <AdminNav />
-              <ViewDonorsFetch />
-            </Route>
-            <Route exact path = "/admin/req/orgs/:id">
-              <AdminNav />
-              <PendingOrg />
-            </Route>
-            <Route exact path = "/admin/view/orgs/:id">
-              <AdminNav />
-              <OrgDetails flag={true}/>
-            </Route>
+  <Router>
+    <div className="App">
+    <AuthProvider>
+    <Routes>
+        <Route path="/" element={<>
+          <Navbar2 />
+          <Home />
+        </>} />
+        <Route path="/signin" element={<>
+          <Navbar2 />
+          <SignIn />
+        </>} />
+        <Route path="/donor-register" element={<>
+          <Navbar2 />
+          <DonorReg />
+        </>} />
+        <Route path="/org-register" element={<>
+          <Navbar2 />
+          <OrgReg />
+        </>} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/admin/*" element={<>
+            <AdminNav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="changepass" element={<AdminPassFetch />} />
+              <Route path="profile" element={<AdminFetch />} />
+              <Route path="req/*" element={<>
+                <Routes>
+                  <Route path="donors" element={<DonorReqFetch />} />
+                  <Route path="donors/:id" element={<PendingDonor />} />
+                  <Route path="orgs" element={<OrgReqFetch />} />
+                  <Route path="orgs/:id" element={<PendingOrg />} />
+                </Routes>
+              </>} />
+            <Route path="view/*" element={<>
+              <Routes>
+                <Route path="orgs" element={<ViewOrgsFetch />} />
+                <Route path="donors" element={<ViewDonorsFetch />} />
+                <Route path="orgs/:id" element={<OrgDetails flag={true} />} />
+              </Routes>
+            </>} />
+          </Routes>
+        </>} />
+        </ Route>
+        <Route path="/donor" element={<>
+          <Navbar />
+          <Donor />
+        </>} />
+        <Route path="/blood" element={<>
+          <Navbar />
+          <Blood />
+        </>} />
+        <Route path="/medSupp" element={<>
+          <Navbar />
+          <MedSupp />
+        </>} />
+        <Route path="/medCase" element={<>
+          <Navbar />
+          <MedCase />
+        </>} />
+        <Route path="/medication" element={<>
+          <Navbar />
+          <Medication />
+        </>} />
+        <Route path="/teaching" element={<>
+          <Navbar />
+          <Teaching />
+        </>} />
+        <Route path="/medSupps/:id" element={<MedSuppDetails />} />
+        <Route path="/medCases/:id" element={<MedCaseDetails />} />
+        <Route path="/bloods/:id" element={<BloodDetails />} />
+        <Route path="/medications/:id" element={<MedicationDetails />} />
+        <Route path="/teachings/:id" element={<TeachingDetails />} />
+        <Route path="/toys" element={<ToyDonReqFetch />} />
+      </Routes>
+    </AuthProvider>
+    </div>
+  <Footer />
+  </Router>
 
-            <Route exact path="/donor">
-                <Navbar />
-              <Donor></Donor>
-          </Route>
-            <Route path="/blood">
-                <Navbar />
-              <Blood></Blood>
-          </Route>
-          <Route path='/medSupp'>
-              <Navbar />
-            <MedSupp></MedSupp>
-          </Route>
-          <Route path='/medCase'>
-              <Navbar />
-            <MedCase></MedCase>
-          </Route>
-          <Route path='/medication'>
-              <Navbar />
-            <Medication></Medication>
-          </Route>
-          <Route path='/teaching'>
-              <Navbar />
-            <Teaching></Teaching>
-          </Route>
-          <Route path="/medSupps/:id">
-              <Navbar />
-              <MedSuppDetails />
-            </Route>
-           <Route path="/medCases/:id">
-               <Navbar />
-              <MedCaseDetails />
-           </Route>
-            <Route path="/bloods/:id">
-                <Navbar />
-              <BloodDetails></BloodDetails>
-            </Route>
-            <Route path="/medications/:id">
-                <Navbar />
-              <MedicationDetails></MedicationDetails>
-            </Route>
-            <Route path="/teachings/:id">
-                <Navbar />
-              <TeachingDetails></TeachingDetails>
-            </Route>
-            <Route path="/toys">
-              <ToyDonReqFetch />
-            </Route>
-
-            
-          </Switch>
-          }</AuthProvider>
-        </div>
-        <Footer />
-    </Router>
   );
 }
 

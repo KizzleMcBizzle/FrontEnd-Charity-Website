@@ -1,14 +1,14 @@
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const TeachingDetails = () => {
   const { id } = useParams();
   const { data: teaching, error, isPending } = useFetch('http://localhost:4000/teaching/' + id);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     alert(`You have fulfilled the request succesfully.`);
-    history.push("/");
+    navigate("/");
   }
 
   return (

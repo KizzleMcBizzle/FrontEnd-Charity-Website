@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from './useFetch'; // Assuming this is the correct import for useFetch
 import { saveAs } from 'file-saver';
 
@@ -7,7 +7,7 @@ import { saveAs } from 'file-saver';
 const PendingOrg = () => {
     const { id } = useParams();
     const { data: org, error, isPending } = useFetch('http://localhost:4000/orgs/' + id);
-    const history = useHistory();
+    const navigate = useNavigate();
 
 
     const handleAccept = () => {
@@ -19,7 +19,7 @@ const PendingOrg = () => {
             body: JSON.stringify({ ...org, verified: true }) // Update the status field to 'accepted'
         }).then(() => {
             console.log('Organization accepted!');
-            history.push('/admin/req/orgs');
+            navigate('/admin/req/orgs');
         });
     };
 
@@ -28,7 +28,7 @@ const PendingOrg = () => {
             method: 'DELETE',
         }).then(() => {
             console.log('Organization deleted!') 
-            history.push('/admin/req/orgs');
+            navigate('/admin/req/orgs');
         });
     };
 

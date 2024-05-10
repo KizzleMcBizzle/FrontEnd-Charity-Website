@@ -1,11 +1,11 @@
 import React from "react";
-import { Redirect, Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "./AuthProvider";
 
-const PrivateRoute = ({children}) => {
+const PrivateRoute = () => {
   const user = useAuth();
-  if (!user.token) return <Redirect to="/signin" />;
-  return children;
+  if (!user.role === 'admin') return <Navigate to="/signin" />;
+  return <Outlet />;
 };
 
 export default PrivateRoute;

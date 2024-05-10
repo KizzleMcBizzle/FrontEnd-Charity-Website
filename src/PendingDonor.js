@@ -1,12 +1,12 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from './useFetch'; // Assuming this is the correct import for useFetch
 import { saveAs } from 'file-saver';
 
 const PendingDonor = () => {
     const { id } = useParams();
     const { data: donor, error, isPending } = useFetch('http://localhost:4000/donors/' + id);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleAccept = () => {
         fetch('http://localhost:4000/donors/' + donor.id, {
@@ -17,7 +17,7 @@ const PendingDonor = () => {
             body: JSON.stringify({ ...donor, verified: true }) // Update the status field to 'accepted'
         }).then(() => {
             console.log('Donor accepted!');
-            history.push('/admin/req/donors');
+            navigate('/admin/req/donors');
         });
     };
 
@@ -26,7 +26,7 @@ const PendingDonor = () => {
         method: 'DELETE',
     }).then(() => {
         console.log('Donor deleted!') 
-        history.push('/admin/req/donors');
+        navigate('/admin/req/donors');
     })
     };
 

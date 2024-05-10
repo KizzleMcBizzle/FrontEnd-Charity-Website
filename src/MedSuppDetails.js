@@ -1,14 +1,14 @@
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const MedSuppDetails = () => {
   const { id } = useParams();
   const { data: medSupp, error, isPending } = useFetch('http://localhost:4000/medicalSupp/' + id);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     alert(`You have donated succesfully`);
-    history.push("/");
+    navigate("/");
   }
 
   return (
