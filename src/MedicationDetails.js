@@ -15,6 +15,7 @@ const MedicationDetails = () => {
         <article>
           <h2>Medication Name: {medication.name}</h2>
           <p>Use: { medication.use }</p>
+          <p>Disease: {medication.disease}</p>
         </article>
       )}
     </div>

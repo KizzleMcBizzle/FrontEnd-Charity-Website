@@ -99,36 +99,47 @@ function App() {
             </Route>
 
             <Route exact path="/donor">
+                <Navbar />
               <Donor></Donor>
           </Route>
             <Route path="/blood">
+                <Navbar />
               <Blood></Blood>
           </Route>
           <Route path='/medSupp'>
+              <Navbar />
             <MedSupp></MedSupp>
           </Route>
           <Route path='/medCase'>
+              <Navbar />
             <MedCase></MedCase>
           </Route>
           <Route path='/medication'>
+              <Navbar />
             <Medication></Medication>
           </Route>
           <Route path='/teaching'>
+              <Navbar />
             <Teaching></Teaching>
           </Route>
           <Route path="/medSupps/:id">
+              <Navbar />
               <MedSuppDetails />
             </Route>
            <Route path="/medCases/:id">
+               <Navbar />
               <MedCaseDetails />
            </Route>
             <Route path="/bloods/:id">
+                <Navbar />
               <BloodDetails></BloodDetails>
             </Route>
             <Route path="/medications/:id">
+                <Navbar />
               <MedicationDetails></MedicationDetails>
             </Route>
             <Route path="/teachings/:id">
+                <Navbar />
               <TeachingDetails></TeachingDetails>
             </Route>
 

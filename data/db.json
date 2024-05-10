@@ -529,26 +529,31 @@
     {
       "title": "Medication Requests",
       "name": "medication",
+      "img": "https://www.denverhealthmedicalplan.org/sites/default/files/styles/full_width/public/2020-04/meds.jpg?itok=2vmpbc0T",
       "id": "1"
     },
     {
       "title": "Blood Donation Requests",
       "name": "blood",
+      "img": "https://www.osfhealthcare.org/blog/wp-content/uploads/2021/12/shutterstock_1307440612-1.jpg",
       "id": "2"
     },
     {
       "title": "Teaching Posts",
       "name": "teaching",
+      "img": "https://degrees.snu.edu/hs-fs/hubfs/AdobeStock_518657595.jpeg",
       "id": "3"
     },
     {
       "title": "Medical Supplies",
       "name": "medSupp",
+      "img": "https://www.ultrateb.com/assets/img/General%20Medical%20Consumables.jpg",
       "id": "4"
     },
     {
       "title": "Medical Cases",
       "name": "medCase",
+      "img": "https://www.shutterstock.com/image-photo/medicine-healthcare-people-concept-female-600nw-2188588635.jpg",
       "id": "5"
     }
   ],
@@ -623,7 +628,7 @@
       "hospital_area": "Downtown",
       "governorate": "New York",
       "hospital_address": "321 Oak Street, New York, NY",
-      "location": "https://www.google.com/maps/place/40.7056,-74.0118" 
+      "location": "https://www.google.com/maps/place/40.7056,-74.0118"
     }
   ],
   "medicalSupp": [
@@ -716,7 +721,9 @@
       "address": "123 Main Street, Cityville, State, Country",
       "organizationName": "Medical Care Organization",
       "medicalSpecialty": "General Surgery",
-      "id": "1"
+      "id": "1",
+      "governorate": "Cityville",
+      "area": "Downtown"
     },
     {
       "patientName": "Jane Doe",
@@ -727,7 +734,9 @@
       "address": "456 Elm Street, Townsville, State, Country",
       "organizationName": "Healthcare Services",
       "medicalSpecialty": "Cardiology",
-      "id": "2"
+      "id": "2",
+      "governorate": "Townsville",
+      "area": "Uptown"
     },
     {
       "patientName": "Bob Smith",
@@ -738,7 +747,9 @@
       "address": "789 Oak Street, Cityville, State, Country",
       "organizationName": "Medical Care Organization",
       "medicalSpecialty": "Neurology",
-      "id": "3"
+      "id": "3",
+      "governorate": "Cityville",
+      "area": "Suburbs"
     }
   ]
 }

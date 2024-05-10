@@ -25,6 +25,8 @@ const MedCaseDetails = () => {
         <p>Address: { medCase.address }</p>
         <p>Organization Name: { medCase.organizationName }</p>
         <p>Medical Speciality: { medCase.medicalSpecialty }</p>
+        <p>Governorate: { medCase.governorate }</p>
+        <p>Area: { medCase.area }</p>
         <a href={medCase.location}>Location</a>
         <button onClick={handleClick}>Fulfill The Request</button>
       </article>
