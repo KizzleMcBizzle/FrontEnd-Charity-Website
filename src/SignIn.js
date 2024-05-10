@@ -4,18 +4,25 @@ import './index.css'
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import {Link} from "react-router-dom";
+import { useAuth } from "./AuthProvider";
+
+
 export default function Example() {
+
     
 
     const [input, setInput] = useState({
-        username: "",
+        email: "",
         password: "",
     });
 
+    const auth = useAuth();
+
     const handleSubmitEvent = (e) => {
         e.preventDefault();
-        if (input.username !== "" && input.password !== "") {
-          //dispatch action from hooks
+        if (input.email !== "" && input.password !== "") {
+          auth.loginAction(input);
+            return;
         }
         alert("please provide a valid input");
     };
