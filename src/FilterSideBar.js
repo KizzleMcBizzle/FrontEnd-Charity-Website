@@ -59,7 +59,7 @@ export default function Example({title , results , type}) {
         }
 
         /*fetches all subcategories from the result*/
-        subCategories= Array.from(new Set(results.map(item => item.organizationType))).map(role => ({ name: role }));
+        subCategories = Array.from(new Set(results.map(item => item.organizationType))).map(role => ({ name: role }));
 
 
 

@@ -31,11 +31,15 @@ import MedicationDetails from './MedicationDetails';
 import TeachingDetails from './TeachingDetails';
 import MedCaseDetails from './MedCaseDetails';
 import Donor from './Donor';
+import AuthProvider from "./AuthProvider";
+import PrivateRoute from "./PrivateRoute.js";
+
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <AuthProvider>{
         <Switch>
             <Route exact path="/">
                 <Navbar2 />
@@ -130,6 +134,7 @@ function App() {
 
             
           </Switch>
+          }</AuthProvider>
         </div>
         <Footer />
     </Router>
