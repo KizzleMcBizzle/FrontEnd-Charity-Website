@@ -1,131 +1,133 @@
 {
-  "login": [
+  "user": [
     {
       "email": "john.doe@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "a099"
+      "id": "john.doe@example.com"
     },
     {
       "email": "alice.johnson@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "b9bf"
+      "id": "alice.johnson@example.com"
     },
     {
       "email": "bob.williams@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "102a"
+      "id": "bob.williams@example.com"
     },
     {
       "email": "eve.brown@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "5f36"
+      "id": "eve.brown@example.com"
     },
     {
       "email": "charlie.davis@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "de17"
+      "id": "charlie.davis@example.com"
     },
     {
       "email": "grace.taylor@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "e690"
+      "id": "grace.taylor@example.com"
     },
     {
       "email": "henry.clark@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "2541"
+      "id": "henry.clark@example.com"
     },
     {
       "email": "ivy.wilson@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "0a17"
+      "id": "ivy.wilson@example.com"
     },
     {
       "email": "kevin.lee@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "775b"
+      "id": "kevin.lee@example.com"
     },
     {
       "email": "laura.smith@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "145a"
+      "id": "laura.smith@example.com"
     },
     {
       "email": "michael.brown@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "ead3"
+      "id": "amichael.brown@example.com"
     },
     {
       "email": "nancy.wilson@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "c5d3"
+      "id": "nancy.wilson@example.com"
     },
     {
       "email": "olivia.jones@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "94af"
+      "id": "olivia.jones@example.com"
     },
     {
       "email": "peter.garcia@example.com",
       "password": "1234",
       "role": "organization",
-      "id": "1acb"
+      "id": "peter.garcia@example.com"
     },
     {
       "email": "alice.smith@example.com",
       "password": "1234",
       "role": "doctor",
-      "id": "dbae"
+      "id": "alice.smith@example.com"
     },
     {
       "email": "bob.johnson@example.com",
       "password": "1234",
       "role": "teacher",
-      "id": "65e3"
+      "id": "bob.johnson@example.com"
     },
     {
       "email": "charlie.brown@example.com",
       "password": "1234",
       "role": "doctor",
-      "id": "7974"
+      "id": "charlie.brown@example.com"
     },
     {
       "email": "diana.williams@example.com",
       "password": "1234",
       "role": "teacher",
-      "id": "98da"
+      "id": "diana.williams@example.com"
     },
     {
       "email": "eva.davis@example.com",
       "password": "1234",
       "role": "Regular",
-      "id": "a5d0"
+      "id": "eva.davis@example.com"
     },
     {
       "email": "frank.martinez@example.com",
       "password": "1234",
       "role": "teacher",
-      "id": "acb7"
+      "id": "frank.martinez@example.com"
     },
     {
       "email": "admin@hopeunity.com",
       "password": "admin",
       "role": "admin",
-      "id": "8732"
+      "id": "admin@hopeunity.com"
     }
+    
+    
   ],
   "orgs": [
     {
@@ -718,62 +720,60 @@
       "area": "Suburbs"
     }
   ],
-  "toys": [
-    {
-      "name": "Toy 1",
-      "age_range": "3-5",
-      "gender": "Any",
-      "category": "Board Games",
-      "id": "f39d"
-    },
-    {
-      "name": "Toy 2",
-      "age_range": "6-8",
-      "gender": "Male",
-      "category": "Sports",
-      "id": "8ad4"
-    },
-    {
-      "name": "Toy 3",
-      "age_range": "3-5",
-      "gender": "Female",
-      "category": "Dolls",
-      "id": "ddd5"
-    },
-    {
-      "name": "Toy 4",
-      "age_range": "8-10",
-      "gender": "Any",
-      "category": "Stuffed Toys",
-      "id": "8bb8"
-    },
-    {
-      "name": "Toy 5",
-      "age_range": "6-8",
-      "gender": "Female",
-      "category": "Outdoor",
-      "id": "a55e"
-    },
-    {
-      "name": "Toy 6",
-      "age_range": "8-10",
-      "gender": "Male",
-      "category": "Cars",
-      "id": "231b"
-    },
-    {
-      "name": "Toy 7",
-      "age_range": "3-5",
-      "gender": "Any",
-      "category": "Stuffed Toys",
-      "id": "4969"
-    },
-    {
-      "name": "Toy 8",
-      "age_range": "8-10",
-      "gender": "Female",
-      "category": "Board Games",
-      "id": "9974"
-    }
-  ]
-}
+
+    "toys": [
+      {
+        "name": "Toy 1",
+        "age_range": "3-5",
+        "gender": "Any",
+        "category": "Board Games"
+        
+      },
+      {
+        "name": "Toy 2",
+        "age_range": "6-8",
+        "gender": "Male",
+        "category": "Sports"
+        
+      },
+      {
+        "name": "Toy 3",
+        "age_range": "3-5",
+        "gender": "Female",
+        "category": "Dolls"
+        
+      },
+      {
+        "name": "Toy 4",
+        "age_range": "8-10",
+        "gender": "Any",
+        "category": "Stuffed Toys"
+        
+      },
+      {
+        "name": "Toy 5",
+        "age_range": "6-8",
+        "gender": "Female",
+        "category": "Outdoor"
+      },
+      {
+        "name": "Toy 6",
+        "age_range": "8-10",
+        "gender": "Male",
+        "category": "Cars"
+      },
+      {
+        "name": "Toy 7",
+        "age_range": "3-5",
+        "gender": "Any",
+        "category": "Stuffed Toys"
+      },
+      {
+        "name": "Toy 8",
+        "age_range": "8-10",
+        "gender": "Female",
+        "category": "Board Games"
+      }
+    ]
+  }
+  

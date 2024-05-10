@@ -3,37 +3,50 @@ import Logo from './Logo.png'
 import './index.css'
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useAuth } from "./AuthProvider";
+import { toast } from "react-toastify";
 
 
 export default function Example() {
 
-    
+    const [username, setUsername] = useState();
+    const [password, setPassword] = useState();
 
-    const [input, setInput] = useState({
-        email: "",
-        password: "",
-    });
+   const navigate = useNavigate();
+   const auth = useAuth();
 
-    const auth = useAuth();
+   const [input, setInput] = useState({
+    email: "",
+    password: "",
+   });
 
     const handleSubmitEvent = (e) => {
+        console.log(input);
         e.preventDefault();
         if (input.email !== "" && input.password !== "") {
-          auth.loginAction(input);
-            return;
-        }
-        alert("please provide a valid input");
+            try {
+            auth.loginAction(input);
+            } catch (err) {
+                console.error(err);
+                alert("Invalid credentials");
+                return;
+            }
+            
+          } else{
+            alert("pleae provide a valid input");
+          }
     };
 
+    
+
     const handleInput = (e) => {
-        const { name, value } = e.target;
-        setInput((prev) => ({
-          ...prev,
-          [name]: value,
-        }));
-      };
+    const { name, value } = e.target;
+    setInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
 
     const [isOpen, setIsOpen] = useState(false);

@@ -164,7 +164,8 @@ export default function Example({title , results , type}) {
                     options: nameOptions
                 }
         ]
-      }else if(type==='ToyDonReq'){
+      }
+      else if(type==='ToyDonReq'){
         page = <ToyDonReq
                toys ={filteredResults}
               />;
@@ -202,13 +203,6 @@ export default function Example({title , results , type}) {
     ]
 
     }
-
-
-
-
-
-
-
 
 
     }

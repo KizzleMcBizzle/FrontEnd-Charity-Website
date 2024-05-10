@@ -4,41 +4,44 @@ import { useNavigate } from "react-router-dom";
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem("site") || "");
+  const [role, setRole] = useState(null);
   const navigate = useNavigate();
+
+
   const loginAction = async (data) => {
     try {
-      const response = await fetch("your-api-endpoint/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      const res = await response.json();
-      if (res.data) {
-        setUser(res.data.user);
-        setToken(res.token);
-        localStorage.setItem("site", res.token);
-        navigate("/dashboard");
-        return;
-      }
-      throw new Error(res.message);
+        const response = await fetch("http://localhost:4000/user/" + data.email, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        const res = await response.json();
+        if (res && res.password === data.password) {
+            console.log(res);
+            setRole(res.role);
+            if(role === 'admin')
+                navigate("/admin");
+            if(role === 'Regular' || role === 'doctor' || role === 'teacher')
+                navigate("/donor");
+            if(role ==='organization')
+                navigate("/organization")
+            return;
+        }
+        throw new Error(res.message);
     } catch (err) {
-      console.error(err);
+        console.error(err);
     }
-  };
+};
+
 
   const logOut = () => {
-    setUser(null);
-    setToken("");
-    localStorage.removeItem("site");
-    navigate("/login");
+    setRole(null);
+    navigate("/");
   };
 
   return (
-    <AuthContext.Provider value={{ token, user, loginAction, logOut }}>
+    <AuthContext.Provider value={{ role, loginAction, logOut}}>
       {children}
     </AuthContext.Provider>
   );
