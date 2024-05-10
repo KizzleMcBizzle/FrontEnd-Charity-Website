@@ -3,404 +3,370 @@
     {
       "email": "john.doe@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "a099"
     },
     {
       "email": "alice.johnson@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "b9bf"
     },
     {
       "email": "bob.williams@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "102a"
     },
     {
       "email": "eve.brown@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "5f36"
     },
     {
       "email": "charlie.davis@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "de17"
     },
     {
       "email": "grace.taylor@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "e690"
     },
     {
       "email": "henry.clark@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "2541"
     },
     {
       "email": "ivy.wilson@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "0a17"
     },
     {
       "email": "kevin.lee@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "775b"
     },
     {
       "email": "laura.smith@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "145a"
     },
     {
       "email": "michael.brown@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "ead3"
     },
     {
       "email": "nancy.wilson@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "c5d3"
     },
     {
       "email": "olivia.jones@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "94af"
     },
     {
       "email": "peter.garcia@example.com",
       "password": "1234",
-      "role": "organization"
+      "role": "organization",
+      "id": "1acb"
     },
     {
       "email": "alice.smith@example.com",
       "password": "1234",
-      "role": "doctor"
+      "role": "doctor",
+      "id": "dbae"
     },
     {
       "email": "bob.johnson@example.com",
       "password": "1234",
-      "role": "teacher"
+      "role": "teacher",
+      "id": "65e3"
     },
     {
       "email": "charlie.brown@example.com",
       "password": "1234",
-      "role": "doctor"
+      "role": "doctor",
+      "id": "7974"
     },
     {
       "email": "diana.williams@example.com",
       "password": "1234",
-      "role": "teacher"
+      "role": "teacher",
+      "id": "98da"
     },
     {
       "email": "eva.davis@example.com",
       "password": "1234",
-      "role": "Regular"
+      "role": "Regular",
+      "id": "a5d0"
     },
     {
       "email": "frank.martinez@example.com",
       "password": "1234",
-      "role": "teacher"
+      "role": "teacher",
+      "id": "acb7"
     },
     {
       "email": "admin@hopeunity.com",
       "password": "admin",
-      "role": "admin"
+      "role": "admin",
+      "id": "8732"
     }
   ],
-  
   "orgs": [
     {
       "id": "1",
-      "name": "Resala",
-      "verified": true,
       "firstName": "John",
       "lastName": "Doe",
+      "verified": true,
       "gender": "male",
       "email": "john.doe@example.com",
       "password": "1234",
       "contactNumber": "1234567890",
-      "organizationName": "Charity A",
+      "name": "Charity A",
       "organizationType": "Non-profit",
-      "organizationAddress": {
-        "area": "Example Area",
-        "governorate": "Example Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "123 Main Street, Exampleville",
+      "area": "Example Area",
+      "governorate": "Example Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "3",
-      "name": "Remas",
-      "verified": false,
       "firstName": "Alice",
       "lastName": "Johnson",
+      "verified": false,
       "gender": "female",
       "email": "alice.johnson@example.com",
       "password": "1234",
       "contactNumber": "4567890123",
-      "organizationName": "Charity C",
+      "name": "Charity C",
       "organizationType": "Hospital",
-      "organizationAddress": {
-        "area": "Hospital Area",
-        "governorate": "Hospital Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "456 Hospital Avenue, Hospitalville",
+      "area": "Hospital Area",
+      "governorate": "Hospital Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "4",
-      "name": "Charity D",
-      "verified": true,
       "firstName": "Bob",
       "lastName": "Williams",
+      "verified": true,
       "gender": "male",
       "email": "bob.williams@example.com",
       "password": "1234",
       "contactNumber": "8765432109",
-      "organizationName": "Charity D",
+      "name": "Charity D",
       "organizationType": "Church",
-      "organizationAddress": {
-        "area": "Church Street",
-        "governorate": "Church Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "789 Church Street, Churchtown",
+      "area": "Church Street",
+      "governorate": "Church Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "5",
-      "name": "Charity E",
-      "verified": true,
       "firstName": "Eve",
       "lastName": "Brown",
+      "verified": true,
       "gender": "female",
       "email": "eve.brown@example.com",
       "password": "1234",
       "contactNumber": "2345678901",
-      "organizationName": "Charity E",
+      "name": "Charity E",
       "organizationType": "Mosque",
-      "organizationAddress": {
-        "area": "Mosque Road",
-        "governorate": "Mosque Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "101 Mosque Road, Mosquetown",
+      "area": "Mosque Road",
+      "governorate": "Mosque Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "6",
-      "name": "Charity F",
-      "verified": true,
       "firstName": "Charlie",
       "lastName": "Davis",
+      "verified": true,
       "gender": "male",
       "email": "charlie.davis@example.com",
       "password": "1234",
       "contactNumber": "7654321098",
-      "organizationName": "Charity F",
+      "name": "Charity F",
       "organizationType": "Orphanage",
-      "organizationAddress": {
-        "area": "Orphanage Lane",
-        "governorate": "Orphanage Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "11 Orphanage Lane, Orphanagetown",
+      "area": "Orphanage Lane",
+      "governorate": "Orphanage Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "7",
-      "name": "Charity G",
-      "verified": true,
       "firstName": "Grace",
       "lastName": "Taylor",
+      "verified": true,
       "gender": "female",
       "email": "grace.taylor@example.com",
       "password": "1234",
       "contactNumber": "3456789012",
-      "organizationName": "Charity G",
+      "name": "Charity G",
       "organizationType": "School",
-      "organizationAddress": {
-        "area": "School Street",
-        "governorate": "School Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "22 School Street, Schoolville",
+      "area": "School Street",
+      "governorate": "School Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "8",
-      "name": "Charity H",
-      "verified": false,
       "firstName": "Henry",
       "lastName": "Clark",
+      "verified": false,
       "gender": "male",
       "email": "henry.clark@example.com",
       "password": "1234",
       "contactNumber": "4567890123",
-      "organizationName": "Charity H",
+      "name": "Charity H",
       "organizationType": "Community Center",
-      "organizationAddress": {
-        "area": "Community Center Avenue",
-        "governorate": "Community Center Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "33 Community Center Avenue, Communitytown",
+      "area": "Community Center Avenue",
+      "governorate": "Community Center Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "9",
-      "name": "Charity I",
-      "verified": true,
       "firstName": "Ivy",
       "lastName": "Wilson",
+      "verified": true,
       "gender": "female",
       "email": "ivy.wilson@example.com",
       "password": "1234",
       "contactNumber": "5678901234",
-      "organizationName": "Charity I",
+      "name": "Charity I",
       "organizationType": "Animal Shelter",
-      "organizationAddress": {
-        "area": "Animal Shelter Lane",
-        "governorate": "Animal Shelter Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "44 Animal Shelter Lane, Animaltown",
+      "area": "Animal Shelter Lane",
+      "governorate": "Animal Shelter Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "11",
-      "name": "Charity K",
-      "verified": true,
       "firstName": "Kevin",
       "lastName": "Lee",
+      "verified": true,
       "gender": "male",
       "email": "kevin.lee@example.com",
       "password": "1234",
       "contactNumber": "7890123456",
-      "organizationName": "Charity K",
+      "name": "Charity K",
       "organizationType": "Food Bank",
-      "organizationAddress": {
-        "area": "Food Bank Street",
-        "governorate": "Food Bank Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "55 Food Bank Street, Foodtown",
+      "area": "Food Bank Street",
+      "governorate": "Food Bank Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "12",
-      "name": "Charity L",
-      "verified": false,
       "firstName": "Laura",
       "lastName": "Smith",
+      "verified": false,
       "gender": "female",
       "email": "laura.smith@example.com",
       "password": "1234",
       "contactNumber": "8901234567",
-      "organizationName": "Charity L",
+      "name": "Charity L",
       "organizationType": "Community Garden",
-      "organizationAddress": {
-        "area": "Community Garden Lane",
-        "governorate": "Community Garden Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "66 Community Garden Lane, Gardentown",
+      "area": "Community Garden Lane",
+      "governorate": "Community Garden Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "13",
-      "name": "Charity M",
-      "verified": false,
       "firstName": "Michael",
       "lastName": "Brown",
+      "verified": false,
       "gender": "male",
       "email": "michael.brown@example.com",
       "password": "1234",
       "contactNumber": "9012345678",
-      "organizationName": "Charity M",
+      "name": "Charity M",
       "organizationType": "Community Center",
-      "organizationAddress": {
-        "area": "Community Center Road",
-        "governorate": "Community Center Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "77 Community Center Road, Roadtown",
+      "area": "Community Center Road",
+      "governorate": "Community Center Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "14",
-      "name": "Charity N",
-      "verified": false,
       "firstName": "Nancy",
       "lastName": "Wilson",
+      "verified": false,
       "gender": "female",
       "email": "nancy.wilson@example.com",
       "password": "1234",
       "contactNumber": "0123456789",
-      "organizationName": "Charity N",
+      "name": "Charity N",
       "organizationType": "Library",
-      "organizationAddress": {
-        "area": "Library Avenue",
-        "governorate": "Library Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "88 Library Avenue, Librarytown",
+      "area": "Library Avenue",
+      "governorate": "Library Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "15",
-      "name": "Charity O",
-      "verified": false,
       "firstName": "Olivia",
       "lastName": "Jones",
+      "verified": false,
       "gender": "female",
       "email": "olivia.jones@example.com",
       "password": "1234",
       "contactNumber": "3456789012",
-      "organizationName": "Charity O",
+      "name": "Charity O",
       "organizationType": "Animal Shelter",
-      "organizationAddress": {
-        "area": "Animal Shelter Road",
-        "governorate": "Animal Shelter Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "99 Animal Shelter Road, Sheltertown",
+      "area": "Animal Shelter Road",
+      "governorate": "Animal Shelter Governorate",
+      "document": "qualification_proof"
     },
     {
       "id": "16",
-      "name": "Charity P",
-      "verified": false,
       "firstName": "Peter",
       "lastName": "Garcia",
+      "verified": false,
       "gender": "male",
       "email": "peter.garcia@example.com",
       "password": "1234",
       "contactNumber": "4567890123",
-      "organizationName": "Charity P",
+      "name": "Charity P",
       "organizationType": "School",
-      "organizationAddress": {
-        "area": "School Avenue",
-        "governorate": "School Governorate"
-      },
-      "document": {
-        "type": "qualification_proof",
-        "url": "http://example.com/qualification_proof.pdf"
-      }
+      "organizationAddress": "111 School Avenue, Schooldistrict",
+      "area": "School Avenue",
+      "governorate": "School Governorate",
+      "document": "qualification_proof"
+    },
+    {
+      "id": "87ca",
+      "firstName": "Omar",
+      "lastName": "Ahmed",
+      "verified": false,
+      "gender": "male",
+      "email": "omarelhussein03@gmail.com",
+      "password": "dwqdqwwq",
+      "contactNumber": "01028106688",
+      "name": "dqwqwddq",
+      "organizationType": "dwqdqw",
+      "organizationAddress": "Some Random Address",
+      "area": "dwqqwddqw",
+      "governorate": "dqwqwddq",
+      "document": "dqwqwddq_document"
     }
   ],
   "donors": [
@@ -562,31 +528,31 @@
       "id": "1",
       "name": "Fluoxetine",
       "use": "Treatment of depression, anxiety, OCD",
-      "disease":"OCD"
+      "disease": "OCD"
     },
     {
       "id": "2",
       "name": "Sertraline",
       "use": "Treatment of depression, anxiety, OCD",
-      "disease":"OCD"
+      "disease": "OCD"
     },
     {
       "id": "3",
       "name": "Escitalopram",
       "use": "Treatment of depression, anxiety",
-      "disease":"Anxiety"
+      "disease": "Anxiety"
     },
     {
       "id": "4",
       "name": "Citalopram",
       "use": "Treatment of depression, anxiety",
-      "disease":"Anxiety"
+      "disease": "Anxiety"
     },
     {
       "id": "5",
       "name": "Mirtazapine",
       "use": "Treatment of depression, anxiety, insomnia",
-      "disease":"Insomnia"
+      "disease": "Insomnia"
     }
   ],
   "blood": [
@@ -752,60 +718,62 @@
       "area": "Suburbs"
     }
   ],
-
-    "toys": [
-      {
-        "name": "Toy 1",
-        "age_range": "3-5",
-        "gender": "Any",
-        "category": "Board Games"
-        
-      },
-      {
-        "name": "Toy 2",
-        "age_range": "6-8",
-        "gender": "Male",
-        "category": "Sports"
-        
-      },
-      {
-        "name": "Toy 3",
-        "age_range": "3-5",
-        "gender": "Female",
-        "category": "Dolls"
-        
-      },
-      {
-        "name": "Toy 4",
-        "age_range": "8-10",
-        "gender": "Any",
-        "category": "Stuffed Toys"
-        
-      },
-      {
-        "name": "Toy 5",
-        "age_range": "6-8",
-        "gender": "Female",
-        "category": "Outdoor"
-      },
-      {
-        "name": "Toy 6",
-        "age_range": "8-10",
-        "gender": "Male",
-        "category": "Cars"
-      },
-      {
-        "name": "Toy 7",
-        "age_range": "3-5",
-        "gender": "Any",
-        "category": "Stuffed Toys"
-      },
-      {
-        "name": "Toy 8",
-        "age_range": "8-10",
-        "gender": "Female",
-        "category": "Board Games"
-      }
-    ]
-  }
-  
+  "toys": [
+    {
+      "name": "Toy 1",
+      "age_range": "3-5",
+      "gender": "Any",
+      "category": "Board Games",
+      "id": "f39d"
+    },
+    {
+      "name": "Toy 2",
+      "age_range": "6-8",
+      "gender": "Male",
+      "category": "Sports",
+      "id": "8ad4"
+    },
+    {
+      "name": "Toy 3",
+      "age_range": "3-5",
+      "gender": "Female",
+      "category": "Dolls",
+      "id": "ddd5"
+    },
+    {
+      "name": "Toy 4",
+      "age_range": "8-10",
+      "gender": "Any",
+      "category": "Stuffed Toys",
+      "id": "8bb8"
+    },
+    {
+      "name": "Toy 5",
+      "age_range": "6-8",
+      "gender": "Female",
+      "category": "Outdoor",
+      "id": "a55e"
+    },
+    {
+      "name": "Toy 6",
+      "age_range": "8-10",
+      "gender": "Male",
+      "category": "Cars",
+      "id": "231b"
+    },
+    {
+      "name": "Toy 7",
+      "age_range": "3-5",
+      "gender": "Any",
+      "category": "Stuffed Toys",
+      "id": "4969"
+    },
+    {
+      "name": "Toy 8",
+      "age_range": "8-10",
+      "gender": "Female",
+      "category": "Board Games",
+      "id": "9974"
+    }
+  ]
+}
