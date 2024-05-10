@@ -21,7 +21,7 @@ export default function DonorReg() {
     const [clinicLocation, setClinicLocation] = useState('');
     const [specialty, setSpecialty] = useState('');
     const [proBonoCases, setProBonoCases] = useState('');
-    const [verified, setVerified] = useState(false);
+    const [verified, setVerified] = useState(true);
     const [subjects, setSubjects] = useState('');
     const [proBonoClasses, setProBonoClasses] = useState('');
     const [proBonoStudents, setProBonoStudents] = useState('');
@@ -173,7 +173,12 @@ export default function DonorReg() {
                     </div>
                     <div className="flex items-center">
                         <input type="checkbox" id="volunteer" name="volunteer" checked={volunteer}
-                               onChange={(e) => setVolunteer(e.target.checked)}
+                               onChange={(e) => {
+                                    setVolunteer(e.target.checked);
+                                    if (e.target.checked) {
+                                        setVerified(false);
+                                    }
+                                }}
                                className="form-checkbox h-5 w-5 text-custom-green"/>
                         <label htmlFor="volunteer" className="ml-2 text-sm text-gray-900">I want to volunteer for a
                             role</label>
@@ -183,7 +188,8 @@ export default function DonorReg() {
                             <label htmlFor="role" className="block text-sm font-medium leading-6 text-gray-900">
                                 Role
                             </label>
-                            <select id="role" name="role" value={role} onChange={(e) => setRole(e.target.value)}
+                            <select id="role" name="role" value={role}
+                                    onChange={(e) => setRole(e.target.value)}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6">
                                 <option value="">Select a role...</option>
                                 <option value="doctor">Doctor</option>
