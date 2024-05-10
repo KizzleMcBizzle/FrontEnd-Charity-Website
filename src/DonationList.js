@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const DonationList = ({ donations, title }) => {
     return (
-        <div className="donation-list bg-white p-5 rounded-lg shadow-md w-full flex items-center flex-col">
+        <div className="donation-list bg-gray-100 p-5 rounded-lg shadow-md w-full flex items-center flex-col">
             <h2 className="text-2xl font-bold mb-5">{title}</h2>
             {donations.map(donation => (
                 <div className="donation-preview mb-4 p-4 bg-white rounded-lg shadow border border-gray-200 flex items-center" key={donation.id}>

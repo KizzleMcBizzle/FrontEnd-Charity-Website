@@ -1,19 +1,21 @@
-
 import useFetch from "./useFetch";
 import MedSuppList from "./MedSuppList";
 
 const MedSupp = () => {
-
 const { error, isPending, data: medSupps } = useFetch('http://localhost:4000/medicalSupp')
-  
+
     return (
-      <div className="medSupp">
-        <h2>Medical Supplies</h2>
-        { error && <div>{ error }</div> }
-        { isPending && <div>Loading...</div> }
+      <div className="donor bg-gray-100 min-h-screen flex flex-col items-center justify-center pt-4">
+        <h2 className="text-4xl font-bold mb-5">Medical Supplies</h2>
+        {error && <div className="text-red-500">{error}</div>}
+          {isPending &&
+              <div className="flex justify-center items-center h-screen">
+                  <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
+              </div>
+          }
         { medSupps && <MedSuppList medSupps={medSupps} /> }
       </div>
     );
   }
-   
+
   export default MedSupp;

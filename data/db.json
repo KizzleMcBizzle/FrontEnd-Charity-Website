@@ -527,28 +527,28 @@
     {
       "type": "Gloves",
       "use": "Protection for hands during medical procedures",
-      "image": "https://m.media-amazon.com/images/I/51GwvFEpPhL._AC_UF894,1000_QL80_.jpg",
+      "image": "https://images.wsj.net/im-216848/?width=1280&size=1",
       "quantity": "200",
       "id": "1"
     },
     {
       "type": "Gown",
       "use": "Protection against bodily fluids",
-      "image": "https://m.media-amazon.com/images/I/31xJ0T-EzZL._AC_SY580_.jpg",
+      "image": "https://static.scientificamerican.com/sciam/cache/file/0FE4B2DD-6F18-4B70-89C069B5928FC4FE_source.jpg?w=600",
       "quantity": "50",
       "id": "2"
     },
     {
       "type": "Face Shield",
       "use": "Protection for face and eyes",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqISnQNOYJcki13Ex_js5sj75iwkr-dH9FVziCgt79rA&s",
+      "image": "https://eg.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/022536/1.jpg?4084",
       "quantity": "30",
       "id": "3"
     },
     {
       "type": "Thermometer",
       "use": "Measuring body temperature",
-      "image": "https://elveniaregenerative.com/wp-content/uploads/2022/07/3.jpg",
+      "image": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/10/thermometers-1296x728-header.jpg?w=1155&h=1528",
       "quantity": "20",
       "id": "4"
     }
