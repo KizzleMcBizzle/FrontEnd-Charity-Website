@@ -5,6 +5,30 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import {Link} from "react-router-dom";
 export default function Example() {
+    
+
+    const [input, setInput] = useState({
+        username: "",
+        password: "",
+    });
+
+    const handleSubmitEvent = (e) => {
+        e.preventDefault();
+        if (input.username !== "" && input.password !== "") {
+          //dispatch action from hooks
+        }
+        alert("please provide a valid input");
+    };
+
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+        setInput((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      };
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     const closeModal = () => {
@@ -30,7 +54,7 @@ export default function Example() {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" onSubmit={handleSubmitEvent}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                                 Email address
@@ -42,6 +66,7 @@ export default function Example() {
                                     type="email"
                                     autoComplete="email"
                                     required
+                                    onChange={handleInput}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"
                                 />
                             </div>
@@ -65,6 +90,7 @@ export default function Example() {
                                     type="password"
                                     autoComplete="current-password"
                                     required
+                                    onChange={handleInput}
                                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"
                                 />
                             </div>

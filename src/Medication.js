@@ -1,6 +1,5 @@
-
 import useFetch from "./useFetch";
-import MedicationList from "./MedicationList";
+import FilterSideBar from "./FilterSideBar";
 
 const Medication = () => {
  
@@ -10,8 +9,15 @@ const { error, isPending, data: medications } = useFetch('http://localhost:4000/
       <div className="medication">
         <h2>Medication Requests</h2>
         { error && <div>{ error }</div> }
-        { isPending && <div>Loading...</div> }
-        { medications && <MedicationList medications={medications} /> }
+        {isPending &&
+            <div className="flex justify-center items-center h-screen">
+                <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
+            </div>
+        }
+        { medications && <FilterSideBar 
+                          results={medications} 
+                          title="Medication Requests"
+                          type="medicationReq"/> }
       </div>
     );
   }

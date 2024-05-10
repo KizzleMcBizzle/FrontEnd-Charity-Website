@@ -16,6 +16,8 @@ import ViewDonors from './ViewDonors'
 import BloodList from './BloodList';    
 import ToyDonReq from './ToyDonReq'
 
+import MedicationList from './MedicationList'
+import MedCaseList from './MedCaseList'
 
 
 
@@ -26,7 +28,6 @@ function classNames(...classes) {
 
 export default function Example({title , results , type}) {
 
-    console.log(results);
     
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [open, setOpen] = useState(false)
@@ -65,7 +66,7 @@ export default function Example({title , results , type}) {
 
 
         /*fetches all subcategories from the result*/
-        subCategories= Array.from(new Set(results.map(item => item.organizationType))).map(role => ({ name: role }));
+        subCategories = Array.from(new Set(results.map(item => item.organizationType))).map(role => ({ name: role }));
 
 
 
@@ -94,6 +95,50 @@ export default function Example({title , results , type}) {
 
 
             subCategories = Array.from(new Set(results.map(item => item.role))).map(role => ({ name: role }));    
+      }
+      else if(type === "medicationReq" ){
+        page =<MedicationList medications={filteredResults}></MedicationList>
+
+        const diseaseOptions = Array.from(new Set(results.map(item => item.disease))).map(dis => ({ value: dis, checked: false }));
+        
+        filters = [
+                {
+                    id: 'disease',
+                    name: 'Disease',
+                    options: diseaseOptions
+                }
+        ]
+      }
+      else if(type === "medicalCase" ){
+        page =<MedCaseList medCases={filteredResults}></MedCaseList>
+
+        const specialityOptions = Array.from(new Set(results.map(item => item.medicalSpecialty))).map(speciality => ({ value: speciality, checked: false }));
+        const organizationOptions = Array.from(new Set(results.map(item => item.organizationName))).map(organization => ({ value: organization, checked: false}));
+        const areaOptions = Array.from(new Set(results.map(item => item.area))).map(area => ({ value: area, checked: false}));
+        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false}));
+        
+        filters = [
+                {
+                    id: 'area',
+                    name: 'Area',
+                    options: areaOptions
+                },
+                {
+                    id: 'governorate',
+                    name: 'Governorate',
+                    options: governorateOptions
+                },
+                {
+                    id: 'organizationName',
+                    name: 'Organization Name',
+                    options: organizationOptions
+                },
+                {
+                    id: 'medicalSpecialty',
+                    name: 'Medical Speciality',
+                    options: specialityOptions
+                },
+        ]
       }
       else if(type === "bloodDonations" ){
         page =<BloodList bloods={filteredResults}></BloodList>
@@ -250,6 +295,28 @@ export default function Example({title , results , type}) {
                 }
         }
         
+        else if(type ==="medicationReq"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.disease === selectedCategory);
+                    return temp;
+                });
+                setFilteredResults(tempItems.flat());
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        else if(type ==="medicalCase"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.organizationName === selectedCategory || item.medicalSpecialty === selectedCategory || item.governorate === selectedCategory || item.area === selectedCategory);
+                    return temp;
+                });
+                setFilteredResults(tempItems.flat());
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
 
 
 

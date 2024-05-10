@@ -32,11 +32,15 @@ import TeachingDetails from './TeachingDetails';
 import MedCaseDetails from './MedCaseDetails';
 import Donor from './Donor';
 import ToyDonReqFetch from './ToyDonReqFetch.js'
+import AuthProvider from "./AuthProvider";
+import PrivateRoute from "./PrivateRoute.js";
+
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <AuthProvider>{
         <Switch>
             <Route exact path="/">
                 <Navbar2 />
@@ -96,36 +100,47 @@ function App() {
             </Route>
 
             <Route exact path="/donor">
+                <Navbar />
               <Donor></Donor>
           </Route>
             <Route path="/blood">
+                <Navbar />
               <Blood></Blood>
           </Route>
           <Route path='/medSupp'>
+              <Navbar />
             <MedSupp></MedSupp>
           </Route>
           <Route path='/medCase'>
+              <Navbar />
             <MedCase></MedCase>
           </Route>
           <Route path='/medication'>
+              <Navbar />
             <Medication></Medication>
           </Route>
           <Route path='/teaching'>
+              <Navbar />
             <Teaching></Teaching>
           </Route>
           <Route path="/medSupps/:id">
+              <Navbar />
               <MedSuppDetails />
             </Route>
            <Route path="/medCases/:id">
+               <Navbar />
               <MedCaseDetails />
            </Route>
             <Route path="/bloods/:id">
+                <Navbar />
               <BloodDetails></BloodDetails>
             </Route>
             <Route path="/medications/:id">
+                <Navbar />
               <MedicationDetails></MedicationDetails>
             </Route>
             <Route path="/teachings/:id">
+                <Navbar />
               <TeachingDetails></TeachingDetails>
             </Route>
             <Route path="/toys">
@@ -134,6 +149,7 @@ function App() {
 
             
           </Switch>
+          }</AuthProvider>
         </div>
         <Footer />
     </Router>
