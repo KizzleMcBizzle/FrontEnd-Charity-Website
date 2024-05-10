@@ -3,7 +3,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon, UserIcon } from '@heroicons/react/24/outline'
 import {BellIcon, XMarkIcon} from "@heroicons/react/16/solid";
 import logo from './Logo.png'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const navigation = {
     categories: [
@@ -52,6 +52,7 @@ function classNames(...classes) {
 
 export default function Example() {
     const [open, setOpen] = useState(false)
+    const navigate = useNavigate();
 
     return (
         <div className="bg-white">
@@ -121,10 +122,10 @@ export default function Example() {
                                                             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                                                                 <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                                                             </div>
-                                                            <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                                            <button onClick={() =>navigate(item.href)} className="mt-6 block font-medium text-gray-900">
                                                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                                 {item.name}
-                                                            </a>
+                                                            </button>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -140,9 +141,9 @@ export default function Example() {
                                                         >
                                                             {section.items.map((item) => (
                                                                 <li key={item.name} className="flow-root">
-                                                                    <a href={item.href} className="-m-2 block p-2 text-gray-500">
+                                                                    <button onClick={() =>navigate(item.href)} className="-m-2 block p-2 text-gray-500">
                                                                         {item.name}
-                                                                    </a>
+                                                                    </button>
                                                                 </li>
                                                             ))}
                                                         </ul>
@@ -156,9 +157,9 @@ export default function Example() {
                                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                                     {navigation.pages.map((page) => (
                                         <div key={page.name} className="flow-root">
-                                            <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                                            <button onClick={() =>navigate(page.href)} className="-m-2 block p-2 font-medium text-gray-900">
                                                 {page.name}
-                                            </a>
+                                            </button>
                                         </div>
                                     ))}
                                 </div>
@@ -244,10 +245,10 @@ export default function Example() {
                                                                                             className="object-cover object-center"
                                                                                         />
                                                                                     </div>
-                                                                                    <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                                                                    <button onClick={() =>navigate(item.href)} className="mt-6 block font-medium text-gray-900">
                                                                                         <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                                                         {item.name}
-                                                                                    </a>
+                                                                                    </button>
                                                                                 </div>
                                                                             ))}
                                                                         </div>
@@ -264,9 +265,9 @@ export default function Example() {
                                                                                     >
                                                                                         {section.items.map((item) => (
                                                                                             <li key={item.name} className="flex">
-                                                                                                <a href={item.href} className="hover:text-gray-800">
+                                                                                                <button onClick={() =>navigate(item.href)} className="hover:text-gray-800">
                                                                                                     {item.name}
-                                                                                                </a>
+                                                                                                </button>
                                                                                             </li>
                                                                                         ))}
                                                                                     </ul>
@@ -284,13 +285,13 @@ export default function Example() {
                                     ))}
 
                                     {navigation.pages.map((page) => (
-                                        <a
+                                        <button
                                             key={page.name}
-                                            href={page.href}
+                                            onClick={() =>navigate(page.href)}
                                             className="flex items-center text-sm font-medium text-gray-700 hover:text-custom-green"
                                         >
                                             {page.name}
-                                        </a>
+                                        </button>
                                     ))}
                                 </div>
                             </Popover.Group>
@@ -347,9 +348,9 @@ export default function Example() {
                                             >
                                                 <Popover.Panel className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                     <div className="py-1">
-                                                        <a href="/admin/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
-                                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                                                        <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                                                        <button onClick={() =>navigate("/admin/profile")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</button>
+                                                        <button onClick={() =>navigate("/")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</button>
+                                                        <button onClick={() =>navigate("/")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</button>
                                                     </div>
                                                 </Popover.Panel>
                                             </Transition>

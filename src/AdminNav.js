@@ -6,6 +6,7 @@ import logo from './Logo.png'
 import {Link, useNavigate} from "react-router-dom";
 import { useAuth } from './AuthProvider';
 
+
 const navigation = {
     categories: [
         {
@@ -46,6 +47,7 @@ const navigation = {
         { name: 'Contact', href: '#' },
     ],
 }
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
