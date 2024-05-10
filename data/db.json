@@ -896,8 +896,8 @@
     
       "books": [
         {
-          "id": 1,
-          "bookName": "To Kill a Mockingbird",
+          "id": "1",
+          "name": "To Kill a Mockingbird",
           "author": "Harper Lee",
           "language": "English",
           "edition": "1st Edition",
@@ -906,8 +906,8 @@
           "quantityRequired": 10
         },
         {
-          "id": 2,
-          "bookName": "1984",
+          "id": "2",
+          "name": "1984",
           "author": "George Orwell",
           "language": "English",
           "edition": "Revised Edition",
@@ -916,8 +916,8 @@
           "quantityRequired": 15
         },
         {
-          "id": 3,
-          "bookName": "Pride and Prejudice",
+          "id": "3",
+          "name": "Pride and Prejudice",
           "author": "Jane Austen",
           "language": "English",
           "edition": "Vintage Classics",

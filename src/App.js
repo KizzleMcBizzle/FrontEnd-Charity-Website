@@ -36,7 +36,9 @@ import FoodDonReqFetch from './FoodDonReqFetch.js';
 import AuthProvider from "./AuthProvider";
 import PrivateRoute from "./PrivateRoute.js";
 import DonorPrivateRoute from './DonorPrivateRoute.js'
-
+import BookDetails from './ViewBookDetails.js';
+import BookDonReqFetch from './BookDonReqFetch.js';
+import ViewBookDetails from './ViewBookDetails.js';
 
 function App() {
   return (
@@ -92,7 +94,7 @@ function App() {
         {/*<Route element={<DonorPrivateRoute />}>*/}
           <Route path="/donor" element={<>
             <Navbar />
-            <Donor />
+            <Donor/>
           </>} />
           <Route path="/blood" element={<>
             <Navbar />
@@ -113,6 +115,14 @@ function App() {
           <Route path="/teaching" element={<>
             <Navbar />
             <Teaching />
+          </>} />
+          <Route path="/Books" element={<>
+            <Navbar />
+            <BookDonReqFetch/>
+          </>} />
+          <Route path="/Books/:id" element={<>
+            <Navbar />
+            <ViewBookDetails/>
           </>} />
           <Route path="/medSupps/:id" element={<MedSuppDetails />} />
           <Route path="/medCases/:id" element={<MedCaseDetails />} />

@@ -16,6 +16,7 @@ import ViewDonors from './ViewDonors'
 import BloodList from './BloodList';    
 import ToyDonReq from './ToyDonReq'
 import FoodDonReq from './FoodDonReq'
+import BookDonReq from './BookDonReq'
 
 import MedicationList from './MedicationList'
 import MedCaseList from './MedCaseList'
@@ -227,13 +228,13 @@ export default function Example({title , results , type}) {
                 options: foodType
             }
             
-    ]
+    ]}else if(type ==='BookDonReq'){
+        page = <BookDonReq
+                books= {filteredResults}/>
+
     }
 
-
-    }
-
-
+}
 
      const filterByCategory = (categoryName) => {
         
