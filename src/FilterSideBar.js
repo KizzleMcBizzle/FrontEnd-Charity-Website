@@ -13,7 +13,9 @@ import styled from 'styled-components';
 import { useEffect } from 'react'
 import ViewOrgs from './ViewOrgs'
 import ViewDonors from './ViewDonors'
-import BloodList from './BloodList'
+import BloodList from './BloodList';    
+import ToyDonReq from './ToyDonReq'
+
 
 
 
@@ -23,6 +25,8 @@ function classNames(...classes) {
 }
 
 export default function Example({title , results , type}) {
+
+    console.log(results);
     
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [open, setOpen] = useState(false)
@@ -56,7 +60,9 @@ export default function Example({title , results , type}) {
         }else if(type ==='adminViewOrgs'){
             page = <ViewOrgs 
                     orgs = {filteredResults}/>
+
         }
+
 
         /*fetches all subcategories from the result*/
         subCategories= Array.from(new Set(results.map(item => item.organizationType))).map(role => ({ name: role }));
@@ -113,18 +119,47 @@ export default function Example({title , results , type}) {
                     options: nameOptions
                 }
         ]
-      }
+      }else if(type==='ToyDonReq'){
+        page = <ToyDonReq
+               toys ={filteredResults}
+              />;
+    
+
+    /*fetches all subcategories from the result*/
+    
+    const toyName = Array.from(new Set(results.map(item => item.name))).map(name => ({ value: name, checked: false }));
+    const age_range = Array.from(new Set(results.map(item => item.age_range))).map(age_range=> ({ value: age_range, checked: false}));
+    const gender = Array.from(new Set(results.map(item => item.gender))).map(gender => ({ value: gender, checked: false}));
+    const category = Array.from(new Set(results.map(item => item.category))).map(category => ({ value: category, checked: false}));
+    
+    filters = [
+            {
+                id: 'name',
+                name: 'Toy Name',
+                options: toyName
+            },
+            {
+                id: 'age_range',
+                name: 'Age Rating',
+                options: age_range
+            },
+            {
+                id: 'gender',
+                name: 'Gender',
+                options: gender
+            },
+            {
+                id: 'category',
+                name: 'Category',
+                options: category
+            }
+
+    ]
+
+    }
     }
 
-
-    
-  
-
-   
-    
-        
-
-    const filterByCategory = (categoryName) => {
+     const filterByCategory = (categoryName) => {
         
         let filteredItems = [];
 
@@ -203,6 +238,18 @@ export default function Example({title , results , type}) {
                 setFilteredResults([...results]);
                 }
         }
+        else if(type==='ToyDonReq'){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.age_range === selectedCategory || item.gender === selectedCategory || item.category === selectedCategory);
+                    return temp;
+                });
+                setFilteredResults(tempItems.flat());
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        
 
 
 
@@ -427,4 +474,5 @@ export default function Example({title , results , type}) {
             </div>
         </div>
     )
+
 }

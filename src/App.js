@@ -31,6 +31,7 @@ import MedicationDetails from './MedicationDetails';
 import TeachingDetails from './TeachingDetails';
 import MedCaseDetails from './MedCaseDetails';
 import Donor from './Donor';
+import ToyDonReqFetch from './ToyDonReqFetch.js'
 
 function App() {
   return (
@@ -126,6 +127,9 @@ function App() {
             </Route>
             <Route path="/teachings/:id">
               <TeachingDetails></TeachingDetails>
+            </Route>
+            <Route path="/toys">
+              <ToyDonReqFetch />
             </Route>
 
             
