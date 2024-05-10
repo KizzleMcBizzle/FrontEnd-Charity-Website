@@ -124,7 +124,7 @@ function App() {
         <Route element={<DonorPrivateRoute />}>
           <Route path="/donor" element={<>
             <Navbar />
-            <Donor />
+            <ToyDonReqFetch />
           </>} />
           <Route path="/blood" element={<>
             <Navbar />

@@ -76,7 +76,7 @@ const PendingOrg = () => {
                                     Organization Name
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {org.organizationName}
+                                    {org.name}
                                 </dd>
                             </div>
                             <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -116,7 +116,7 @@ const PendingOrg = () => {
                                     Organization Address
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {org.organizationAddress.area}, {org.organizationAddress.governorate}
+                                    {org.organizationAddress}
                                 </dd>
                             </div>
                         </dl>

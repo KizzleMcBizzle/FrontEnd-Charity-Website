@@ -71,8 +71,8 @@ export default function Example({title , results , type}) {
 
 
 
-        const areaOptions = Array.from(new Set(results.map(item => item.organizationAddress.area))).map(area => ({ value: area, checked: false }));
-        const governorateOptions = Array.from(new Set(results.map(item => item.organizationAddress.governorate))).map(governorate => ({ value: governorate, checked: false}));
+        const areaOptions = Array.from(new Set(results.map(item => item.area))).map(area => ({ value: area, checked: false }));
+        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false}));
         
         filters = [
                 {
@@ -234,7 +234,7 @@ export default function Example({title , results , type}) {
     }
 
 
-}
+
      const filterByCategory = (categoryName) => {
         
         let filteredItems = [];
@@ -296,7 +296,7 @@ export default function Example({title , results , type}) {
         if(type === 'adminReqOrgs' || type ==='adminViewOrgs'){
             if (selectedFilters.length > 0) {
             let tempItems = selectedFilters.map((selectedCategory) => {
-                let temp = results.filter((item) => item.organizationAddress.area === selectedCategory || item.organizationAddress.governorate === selectedCategory);
+                let temp = results.filter((item) => item.area === selectedCategory || item.governorate === selectedCategory);
                 return temp;
             }); 
             let merged = [].concat.apply([], tempItems);
@@ -597,3 +597,4 @@ export default function Example({title , results , type}) {
         </div>
     )
 
+}

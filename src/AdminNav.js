@@ -161,7 +161,7 @@ export default function Example() {
                                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                                     {navigation.pages.map((page) => (
                                         <div key={page.name} className="flow-root">
-                                            <button href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                                            <button onClick={()=>navigate(page.href)} className="-m-2 block p-2 font-medium text-gray-900">
                                                 {page.name}
                                             </button>
                                         </div>
@@ -249,7 +249,7 @@ export default function Example() {
                                                                                             className="object-cover object-center"
                                                                                         />
                                                                                     </div>
-                                                                                    <button href={item.href} className="mt-6 block font-medium text-gray-900">
+                                                                                    <button onClick={() => navigate(item.href)} className="mt-6 block font-medium text-gray-900">
                                                                                         <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                                                         {item.name}
                                                                                     </button>
