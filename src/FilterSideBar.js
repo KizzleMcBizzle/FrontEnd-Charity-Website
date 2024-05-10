@@ -202,6 +202,15 @@ export default function Example({title , results , type}) {
     ]
 
     }
+
+
+
+
+
+
+
+
+
     }
 
      const filterByCategory = (categoryName) => {
@@ -224,6 +233,7 @@ export default function Example({title , results , type}) {
         const searchTerm = e.target.value; // Convert search term to lowercase for case-insensitive search
         setSearchItem(searchTerm);
         let filteredItems;
+        
         if(type ==="bloodDonations"){
              filteredItems = results.filter((result) =>
                 result.blood_type.toLowerCase().includes(searchTerm.toLowerCase())
@@ -266,8 +276,10 @@ export default function Example({title , results , type}) {
             let tempItems = selectedFilters.map((selectedCategory) => {
                 let temp = results.filter((item) => item.organizationAddress.area === selectedCategory || item.organizationAddress.governorate === selectedCategory);
                 return temp;
-            });
-            setFilteredResults(tempItems.flat());
+            }); 
+            let merged = [].concat.apply([], tempItems);
+            let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+            setFilteredResults(uniqueItems);
             } else {
             setFilteredResults([...results]);
             }
@@ -278,7 +290,9 @@ export default function Example({title , results , type}) {
                     let temp = results.filter((item) => item.hospital_area === selectedCategory || item.governorate === selectedCategory || item.hospital_name === selectedCategory);
                     return temp;
                 });
-                setFilteredResults(tempItems.flat());
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
                 } else {
                 setFilteredResults([...results]);
                 }
@@ -289,7 +303,9 @@ export default function Example({title , results , type}) {
                     let temp = results.filter((item) => item.age_range === selectedCategory || item.gender === selectedCategory || item.category === selectedCategory);
                     return temp;
                 });
-                setFilteredResults(tempItems.flat());
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
                 } else {
                 setFilteredResults([...results]);
                 }
@@ -301,7 +317,9 @@ export default function Example({title , results , type}) {
                     let temp = results.filter((item) => item.disease === selectedCategory);
                     return temp;
                 });
-                setFilteredResults(tempItems.flat());
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                 setFilteredResults(uniqueItems);
                 } else {
                 setFilteredResults([...results]);
                 }
@@ -312,7 +330,9 @@ export default function Example({title , results , type}) {
                     let temp = results.filter((item) => item.organizationName === selectedCategory || item.medicalSpecialty === selectedCategory || item.governorate === selectedCategory || item.area === selectedCategory);
                     return temp;
                 });
-                setFilteredResults(tempItems.flat());
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
                 } else {
                 setFilteredResults([...results]);
                 }
