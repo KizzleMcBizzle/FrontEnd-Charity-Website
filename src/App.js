@@ -89,10 +89,10 @@ function App() {
         </ Route>
        
 
-        <Route element={<DonorPrivateRoute />}>
+        {/*<Route element={<DonorPrivateRoute />}>*/}
           <Route path="/donor" element={<>
             <Navbar />
-            <ToyDonReqFetch />
+            <Donor />
           </>} />
           <Route path="/blood" element={<>
             <Navbar />
@@ -120,7 +120,7 @@ function App() {
           <Route path="/medications/:id" element={<MedicationDetails />} />
           <Route path="/teachings/:id" element={<TeachingDetails />} />
           <Route path="/toys" element={<ToyDonReqFetch />} />
-        </Route>
+        {/*</Route>*/}
 
 
 
