@@ -8,7 +8,6 @@ const { error, isPending, data: medCases } = useFetch('http://localhost:4000/med
   
     return (
       <div className="medCase">
-        <h2>Medical Cases</h2>
         { error && <div>{ error }</div> }
         {isPending &&
             <div className="flex justify-center items-center h-screen">

@@ -7,20 +7,19 @@ const MedCaseList = ({ medCases }) => {
     useEffect(() => {
         setCurrCases(medCases);
     }, [medCases]);
-  
+
     return (
-      <div className="medCase-list">
+      <div className="donor-use-req-list">
           {currMedCases.map(medCase => (
-              <div className="links" key={medCase.id}>
-                    <Link to={`/medCases/${medCase.id}`}>
-                        <h2>{ medCase.patientName }</h2>
-                     </Link>
-                     <p>{medCase.age}</p>
-                     <p>{medCase.gender}</p>
+              <div className="bg-gray-100 p-6 my-5 border-b border-gray-200 text-left shadow-md hover:shadow-lg rounded-lg transition-all duration-200 ease-in-out" key={medCase.id}>
+                    <Link to={`/medCases/${medCase.id}`} className="no-underline">
+                        <h2 className="mt-2 text-center text-2xl leading-9 tracking-tight text-gray-800 font-semibold hover:text-custom-green">{ medCase.patientName }</h2>
+                        <p className="mt-2 text-center text-l leading-9 tracking-tight text-gray-800">{medCase.medicalSpecialty}</p>
+                    </Link>
               </div>
           ))}
       </div>
     );
 }
-   
-  export default MedCaseList;
+
+export default MedCaseList;
