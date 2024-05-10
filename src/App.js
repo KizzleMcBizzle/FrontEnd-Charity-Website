@@ -35,6 +35,7 @@ import ToyDonReqFetch from './ToyDonReqFetch.js'
 import FoodDonReqFetch from './FoodDonReqFetch.js';
 import AuthProvider from "./AuthProvider";
 import PrivateRoute from "./PrivateRoute.js";
+import DonorPrivateRoute from './DonorPrivateRoute.js'
 
 
 function App() {
@@ -59,6 +60,8 @@ function App() {
           <Navbar2 />
           <OrgReg />
         </>} />
+
+        
         <Route element={<PrivateRoute />}>
           <Route path="/admin/*" element={<>
             <AdminNav />
@@ -115,6 +118,44 @@ function App() {
         <Route path="/teachings/:id" element={<TeachingDetails />} />
         <Route path="/toys" element={<ToyDonReqFetch />} />
         <Route path="/food" element={<FoodDonReqFetch />} />
+
+
+
+        <Route element={<DonorPrivateRoute />}>
+          <Route path="/donor" element={<>
+            <Navbar />
+            <Donor />
+          </>} />
+          <Route path="/blood" element={<>
+            <Navbar />
+            <Blood />
+          </>} />
+          <Route path="/medSupp" element={<>
+            <Navbar />
+            <MedSupp />
+          </>} />
+          <Route path="/medCase" element={<>
+            <Navbar />
+            <MedCase />
+          </>} />
+          <Route path="/medication" element={<>
+            <Navbar />
+            <Medication />
+          </>} />
+          <Route path="/teaching" element={<>
+            <Navbar />
+            <Teaching />
+          </>} />
+          <Route path="/medSupps/:id" element={<MedSuppDetails />} />
+          <Route path="/medCases/:id" element={<MedCaseDetails />} />
+          <Route path="/bloods/:id" element={<BloodDetails />} />
+          <Route path="/medications/:id" element={<MedicationDetails />} />
+          <Route path="/teachings/:id" element={<TeachingDetails />} />
+          <Route path="/toys" element={<ToyDonReqFetch />} />
+        </Route>
+
+
+
       </Routes>
     </AuthProvider>
     </div>
