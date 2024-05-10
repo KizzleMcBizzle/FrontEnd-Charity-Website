@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon } from '@heroicons/react/24/outline'
 import {XMarkIcon} from "@heroicons/react/16/solid";
-import { Link } from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import logo from './Logo.png'
 
 const navigation = {
@@ -72,7 +72,8 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const navigate = useNavigate();
 
 
     return (
@@ -143,10 +144,10 @@ export default function Example() {
                                                             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                                                                 <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                                                             </div>
-                                                            <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                                            <button onClick={() =>navigate(item.href)} className="mt-6 block font-medium text-gray-900">
                                                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                                 {item.name}
-                                                            </a>
+                                                            </button>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -162,9 +163,9 @@ export default function Example() {
                                                         >
                                                             {section.items.map((item) => (
                                                                 <li key={item.name} className="flow-root">
-                                                                    <a href={item.href} className="-m-2 block p-2 text-gray-500">
+                                                                    <button onClick={() =>navigate(item.href)} className="-m-2 block p-2 text-gray-500">
                                                                         {item.name}
-                                                                    </a>
+                                                                    </button>
                                                                 </li>
                                                             ))}
                                                         </ul>
@@ -265,10 +266,10 @@ export default function Example() {
                                                                                             className="object-cover object-center"
                                                                                         />
                                                                                     </div>
-                                                                                    <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                                                                    <button onClick={() =>navigate(item.href)} className="mt-6 block font-medium text-gray-900">
                                                                                         <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                                                         {item.name}
-                                                                                    </a>
+                                                                                    </button>
                                                                                 </div>
                                                                             ))}
                                                                         </div>
@@ -285,9 +286,9 @@ export default function Example() {
                                                                                     >
                                                                                         {section.items.map((item) => (
                                                                                             <li key={item.name} className="flex">
-                                                                                                <a href={item.href} className="hover:text-gray-800">
+                                                                                                <button onClick={() =>navigate(item.href)} className="hover:text-gray-800">
                                                                                                     {item.name}
-                                                                                                </a>
+                                                                                                </button>
                                                                                             </li>
                                                                                         ))}
                                                                                     </ul>
@@ -305,13 +306,13 @@ export default function Example() {
                                     ))}
 
                                     {navigation.pages.map((page) => (
-                                        <a
+                                        <button
                                             key={page.name}
-                                            href={page.href}
+                                            onClick={() =>navigate(page.href)}
                                             className="flex items-center text-sm font-medium text-gray-700 hover:text-green-600"
                                         >
                                             {page.name}
-                                        </a>
+                                        </button>
                                     ))}
                                 </div>
                             </Popover.Group>
