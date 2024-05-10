@@ -300,7 +300,7 @@ export default function Example({title , results , type}) {
         else if(type==='ToyDonReq'){
             if (selectedFilters.length > 0) {
                 let tempItems = selectedFilters.map((selectedCategory) => {
-                    let temp = results.filter((item) => item.age_range === selectedCategory || item.gender === selectedCategory || item.category === selectedCategory);
+                    let temp = results.filter((item) => item.age_range === selectedCategory || item.gender === selectedCategory || item.category === selectedCategory || item.name === selectedCategory);
                     return temp;
                 });
                 let merged = [].concat.apply([], tempItems);
