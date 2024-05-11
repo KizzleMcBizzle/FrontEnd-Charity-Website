@@ -6,13 +6,16 @@ import DonationDetailsForMedicalSupp from './DonationDetailsForMedicalSupp';
 import DonationDetailsForFood from './DonationDetailsForFood';
 import DonationDetailsForSchoolSupp from './DonationDetailsForSchoolSupp';
 import DonationDetailsForMedications from './DonationDetailsForMedications';
+import Notification from './Notification';
 
 const DonationManagementPage = () => {
   const [donations, setDonations] = useState([]);
+  const [notification, setNotification] = useState('');
 
   // Function to add a new donation to the centralized state
   const addDonation = (newDonation) => {
     setDonations([...donations, newDonation]);
+    setNotification(`Donation "${newDonation.name}" has been added.`);
   };
 
   // Function to update a donation in the centralized state
@@ -24,17 +27,20 @@ const DonationManagementPage = () => {
       return donation;
     });
     setDonations(updatedDonations);
+    setNotification(`Donation "${updatedDonation.name}" has been updated.`);
   };
 
   // Function to delete a donation from the centralized state
   const deleteDonation = (donationId) => {
     const updatedDonations = donations.filter((donation) => donation.id !== donationId);
     setDonations(updatedDonations);
+    setNotification('Donation has been deleted.');
   };
 
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">Donation Management Page</h1>
+      {notification && <Notification message={notification} />}
       {donations.length === 0 ? (
         <p>No donations available.</p>
       ) : (
@@ -57,5 +63,3 @@ const DonationManagementPage = () => {
 };
 
 export default DonationManagementPage;
-
-

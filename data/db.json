@@ -447,7 +447,7 @@
       "email": "omarelhussein03@gmail.com",
       "password": "dwqqd",
       "contactNumber": "01028106688",
-      "address": "Market El-Zahraa Street, Burj Aliaa 3, 5th Floor apartment number 12, Same District as Wadi Degla Club",
+      "address": "Some Random Address",
       "area": "dqw",
       "governorate": "dqwwdq",
       "role": "Regular",
@@ -520,6 +520,36 @@
       "name": "medCase",
       "img": "https://www.shutterstock.com/image-photo/medicine-healthcare-people-concept-female-600nw-2188588635.jpg",
       "id": "5"
+    },
+    {
+      "title": "Toys",
+      "name": "Toys",
+      "img": "https://live-production.wcms.abc-cdn.net.au/4362dff248e23a046b61041c1d664630?impolicy=wcms_crop_resize&cropH=1080&cropW=1920&xPos=0&yPos=99&width=862&height=485",
+      "id": "6"
+    },
+    {
+      "title": "Stationary Items",
+      "name": "schoolStationary",
+      "img": "https://www.promateworld.com/storage/blog/trendy-stationery-items-01-1.jpg",
+      "id": "7"
+    },
+    {
+      "title": "Books",
+      "name": "Books",
+      "img": "https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=1356&h=668&fit=crop",
+      "id": "8"
+    },
+    {
+      "title": "Clothes",
+      "name": "Clothes",
+      "img": "https://uwaterloo.ca/news/sites/ca.news/files/styles/feature_large/public/perry-merrity-ii-gprji5r4rak-unsplash.jpg?itok=zWvhOwNY",
+      "id": "9"
+    },
+    {
+      "title": "Food",
+      "name": "Food",
+      "img": "https://www.eatingwell.com/thmb/m5xUzIOmhWSoXZnY-oZcO9SdArQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg",
+      "id": "10"
     }
   ],
   "medication": [
