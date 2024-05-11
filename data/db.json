@@ -368,6 +368,7 @@
       "governorate": "dqwqwddq",
       "document": "dqwqwddq_document"
     }
+   
   ],
   "donors": [
     {
@@ -875,28 +876,33 @@
   "food": [
     {
       
-      "id": 1,
+      "id": "1",
       "name": "Apples",
+      "type":"Fruits & Vegetables",
       "quantity_required": "50 KG"
     },
     {
-      "id": 2,
-      "name": "Rice",
-      "quantity_required": "1000 KG"
+      "id": "2",
+      "name": "Salad",
+      "type": "Fresh Meals",
+      "quantity_required": "26 Servings"
     },
     {
-      "id": 3,
-      "name": "Milk",
-      "quantity_required": "100 Liters"
+      "id": "3",
+      "name": "Beans",
+      "type":"Canned Foods",
+      "quantity_required": "17 Cans"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Bread",
+      "type": "Baked Goods",
       "quantity_required": "500 Loaves"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Carrots",
+      "type": "Fruits & Vegetables",
       "quantity_required": "30 KG"
     }
   
@@ -904,34 +910,34 @@
   
     "books": [
       {
-        "id": 1,
+        "id": "1",
         "name": "Introduction to Algorithms",
         "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
         "language": "English",
         "edition": "3rd Edition",
         "summary": "Introduction to Algorithms is a book on computer programming algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. It is used as the textbook for algorithms courses at many universities and is commonly cited as a reference for algorithms in scientific papers.",
         "picture": "https://example.com/introduction-to-algorithms.jpg",
-        "quantity_required": 5
+        "quantity_required": "5"
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "Fundamentals of Physics",
         "author": "David Halliday, Robert Resnick, Jearl Walker",
         "language": "English",
         "edition": "10th Edition",
         "summary": "Fundamentals of Physics is a textbook on basic principles of physics. It covers mechanics, thermodynamics, electromagnetism, and optics. The book is widely used in introductory physics courses.",
         "picture": "https://example.com/fundamentals-of-physics.jpg",
-        "quantity_required": 7
+        "quantity_required": "7"
       },
       {
-        "id": 3,
+        "id": "3",
         "name": "Chemistry: The Central Science",
         "author": "Theodore L. Brown, H. Eugene LeMay, Bruce E. Bursten, Catherine Murphy, Patrick Woodward, Matthew E. Stoltzfus",
         "language": "English",
         "edition": "14th Edition",
         "summary": "Chemistry: The Central Science is a comprehensive textbook on chemistry. It covers various topics including atomic structure, chemical bonding, kinetics, thermodynamics, and organic chemistry.",
         "picture": "https://example.com/chemistry-the-central-science.jpg",
-        "quantity_required": 4
+        "quantity_required": "4"
       }
     ],
   
@@ -991,9 +997,7 @@
       "material": "Fleece",
       "quantity": 30
     }
-
   ],
-
   "stationaryItems": [
     {
       "id": "1",
@@ -1033,24 +1037,23 @@
     }
   ],
   "pickup_req": [
-        
     {
-        "id": 1,
-        "date": "2024-05-10",
-        "time": "14:00",
-        "location": "1234 Elm Street"
+      "id": 1,
+      "date": "2024-05-10",
+      "time": "14:00",
+      "location": "1234 Elm Street"
     },
     {
-        "id": 2,
-        "date": "2024-05-11",
-        "time": "09:30",
-        "location": "5678 Maple Avenue"
+      "id": 2,
+      "date": "2024-05-11",
+      "time": "09:30",
+      "location": "5678 Maple Avenue"
     },
     {
-        "id": 3,
-        "date": "2024-05-12",
-        "time": "16:45",
-        "location": "9101 Oak Boulevard"
+      "id": 3,
+      "date": "2024-05-12",
+      "time": "16:45",
+      "location": "9101 Oak Boulevard"
     }
-]
+  ]
 }
