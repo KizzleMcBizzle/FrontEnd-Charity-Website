@@ -60,7 +60,7 @@ function App() {
     <Routes>
         <Route path="/" element={<>
           <Navbar2 />
-          <DonationDetailsForBloodDonation />
+          <Home />
         </>} />
         <Route path="/signin" element={<>
           <Navbar2 />
