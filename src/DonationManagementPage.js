@@ -10,6 +10,7 @@ import Notification from './Notification';
 
 const DonationManagementPage = () => {
   const [donations, setDonations] = useState([]);
+  const [selectedDonation, setSelectedDonation] = useState(null);
   const [notification, setNotification] = useState('');
 
   // Function to add a new donation to the centralized state
@@ -37,6 +38,11 @@ const DonationManagementPage = () => {
     setNotification('Donation has been deleted.');
   };
 
+  // Function to handle viewing details of a donation
+  const viewDonationDetails = (donation) => {
+    setSelectedDonation(donation);
+  };
+
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">Donation Management Page</h1>
@@ -53,10 +59,21 @@ const DonationManagementPage = () => {
               <p className="text-sm text-gray-500">Status: {donation.status}</p>
               <button className="text-blue-500 mr-2" onClick={() => updateDonation({ ...donation, status: 'Pending' })}>Mark Pending</button>
               <button className="text-green-500 mr-2" onClick={() => updateDonation({ ...donation, status: 'Approved' })}>Mark Approved</button>
-              <button className="text-red-500" onClick={() => deleteDonation(donation.id)}>Delete</button>
+              <button className="text-red-500 mr-2" onClick={() => deleteDonation(donation.id)}>Delete</button>
+              <button className="text-gray-500" onClick={() => viewDonationDetails(donation)}>View Details</button>
             </li>
           ))}
         </ul>
+      )}
+      {selectedDonation && (
+        <div>
+          {/* Display details of the selected donation */}
+          <h2 className="text-lg font-semibold">{selectedDonation.name} Details</h2>
+          <p>Type: {selectedDonation.type}</p>
+          <p>Quantity: {selectedDonation.quantity}</p>
+          {/* Add more details here as needed */}
+          <button className="text-gray-500" onClick={() => setSelectedDonation(null)}>Close</button>
+        </div>
       )}
     </div>
   );
