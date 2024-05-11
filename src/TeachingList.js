@@ -6,7 +6,7 @@ const TeachingList = ({ teachings }) => {
       <div className="teaching-list">
           {teachings.map(teaching => (
               <div className="links" key={teaching.id}>
-                    <Link to={`/teachings/${teaching.id}`}>
+                    <Link to={`/donor/teaching/${teaching.id}`}>
                         <h2>{ teaching.title }</h2>
                      </Link>
               </div>

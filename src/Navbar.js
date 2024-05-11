@@ -7,42 +7,64 @@ import {Link, useNavigate} from "react-router-dom";
 
 const navigation = {
     categories: [
+        
         {
-            id: 'Requests',
-            name: 'Requests',
+            id: 'Donate',
+            name: 'Donate',
             featured: [
             ],
             sections: [
                 {
-                    id: 'Applications',
-                    name: 'Applications',
+                    id: 'Medical',
+                    name: 'Medical',
                     items: [
-                        { name: 'Donors', href: '/admin/req/donors' },
-                        { name: 'Organizations', href: '/admin/req/orgs' },
+                        { name: 'Medication Requests', href: '/donor/medication' },
+                        { name: 'Blood Donations', href: '/donor/blood' },
+                        { name: 'Medical Supplies', href: '/donor/medSupp' },
                     ],
                 },
-            ],
-        },
-        {
-            id: 'View',
-            name: 'View',
-            featured: [
-            ],
-            sections: [
                 {
-                    id: 'Registered',
-                    name: 'Registered',
+                    id: 'Pro-Bono',
+                    name: 'Pro-Bono',
                     items: [
-                        { name: 'Donors', href: '/admin/view/donors' },
-                        { name: 'Organizations', href: '/admin/view/orgs' },
+                        { name: 'Teaching Posts', href: '/donor/teaching' },
+                        { name: 'Medical cases', href: '/donor/blood' },
+                    
+                    ],
+                },
+                {
+                    id: 'Enternaimnet',
+                    name: 'Entertainment',
+                    items: [
+                        { name: 'Toys', href: '/donor/toys' },
+                        
+                    ],
+                },
+                {
+                    id: 'Education',
+                    name: 'Education',
+                    items: [
+                        { name: 'Books', href: '/donor/books' },
+                        
+                    ],
+                },
+                {
+                    id: 'Essentials',
+                    name: 'Essentials',
+                    items: [
+                        { name: 'Food', href: '/donor/food' },
+                        
                     ],
                 },
             ],
         },
+        
     ],
     pages: [
-        { name: 'About Us', href: '/admin/' },
+        { name: 'Home', href: '/donor/donor' },
+        { name: 'About Us', href: '/donor' },
         { name: 'Contact', href: '#' },
+        
     ],
 }
 
@@ -245,7 +267,7 @@ export default function Example() {
                                                                                             className="object-cover object-center"
                                                                                         />
                                                                                     </div>
-                                                                                    <button onClick={() =>navigate(item.href)} className="mt-6 block font-medium text-gray-900">
+                                                                                    <button onClick={() =>navigate(item.href) } className="mt-6 block font-medium text-gray-900">
                                                                                         <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                                                         {item.name}
                                                                                     </button>

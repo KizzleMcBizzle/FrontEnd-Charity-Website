@@ -6,7 +6,7 @@ const MedSuppList = ({ medSupps }) => {
       <div className="medSupp-list">
           {medSupps.map(medSupp => (
               <div className="links" key={medSupp.id}>
-                    <Link to={`/medSupps/${medSupp.id}`}>
+                    <Link to={`/donor/medSupps/${medSupp.id}`}>
                         <h2>{ medSupp.type }</h2>
                      </Link>
               </div>

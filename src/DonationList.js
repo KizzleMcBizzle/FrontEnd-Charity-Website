@@ -8,7 +8,7 @@ const DonationList = ({ donations, title }) => {
                 <div className="donation-preview mb-4 p-4 bg-white rounded-lg shadow border border-gray-200 flex items-center" key={donation.id}>
                     <img src={donation.img} alt={donation.type} className="w-32 h-32 object-cover rounded-lg mr-4 border border-gray-300"/>
                     <div className="donation-info w-64 h-32 flex items-center">
-                        <Link to={`/${donation.name}`} className="text-blue-500 hover:text-custom-green">
+                        <Link to={`/donor/${donation.name}`} className="text-blue-500 hover:text-custom-green">
                             <h2 className="font-semibold text-gray-800 hover:text-green-600 text-xl">{ donation.title }</h2>
                         </Link>
                         <p className="text-gray-600 text-lg">{ donation.description }</p>

@@ -512,7 +512,6 @@
       "address": "Some Random Address",
       "area": "qwd",
       "governorate": "dqw",
-      "volunteer": true,
       "role": "doctor",
       "clinicLocation": "qwd",
       "specialty": "dqwdqw",
