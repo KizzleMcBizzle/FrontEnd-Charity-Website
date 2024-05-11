@@ -50,6 +50,8 @@ import SchoolStationaryFetch from './SchoolStationaryFetch.js';
 import SchoolStationaryList from './SchoolStationaryList'
 import SchoolStationaryDetails from './SchoolStationaryDetails'
 import VehicleBookingForm from './VehicleBookingForm.js'
+import OrgProfileFetch from './OrgProfileFetch'
+import OrgPassFetch from './OrgPassFetch';
 
 
 
@@ -109,32 +111,47 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/donor" element={<Donor/>} />
-              <Route path="/blood" element={<Blood />} />
-              <Route path="/bloods/:id" element={<BloodDetails />} />
-              <Route path="/medSupp" element={<MedSupp />} />
-              <Route path="/medSupp/:id" element={<MedSuppDetails />} />
-              <Route path="/medCase" element={<MedCase />} />
-              <Route path="/medCases/:id" element={<MedCaseDetails />} />
-              <Route path="/medication" element={<Medication />} />
-              <Route path="/medication/:id" element={<MedicationDetails />} />
-              <Route path="/teaching" element={<Teaching />} />
-              <Route path="/teaching/:id" element={<TeachingDetails />} />
-              <Route path="/books" element={ <BookDonReqFetch/>} />
-              <Route path="/books/:id" element={<ViewBookDetails/>} />
-              <Route path="/toys" element={<ToyDonReqFetch/>} />
-              <Route path="/toys/:id" element={<ViewToyDetails/>} />
-              <Route path="/food" element={<FoodDonReqFetch/>} />
-              <Route path="/food/:id" element={<ViewFoodDetails/>} />
-              <Route path="/clothes" element={<ClothesFetch/>} />
-              <Route path="/clothes/:id" element={<ViewClothesDetails />} />
-              <Route path="/schoolStationary" element={<SchoolStationaryFetch />} />
-              <Route path="/schoolStationary/:id" element={<SchoolStationaryDetails />} />
+              <Route path="donor" element={<Donor/>} />
+              <Route path="blood" element={<Blood />} />
+              <Route path="bloods/:id" element={<BloodDetails />} />
+              <Route path="medSupp" element={<MedSupp />} />
+              <Route path="medSupp/:id" element={<MedSuppDetails />} />
+              <Route path="medCase" element={<MedCase />} />
+              <Route path="medCases/:id" element={<MedCaseDetails />} />
+              <Route path="medication" element={<Medication />} />
+              <Route path="medication/:id" element={<MedicationDetails />} />
+              <Route path="teaching" element={<Teaching />} />
+              <Route path="teaching/:id" element={<TeachingDetails />} />
+              <Route path="books" element={ <BookDonReqFetch/>} />
+              <Route path="books/:id" element={<ViewBookDetails/>} />
+              <Route path="toys" element={<ToyDonReqFetch/>} />
+              <Route path="toys/:id" element={<ViewToyDetails/>} />
+              <Route path="food" element={<FoodDonReqFetch/>} />
+              <Route path="food/:id" element={<ViewFoodDetails/>} />
+              <Route path="clothes" element={<ClothesFetch/>} />
+              <Route path="clothes/:id" element={<ViewClothesDetails />} />
+              <Route path="schoolStationary" element={<SchoolStationaryFetch />} />
+              <Route path="schoolStationary/:id" element={<SchoolStationaryDetails />} />
 
 
             </Routes>
-          </>} />
+            </>} />
+            
         {/*</Route>*/}
+
+        <Route path="/org/*" element={<>
+          
+          <Routes>
+          <Route path="/" element={<OrgProfileFetch />} />
+          <Route path="changepass" element={<OrgPassFetch />} />
+          
+          </Routes>
+          
+        </>} />
+
+
+            
+        
 
 
 

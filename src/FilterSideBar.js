@@ -189,8 +189,8 @@ export default function Example({title , results , type}) {
                     options: areaOptions
                 },
                 {
-                    id: 'subjects',
-                    name: 'Subjects',
+                    id: 'governorate',
+                    name: 'Governorate',
                     options: governorateOptions
                 }
         ]

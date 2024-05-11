@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ChangePassword = ({user, url, onPasswordChange}) => {
+
     const [oldPassword, setOldPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,8 +40,11 @@ const ChangePassword = ({user, url, onPasswordChange}) => {
                 body: JSON.stringify({ ...user, password: newPassword }),
             }).then(()=>{
                 setError(null);
-                setSuccess('Password changed successfully!');
-                onPasswordChange()
+                setTimeout (() => {setSuccess('Password changed successfully!');navigate(-1);}
+                , 500);
+                
+                
+                //onPasswordChange()
             })
             .catch(() =>{
                 setSuccess(null);

@@ -5,6 +5,7 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [role, setRole] = useState(null);
+  const [id,setID] = useState(null);
   const navigate = useNavigate();
 
 
@@ -20,12 +21,13 @@ const AuthProvider = ({ children }) => {
         if (res && res.password === data.password) {
             console.log(res);
             setRole(res.role);
+            setID(res.objectID);
             if(role === 'admin')
                 navigate("/admin");
             if(role === 'Regular' || role === 'doctor' || role === 'teacher')
                 navigate("/donor");
             if(role ==='organization')
-                navigate("/organization")
+                navigate("/org")
             return;
         }
         throw new Error(res.message);
@@ -41,7 +43,7 @@ const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ role, loginAction, logOut}}>
+    <AuthContext.Provider value={{ id , role, loginAction, logOut}}>
       {children}
     </AuthContext.Provider>
   );
