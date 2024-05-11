@@ -12,7 +12,7 @@ const MedSuppDetails = () => {
   }
 
   return (
-    <div className="medSupp-details">
+    <div className="donor-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
       { isPending && <div>Loading...</div> }
       { error && <div>{ error }</div> }
       { medSupp && (
