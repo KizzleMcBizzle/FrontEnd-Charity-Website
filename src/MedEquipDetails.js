@@ -9,7 +9,7 @@ const MedEquipDetails = () => {
     <div className="donor-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
       { isPending && <div>Loading...</div> }
       { error && <div>{ error }</div> }
-      { medication && (
+      { medEquip && (
         <div className="bg-white overflow-hidden shadow rounded-lg border">
           <div className="px-4 py-5 sm:px-6">
             <h2 className="text-lg leading-6 font-medium text-gray-900">Medical Equipment</h2>
