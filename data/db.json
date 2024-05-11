@@ -704,60 +704,45 @@
     {
       "title": "Introduction to Mathematics",
       "id": "1",
+      "area": "Cityville",
+      "governorate": "State",
       "number_of_students": 25,
       "address": "123 Main Street, Cityville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
-      "area": "Cityville",
-      "governorate": "State",
-      "subjects": [
-        "Mathematics",
-        "Algebra",
-        "Geometry"
-      ]
+      "subjects": "Mathematics"
     },
     {
       "title": "Basic English Language Skills",
       "id": "2",
+      "area": "Townsville",
+      "governorate": "State",
       "number_of_students": 20,
       "address": "456 Elm Street, Townsville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
-      "area": "Townsville",
-      "governorate": "State",
-      "subjects": [
-        "English",
-        "Grammar",
-        "Vocabulary"
-      ]
+      "subjects": "English"
     },
     {
       "title": "Introduction to Physics",
       "id": "3",
+      "area": "Cityville",
+      "governorate": "State",
       "number_of_students": 18,
       "address": "456 Maple Street, Cityville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=456+Maple+Street+Cityville+State+Country",
-      "area": "Cityville",
-      "governorate": "State",
-      "subjects": [
-        "Physics",
-        "Mechanics",
-        "Electromagnetism"
-      ]
+      "subjects": "Physics"
     },
     {
       "title": "Basic Spanish Language Skills",
       "id": "4",
+      "area": "Townsville",
+      "governorate": "State",
       "number_of_students": 22,
       "address": "987 Birch Street, Townsville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=987+Birch+Street+Townsville+State+Country",
-      "area": "Townsville",
-      "governorate": "State",
-      "subjects": [
-        "Spanish",
-        "Grammar",
-        "Vocabulary"
-      ]
+      "subjects": "Spanish"
     }
   ],
+  
   "medCase": [
     {
       "patientName": "John Doe",
