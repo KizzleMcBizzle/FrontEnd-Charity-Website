@@ -54,6 +54,9 @@ import MedEquip from './MedEquip.js';
 import MedEquipDetails from './MedEquipDetails.js';
 import MedDevice from './MedDevice.js';
 import MedDeviceDetails from './MedDeviceDetails.js';
+import Notification from './Notification.js'
+import BookingForm from './BookingForm'
+import DeliveryApp from './DeliveryApp';
 
 
 
@@ -65,7 +68,7 @@ function App() {
     <Routes>
         <Route path="/" element={<>
           <Navbar2 />
-          <Home />
+          <DeliveryApp />
         </>} />
         <Route path="/signin" element={<>
           <Navbar2 />
@@ -137,6 +140,12 @@ function App() {
               <Route path="schoolStationary" element={<SchoolStationaryFetch />} />
               <Route path="schoolStationary/:id" element={<SchoolStationaryDetails />} />
 
+              <Route path="view/*" element={<>
+                <Routes>
+                  <Route path="orgs" element={<ViewOrgsFetch />} />
+                  <Route path="orgs/:id" element={<OrgDetails flag={false} />} />
+                </Routes>
+              </>} />
 
             </Routes>
             </>} />
