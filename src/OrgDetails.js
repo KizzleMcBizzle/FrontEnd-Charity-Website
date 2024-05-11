@@ -64,12 +64,12 @@ const OrgDetails = ({flag}) => {
                                     Organization Name
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {org.organizationName}
+                                    {org.name}
                                 </dd>
                             </div>
                             <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                 <dt className="text-sm font-medium text-gray-500">
-                                Organization Representative
+                                    Organization Representative
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                                     {org.firstName} {org.lastName}
@@ -123,14 +123,32 @@ const OrgDetails = ({flag}) => {
                                     {org.governorate}
                                 </dd>
                             </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Google Marker
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    <a href={org.googleMapsUrl} className="mb-3">Google Maps</a>
+                                    <iframe
+                                        width="600"
+                                        height="450"
+                                        frameBorder="0"
+                                        style={{border: 0}}
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w&q=29.987350, 31.438084"
+                                        allowFullScreen=""
+                                        aria-hidden="false"
+                                        tabIndex="0"
+                                    ></iframe>
+                                </dd>
+                            </div>
                         </dl>
                     </div>
                 </div>
             )}
             <div className="buttons mt-4 px-4 py-5 sm:px-6">
-               
-                {flag && <button onClick={handleReject}
-                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Delete Account
+
+            {flag && <button onClick={handleReject}
+                                 className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Delete Account
                 </button>}
                 {flag && <button onClick={handleDownload}
                         className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Download Document
