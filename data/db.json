@@ -844,25 +844,32 @@
   ],
   "food": [
     {
-      "id": "1",
-      "type": "Fruits and Vegetables",
-      "name": "Apples"
+      
+      "id": 1,
+      "name": "Apples",
+      "quantity_required": "50 KG"
     },
     {
-      "id": "2",
-      "type": "Canned Foods",
-      "name": "Canned Soup"
+      "id": 2,
+      "name": "Rice",
+      "quantity_required": "1000 KG"
     },
     {
-      "id": "3",
-      "type": "Fresh Meals",
-      "name": "Prepared Sandwiches"
+      "id": 3,
+      "name": "Milk",
+      "quantity_required": "100 Liters"
     },
     {
-      "id": "4",
-      "type": "Baked Goods",
-      "name": "Bread"
+      "id": 4,
+      "name": "Bread",
+      "quantity_required": "500 Loaves"
+    },
+    {
+      "id": 5,
+      "name": "Carrots",
+      "quantity_required": "30 KG"
     }
+  
   ],
   
     "books": [
