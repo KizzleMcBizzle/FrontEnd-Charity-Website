@@ -151,6 +151,8 @@ function App() {
           <Route path="/medications/:id" element={<MedicationDetails />} />
           <Route path="/teachings/:id" element={<TeachingDetails />} />
           <Route path="/toys" element={<ToyDonReqFetch />} />
+          <Route path="/food" element={<ToyDonReqFetch />} />
+          <Route path="/books" element={<ToyDonReqFetch />} />
         {/*</Route>*/}
 
 
