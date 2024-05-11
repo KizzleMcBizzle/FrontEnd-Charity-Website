@@ -164,8 +164,14 @@ export default function Example() {
                                                             className="mt-6 flex flex-col space-y-6"
                                                         >
                                                             {section.items.map((item) => (
-                                                                <li key={item.name} className="flow-root">
-                                                                    <button onClick={() =>navigate(item.href)} className="-m-2 block p-2 text-gray-500">
+                                                                <li key={item.name} className="flex">
+                                                                    <button
+                                                                        onClick={() => {
+                                                                            navigate(item.href);
+                                                                            setOpen(false); // Close the dropdown
+                                                                        }}
+                                                                        className="hover:text-gray-800"
+                                                                    >
                                                                         {item.name}
                                                                     </button>
                                                                 </li>
@@ -289,7 +295,13 @@ export default function Example() {
                                                                                     >
                                                                                         {section.items.map((item) => (
                                                                                             <li key={item.name} className="flex">
-                                                                                                <button onClick={() =>navigate(item.href)} className="hover:text-gray-800">
+                                                                                                <button
+                                                                                                    onClick={() => {
+                                                                                                        navigate(item.href);
+                                                                                                        setOpen(false); // Close the dropdown
+                                                                                                    }}
+                                                                                                    className="hover:text-gray-800"
+                                                                                                >
                                                                                                     {item.name}
                                                                                                 </button>
                                                                                             </li>
