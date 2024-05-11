@@ -60,10 +60,11 @@ export default function DonorReg() {
     const handlesubmit = (e) => {
         setName(firstName + " " + lastName);
         e.preventDefault();
+        const googleMapsUrl = `https://www.google.com/maps/?q=${markerPosition.lat},${markerPosition.lng}`;
         let regobj = {
             firstName, lastName, name: firstName + " " + lastName, verified, email, password, contactNumber, address, area, governorate,
             role, clinicLocation, specialty, proBonoCases, subjects, proBonoClasses,
-            proBonoStudents, document
+            proBonoStudents, document, googleMapsUrl
         };
         console.log(regobj);
         fetch("http://localhost:4000/donors", {
@@ -224,7 +225,6 @@ export default function DonorReg() {
                    value={proBonoCases} onChange={(e) => setProBonoCases(e.target.value)}
                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
-        {mapLoaded && (
             <div>
                 <label htmlFor="area" className="block text-sm font-medium leading-6 text-gray-900">
                     Google Marker
@@ -233,7 +233,7 @@ export default function DonorReg() {
                     <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
                         <GoogleMap
                             mapContainerStyle={{height: "100%", width: "100%"}}
-                            center={{lat: -34.397, lng: 150.644}}
+                            center={markerPosition}
                             zoom={8}
                         >
                             <Marker
@@ -247,25 +247,25 @@ export default function DonorReg() {
                     </LoadScript>
                 </div>
             </div>
-        )}
     </>
-)}
-{volunteer && role === 'teacher' && (
-    <>
-        <div>
-            <label htmlFor="subjects" className="block text-sm font-medium leading-6 text-gray-900">
-                Subject(s) (if multiple separate by commas)
-            </label>
-            <input id="subjects" name="subjects" type="text" required
-                   value={subjects} onChange={(e) => setSubjects(e.target.value)}
-                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
-        </div>
-        <div>
-            <label htmlFor="proBonoClasses" className="block text-sm font-medium leading-6 text-gray-900">
-                Number of Pro-Bono Classes
-            </label>
-            <input id="proBonoClasses" name="proBonoClasses" type="number" min="0" required
-                   value={proBonoClasses} onChange={(e) => setProBonoClasses(e.target.value)}
+                    )}
+                    {volunteer && role === 'teacher' && (
+                        <>
+                            <div>
+                                <label htmlFor="subjects" className="block text-sm font-medium leading-6 text-gray-900">
+                                    Subject(s) (if multiple separate by commas)
+                                </label>
+                                <input id="subjects" name="subjects" type="text" required
+                                       value={subjects} onChange={(e) => setSubjects(e.target.value)}
+                                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+                            </div>
+                            <div>
+                                <label htmlFor="proBonoClasses"
+                                       className="block text-sm font-medium leading-6 text-gray-900">
+                                    Number of Pro-Bono Classes
+                                </label>
+                                <input id="proBonoClasses" name="proBonoClasses" type="number" min="0" required
+                                       value={proBonoClasses} onChange={(e) => setProBonoClasses(e.target.value)}
                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
         <div>

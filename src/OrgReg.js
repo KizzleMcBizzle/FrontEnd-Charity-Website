@@ -22,18 +22,18 @@ export default function OrgReg() {
         }, 2000);
     };
 
-function useScript(src) {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.async = true;
-        document.body.appendChild(script);
+    function useScript(src) {
+        useEffect(() => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = true;
+            document.body.appendChild(script);
 
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, [src]);
-}
+            return () => {
+                document.body.removeChild(script);
+            }
+        }, [src]);
+    }
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -53,23 +53,25 @@ function useScript(src) {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        let regobj = {firstName, lastName, verified, gender, email, password,
-            contactNumber, name, organizationType, organizationAddress, area, governorate, document};
+        const googleMapsUrl = `https://www.google.com/maps/?q=${markerPosition.lat},${markerPosition.lng}`;
+        let regobj = {
+            firstName, lastName, verified, gender, email, password,
+            contactNumber, name, organizationType, organizationAddress, area, governorate, document,
+            googleMapsUrl // add this line
+        };
         console.log(regobj);
-            //console.log(regobj);
-            fetch("http://localhost:4000/orgs", {
-                method: "POST",
-                headers: { 'content-type': 'application/json' },
-                body: JSON.stringify(regobj)
-            }).then((res) => {
-                toast.success('Registered successfully.')
-                toast.success('Registered successfully.')
-                setTimeout(() => {
-                    navigate('/signin');
-                }, 3000);
-            }).catch((err) => {
-                toast.error('Failed :' + err.message);
-            });
+        fetch("http://localhost:4000/orgs", {
+            method: "POST",
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(regobj)
+        }).then((res) => {
+            toast.success('Registered successfully.')
+            setTimeout(() => {
+                navigate('/signin');
+            }, 3000);
+        }).catch((err) => {
+            toast.error('Failed :' + err.message);
+        });
     }
 
 
@@ -192,12 +194,15 @@ function useScript(src) {
                     </div>
                     {/* This is supposed to be the Google Maps marker, but it's not working
                      will try and fix it later*/}
-                    {mapLoaded && (
-                        <div>
+                    <div>
+                        <label htmlFor="area" className="block text-sm font-medium leading-6 text-gray-900">
+                            Google Marker
+                        </label>
+                        <div className="relative h-64 w-full rounded-md overflow-hidden">
                             <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
                                 <GoogleMap
                                     mapContainerStyle={{height: "100%", width: "100%"}}
-                                    center={{lat: -34.397, lng: 150.644}}
+                                    center={markerPosition}
                                     zoom={8}
                                 >
                                     <Marker
@@ -210,7 +215,7 @@ function useScript(src) {
                                 </GoogleMap>
                             </LoadScript>
                         </div>
-                    )}
+                    </div>
                     <div>
                         <label htmlFor="orgDocument" className="block text-sm font-medium leading-6 text-gray-900">
                             Document Upload for Organization Verification
@@ -224,7 +229,7 @@ function useScript(src) {
                         {loading ? <ClipLoader/> : fileName &&
                             <p className="text-sm text-gray-500 mt-2">Uploaded file: {fileName}</p>}
                         <p className="text-sm text-gray-500 mt-4">
-                            As an Organization representative, upload document(s) to prove that you are a part of this
+                        As an Organization representative, upload document(s) to prove that you are a part of this
                             organization and that it is what it claims to be (school/hospital/church/mosque/non-profit)
                             to establish trust and credibility within the platform's community, facilitating partnership
                             opportunities and resource mobilization.
