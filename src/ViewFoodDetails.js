@@ -13,7 +13,7 @@ const ViewFoodDetails = () => {
         <div className="food-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {food && (
+            {food && (<>
                 <div className="bg-white overflow-hidden shadow rounded-lg border">
                     <div className="px-4 py-5 sm:px-6">
                         <h3 className="text-lg leading-6 font-medium text-gray-900">
@@ -51,16 +51,17 @@ const ViewFoodDetails = () => {
                             </div>
                         </dl>
                     </div>
-                   
+                    
                 </div>
+                <div className="buttons mt-4 px-4 py-5 sm:px-6">
+               
+                <button onClick={''}
+                   className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
+                </button>
+           </div></>
                 
                 )}
-                 <div className="buttons mt-4 px-4 py-5 sm:px-6">
                
-               <button onClick={''}
-                  className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
-               </button>
-          </div>
      </div>
     )}
     

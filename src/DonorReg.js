@@ -72,7 +72,6 @@ export default function DonorReg() {
             body: JSON.stringify(regobj)
         }).then((res) => {
             toast.success('Registered successfully.')
-            toast.success('Registered successfully.')
             setTimeout(() => {
                 navigate('/signin');
             }, 3000);
