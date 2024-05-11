@@ -469,7 +469,7 @@ export default function Example({title , results , type}) {
         else if(type==='FoodDonReq'){
             if (selectedFilters.length > 0) {
                 let tempItems = selectedFilters.map((selectedCategory) => {
-                    let temp = results.filter((item) => item.type === selectedCategory || item.name === selectedCategory || item.quantity_required === selectedCategory);
+                    let temp = results.filter((item) => item.type === selectedCategory);
                     return temp;
                 });
                 let merged = [].concat.apply([], tempItems);
