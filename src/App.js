@@ -68,7 +68,7 @@ function App() {
     <Routes>
         <Route path="/" element={<>
           <Navbar2 />
-          <DeliveryApp />
+          <Home />
         </>} />
         <Route path="/signin" element={<>
           <Navbar2 />
