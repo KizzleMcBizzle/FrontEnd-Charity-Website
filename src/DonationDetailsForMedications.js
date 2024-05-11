@@ -8,7 +8,7 @@ const DonationDetailsForMedications = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted medications donation:', { medicationName, quantity, expirationDate });
-    // You can send this data to your backend or handle it as needed
+    
   };
 
   return (

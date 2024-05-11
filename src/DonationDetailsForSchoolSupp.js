@@ -8,7 +8,7 @@ const DonationDetailsForSchoolSupp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted school supplies donation:', { supplyType, quantity, condition });
-    // You can send this data to your backend or handle it as needed
+   
   };
 
   return (
