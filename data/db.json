@@ -368,6 +368,7 @@
       "governorate": "dqwqwddq",
       "document": "dqwqwddq_document"
     }
+   
   ],
   "donors": [
     {
@@ -966,9 +967,7 @@
       "material": "Fleece",
       "quantity": 30
     }
-
   ],
-
   "stationaryItems": [
     {
       "id": "1",
@@ -1008,24 +1007,23 @@
     }
   ],
   "pickup_req": [
-        
     {
-        "id": 1,
-        "date": "2024-05-10",
-        "time": "14:00",
-        "location": "1234 Elm Street"
+      "id": 1,
+      "date": "2024-05-10",
+      "time": "14:00",
+      "location": "1234 Elm Street"
     },
     {
-        "id": 2,
-        "date": "2024-05-11",
-        "time": "09:30",
-        "location": "5678 Maple Avenue"
+      "id": 2,
+      "date": "2024-05-11",
+      "time": "09:30",
+      "location": "5678 Maple Avenue"
     },
     {
-        "id": 3,
-        "date": "2024-05-12",
-        "time": "16:45",
-        "location": "9101 Oak Boulevard"
+      "id": 3,
+      "date": "2024-05-12",
+      "time": "16:45",
+      "location": "9101 Oak Boulevard"
     }
-]
+  ]
 }

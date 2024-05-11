@@ -49,6 +49,7 @@ import DonationDetailsForClothes from './DonationDetailsForClothes'
 import SchoolStationaryFetch from './SchoolStationaryFetch.js';
 import SchoolStationaryList from './SchoolStationaryList'
 import SchoolStationaryDetails from './SchoolStationaryDetails'
+import VehicleBookingForm from './VehicleBookingForm.js'
 
 
 
@@ -60,7 +61,7 @@ function App() {
     <Routes>
         <Route path="/" element={<>
           <Navbar2 />
-          <DonationDetailsForBloodDonation />
+          <Home />
         </>} />
         <Route path="/signin" element={<>
           <Navbar2 />
