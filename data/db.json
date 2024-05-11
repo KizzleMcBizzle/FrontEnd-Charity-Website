@@ -845,28 +845,33 @@
   "food": [
     {
       
-      "id": 1,
+      "id": "1",
       "name": "Apples",
+      "type":"Fruits & Vegetables",
       "quantity_required": "50 KG"
     },
     {
-      "id": 2,
-      "name": "Rice",
-      "quantity_required": "1000 KG"
+      "id": "2",
+      "name": "Salad",
+      "type": "Fresh Meals",
+      "quantity_required": "26 Servings"
     },
     {
-      "id": 3,
-      "name": "Milk",
-      "quantity_required": "100 Liters"
+      "id": "3",
+      "name": "Beans",
+      "type":"Canned Foods",
+      "quantity_required": "17 Cans"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Bread",
+      "type": "Baked Goods",
       "quantity_required": "500 Loaves"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Carrots",
+      "type": "Fruits & Vegetables",
       "quantity_required": "30 KG"
     }
   
@@ -874,7 +879,7 @@
   
     "books": [
       {
-        "id": 1,
+        "id": "1",
         "name": "Introduction to Algorithms",
         "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
         "language": "English",
@@ -884,7 +889,7 @@
         "quantity_required": 5
       },
       {
-        "id": 2,
+        "id": "2",
         "name": "Fundamentals of Physics",
         "author": "David Halliday, Robert Resnick, Jearl Walker",
         "language": "English",
@@ -894,7 +899,7 @@
         "quantity_required": 7
       },
       {
-        "id": 3,
+        "id": "3",
         "name": "Chemistry: The Central Science",
         "author": "Theodore L. Brown, H. Eugene LeMay, Bruce E. Bursten, Catherine Murphy, Patrick Woodward, Matthew E. Stoltzfus",
         "language": "English",
