@@ -813,56 +813,64 @@
       "name": "Toy 1",
       "age_range": "3-5",
       "gender": "Any",
-      "category": "Board Games"
+      "category": "Board Games",
+      "img": "https://images.saymedia-content.com/.image/t_share/MTc0MzA1MTA4NTg5MjkxMDA0/the-top-ten-board-games-of-all-time.jpg"
     },
     {
       "id": "2",
       "name": "Toy 2",
       "age_range": "6-8",
       "gender": "Male",
-      "category": "Sports"
+      "category": "Sports",
+      "img": "https://www.adityabirlacapital.com/healthinsurance/active-together/wp-content/uploads/2023/09/Sports-1.jpg"
     },
     {
       "id": "3",
       "name": "Toy 3",
       "age_range": "3-5",
       "gender": "Female",
-      "category": "Dolls"
+      "category": "Dolls",
+      "img": "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2023/06/08/6282007f-9a94-45a5-b8d3-2f5c6f7d304a_bed8cd25.jpg?itok=qGjdub56&v=1686206000"
     },
     {
       "id": "4",
       "name": "Toy 4",
       "age_range": "8-10",
       "gender": "Any",
-      "category": "Stuffed Toys"
+      "category": "Stuffed Toys",
+      "img": "https://hansightoy.com/cdn/shop/articles/Who_Owns_The_Most_Plushies_In_The_World_1200x1200.jpg?v=1695612943"
     },
     {
       "id": "5",
       "name": "Toy 5",
       "age_range": "6-8",
       "gender": "Female",
-      "category": "Outdoor"
+      "category": "Outdoor",
+      "img": "https://assets.wfcdn.com/im/27103547/resize-h500-w750%5Ecompr-r85/2477/247796091/default_name.jpg"
     },
     {
       "id": "6",
       "name": "Toy 6",
       "age_range": "8-10",
       "gender": "Male",
-      "category": "Cars"
+      "category": "Cars",
+      "img": "https://i.ytimg.com/vi/EsdyiNQgmIE/maxresdefault.jpg"
     },
     {
       "id": "7",
       "name": "Toy 7",
       "age_range": "3-5",
       "gender": "Any",
-      "category": "Stuffed Toys"
+      "category": "Stuffed Toys",
+      "img": "https://hansightoy.com/cdn/shop/articles/Who_Owns_The_Most_Plushies_In_The_World_1200x1200.jpg?v=1695612943"
     },
     {
       "id": "8",
       "name": "Toy 8",
       "age_range": "8-10",
       "gender": "Female",
-      "category": "Board Games"
+      "category": "Board Games",
+      "img": "https://images.saymedia-content.com/.image/t_share/MTc0MzA1MTA4NTg5MjkxMDA0/the-top-ten-board-games-of-all-time.jpg"
     }
   ],
   "food": [
@@ -905,7 +913,7 @@
       "language": "English",
       "edition": "3rd Edition",
       "summary": "Introduction to Algorithms is a book on computer programming algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. It is used as the textbook for algorithms courses at many universities and is commonly cited as a reference for algorithms in scientific papers.",
-      "picture": "https://example.com/introduction-to-algorithms.jpg",
+      "picture": "https://scx2.b-cdn.net/gfx/news/2022/the-algorithm-for-publ.jpg",
       "quantity_required": "5"
     },
     {
@@ -915,7 +923,7 @@
       "language": "English",
       "edition": "10th Edition",
       "summary": "Fundamentals of Physics is a textbook on basic principles of physics. It covers mechanics, thermodynamics, electromagnetism, and optics. The book is widely used in introductory physics courses.",
-      "picture": "https://example.com/fundamentals-of-physics.jpg",
+      "picture": "https://m.media-amazon.com/images/I/81iBEx-cNZS._AC_UF1000,1000_QL80_DpWeblab_.jpg",
       "quantity_required": "7"
     },
     {
@@ -925,7 +933,7 @@
       "language": "English",
       "edition": "14th Edition",
       "summary": "Chemistry: The Central Science is a comprehensive textbook on chemistry. It covers various topics including atomic structure, chemical bonding, kinetics, thermodynamics, and organic chemistry.",
-      "picture": "https://example.com/chemistry-the-central-science.jpg",
+      "picture": "https://m.media-amazon.com/images/I/816pqWb5T+L._AC_UF1000,1000_QL80_.jpg",
       "quantity_required": "4"
     }
   ],
