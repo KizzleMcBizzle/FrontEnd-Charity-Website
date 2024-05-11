@@ -193,6 +193,20 @@ export default function Example({title , results , type}) {
                 }
         ]
       }
+    
+        else if(type === "medSupplies" ){
+            page =<MedSuppList medSupps={filteredResults}></MedSuppList>
+
+            const typeOptions = Array.from(new Set(results.map(item => item.type))).map(type => ({ value: type, checked: false }));
+            
+            filters = [
+                    {
+                        id: 'type',
+                        name: 'Type',
+                        options: typeOptions
+                    }
+            ]
+        }
       else if(type==='ToyDonReq'){
         page = <ToyDonReq
                toys ={filteredResults}

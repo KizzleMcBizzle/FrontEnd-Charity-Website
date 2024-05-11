@@ -4,10 +4,10 @@ const MedSuppList = ({ medSupps }) => {
   
     return (
       <div className="medSupp-list">
-          {medications.map(medication => (
-              <div className="links" key={medication.id}>
-                    <Link to={`/medications/${medication.id}`}>
-                        <h2>{ medication.name }</h2>
+          {medSupps.map(medSupp => (
+              <div className="links" key={medSupp.id}>
+                    <Link to={`/medications/${medSupp.id}`}>
+                        <h2>{ medSupp.name }</h2>
                      </Link>
               </div>
           ))}

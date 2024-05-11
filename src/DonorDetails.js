@@ -5,7 +5,7 @@ import { saveAs } from 'file-saver';
 
 const PendingDonor = () => {
     const { id } = useParams();
-    const { data: donor, error, isPending } = useFetch('http://localhost:4000/donors/' + id);
+    const { data: donor, error, isPending } = useFetch('http://localhost:4000/donation/' + id);
     const navigate = useNavigate();
 
     let download = false;
