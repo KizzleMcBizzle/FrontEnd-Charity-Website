@@ -23,6 +23,7 @@ import MedSuppList from './MedSuppList'
 import MedCaseList from './MedCaseList'
 import TeachingList from './TeachingList'
 import ClothesDonationList from './ClothesDonationList'
+import SchoolStationaryList from './SchoolStationaryList'
 
 
 
@@ -303,6 +304,10 @@ export default function Example({title , results , type}) {
     ]
 
 
+
+    }
+    else if(type === 'ViewSchoolStationary'){
+        page = <SchoolStationaryList clothes={filteredResults}/>
 
     }
 

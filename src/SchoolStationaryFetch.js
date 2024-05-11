@@ -1,9 +1,9 @@
 import useFetch from "./useFetch";
 import FilterSideBar from "./FilterSideBar";
 
-const ClothesFetch = () => {
+const SchoolStationaryFetch = () => {
     //custom hook, check useFetch.js
-    const {data : clothes, isPending, error} = useFetch('http://localhost:4000/clothes');
+    const {data : stationary, isPending, error} = useFetch('http://localhost:4000/stationaryItems');
 
   
   return (
@@ -14,13 +14,13 @@ const ClothesFetch = () => {
                 <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
             </div>
         }
-        {clothes && <FilterSideBar 
-                    results = {clothes}
-                    title='Clothes Donation Requests'
-                    type = 'ViewClothes'
+        {stationary && <FilterSideBar 
+                    results = {stationary}
+                    title='School Stationary Items Donation Requests'
+                    type = 'ViewSchoolStationary'
                     />}
     </div>
   );
 }
  
-export default ClothesFetch;
+export default SchoolStationaryFetch;

@@ -44,6 +44,12 @@ import ViewFoodDetails from './ViewFoodDetails.js';
 import ClothesDonationList from './ClothesDonationList.js';
 import ClothesFetch from './ClothesFetch.js';
 import ViewClothesDetails from './ViewClothesDetails.js'
+import DonationDetailsForBloodDonation from './DonationDetailsForBloodDonation'
+import DonationDetailsForClothes from './DonationDetailsForClothes'
+import SchoolStationaryFetch from './SchoolStationaryFetch.js';
+import SchoolStationaryList from './SchoolStationaryList'
+import SchoolStationaryDetails from './SchoolStationaryDetails'
+
 
 
 function App() {
@@ -54,7 +60,7 @@ function App() {
     <Routes>
         <Route path="/" element={<>
           <Navbar2 />
-          <Home />
+          <DonationDetailsForBloodDonation />
         </>} />
         <Route path="/signin" element={<>
           <Navbar2 />
@@ -96,8 +102,7 @@ function App() {
           </Routes>
         </>} />
         </ Route>
-       
-
+            
         {/*<Route element={<DonorPrivateRoute />}>*/}
         <Route path="/donor/*" element={<>
             <Navbar />
@@ -122,6 +127,9 @@ function App() {
               <Route path="/food/:id" element={<ViewFoodDetails/>} />
               <Route path="/clothes" element={<ClothesFetch/>} />
               <Route path="/clothes/:id" element={<ViewClothesDetails />} />
+              <Route path="/schoolStationary" element={<SchoolStationaryFetch />} />
+              <Route path="/schoolStationary/:id" element={<SchoolStationaryDetails />} />
+
 
             </Routes>
           </>} />

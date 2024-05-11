@@ -953,6 +953,45 @@
     }
 
   ],
+
+  "stationaryItems": [
+    {
+      "id": "1",
+      "name": "Notebook",
+      "type": "Notebook",
+      "quantity": 100
+    },
+    {
+      "id": "2",
+      "name": "Pencil",
+      "type": "Pencil",
+      "quantity": 200
+    },
+    {
+      "id": "3",
+      "name": "Eraser",
+      "type": "Eraser",
+      "quantity": 150
+    },
+    {
+      "id": "4",
+      "name": "Ruler",
+      "type": "Ruler",
+      "quantity": 75
+    },
+    {
+      "id": "5",
+      "name": "Glue",
+      "type": "Glue",
+      "quantity": 80
+    },
+    {
+      "id": "6",
+      "name": "Scissors",
+      "type": "Scissors",
+      "quantity": 50
+    }
+  ],
   "pickup_req": [
         
     {

@@ -38,14 +38,15 @@ const navigation = {
                     items: [
                         { name: 'Toys', href: '/donor/toys' },
                         
+                        
                     ],
                 },
                 {
-                    id: 'Education',
-                    name: 'Education',
+                    id: 'School Supplies',
+                    name: 'School Supplies',
                     items: [
+                        { name: 'Stationary Items', href: '/donor/schoolStationary' },
                         { name: 'Books', href: '/donor/books' },
-                        
                     ],
                 },
                 {
