@@ -864,38 +864,41 @@
       "name": "Bread"
     }
   ],
-  "books": [
-    {
-      "id": "1",
-      "name": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "language": "English",
-      "edition": "1st Edition",
-      "summary": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature. The plot and characters are loosely based on the author's observations of her family, her neighbors and an event that occurred near her hometown of Monroeville, Alabama, in 1936, when she was 10 years old.",
-      "image": "https://example.com/to-kill-a-mockingbird.jpg",
-      "quantityRequired": 10
-    },
-    {
-      "id": "2",
-      "name": "1984",
-      "author": "George Orwell",
-      "language": "English",
-      "edition": "Revised Edition",
-      "summary": "1984 is a dystopian novel by George Orwell published in 1949. The story takes place in an imagined future, the year 1984, when much of the world has fallen victim to perpetual war, omnipresent government surveillance, historical negationism, and propaganda. Great Britain, known as Airstrip One, has become a province of a totalitarian superstate named Oceania that is ruled by the Party who employ the Thought Police to persecute individuality and independent thinking.",
-      "image": "https://example.com/1984.jpg",
-      "quantityRequired": 15
-    },
-    {
-      "id": "3",
-      "name": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "language": "English",
-      "edition": "Vintage Classics",
-      "summary": "Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.",
-      "image": "https://example.com/pride-and-prejudice.jpg",
-      "quantityRequired": 20
-    }
-  ],
+  
+    "books": [
+      {
+        "id": 1,
+        "name": "Introduction to Algorithms",
+        "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+        "language": "English",
+        "edition": "3rd Edition",
+        "summary": "Introduction to Algorithms is a book on computer programming algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. It is used as the textbook for algorithms courses at many universities and is commonly cited as a reference for algorithms in scientific papers.",
+        "picture": "https://example.com/introduction-to-algorithms.jpg",
+        "quantity_required": 5
+      },
+      {
+        "id": 2,
+        "name": "Fundamentals of Physics",
+        "author": "David Halliday, Robert Resnick, Jearl Walker",
+        "language": "English",
+        "edition": "10th Edition",
+        "summary": "Fundamentals of Physics is a textbook on basic principles of physics. It covers mechanics, thermodynamics, electromagnetism, and optics. The book is widely used in introductory physics courses.",
+        "picture": "https://example.com/fundamentals-of-physics.jpg",
+        "quantity_required": 7
+      },
+      {
+        "id": 3,
+        "name": "Chemistry: The Central Science",
+        "author": "Theodore L. Brown, H. Eugene LeMay, Bruce E. Bursten, Catherine Murphy, Patrick Woodward, Matthew E. Stoltzfus",
+        "language": "English",
+        "edition": "14th Edition",
+        "summary": "Chemistry: The Central Science is a comprehensive textbook on chemistry. It covers various topics including atomic structure, chemical bonding, kinetics, thermodynamics, and organic chemistry.",
+        "picture": "https://example.com/chemistry-the-central-science.jpg",
+        "quantity_required": 4
+      }
+    ],
+  
+  
 
 
 
