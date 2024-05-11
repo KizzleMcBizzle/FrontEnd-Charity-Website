@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const DonationDetailsForMedicalSupp= () => {
+const DonationDetailsForMedicalSupp = () => {
+  const [name, setName] = useState('');
   const [deviceType, setDeviceType] = useState('');
   const [use, setUse] = useState('');
   const [image, setImage] = useState('');
@@ -8,14 +9,17 @@ const DonationDetailsForMedicalSupp= () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted medical supplies donation:', { deviceType, use, image, quantity });
-   
+    console.log('Submitted medical supplies donation:', { name, deviceType, use, image, quantity });
   };
 
   return (
     <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 py-6">
       <h2 className="text-lg font-semibold mb-6">Enter Medical Supplies Donation Details</h2>
       <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
+          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" />
+        </div>
         <div className="mb-4">
           <label htmlFor="deviceType" className="block text-gray-700 mb-2">Device Type:</label>
           <input type="text" id="deviceType" value={deviceType} onChange={(e) => setDeviceType(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter device type" />

@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 
 const DonationDetailsForFood = () => {
   const [foodType, setFoodType] = useState('');
+  const [name, setName] = useState('');
   const [quantity, setQuantity] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted food donation:', { foodType, quantity, expiryDate });
-
+    console.log('Submitted food donation:', { foodType, name, quantity });
   };
 
   return (
@@ -20,12 +19,12 @@ const DonationDetailsForFood = () => {
           <input type="text" id="foodType" value={foodType} onChange={(e) => setFoodType(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter food type" />
         </div>
         <div className="mb-4">
-          <label htmlFor="quantity" className="block text-gray-700 mb-2">Quantity:</label>
-          <input type="text" id="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity" />
+          <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
+          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" />
         </div>
         <div className="mb-4">
-          <label htmlFor="expiryDate" className="block text-gray-700 mb-2">Expiry Date:</label>
-          <input type="date" id="expiryDate" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" />
+          <label htmlFor="quantity" className="block text-gray-700 mb-2">Quantity:</label>
+          <input type="text" id="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity" />
         </div>
         <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
       </form>
