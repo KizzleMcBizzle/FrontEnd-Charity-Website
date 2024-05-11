@@ -1,5 +1,5 @@
 import useFetch from "./useFetch";
-import MedSuppList from "./MedSuppList";
+import FilterSideBar from "./FilterSideBar";
 
 const MedSupp = () => {
 const { error, isPending, data: medSupps } = useFetch('http://localhost:4000/medicalSupp')
@@ -13,7 +13,10 @@ const { error, isPending, data: medSupps } = useFetch('http://localhost:4000/med
                   <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
               </div>
           }
-        { medSupps && <MedSuppList medSupps={medSupps} /> }
+        { medSupps && <FilterSideBar
+                      results={medSupps}
+                      title="Medical Supplies"
+                      type="medSupplies" /> }
       </div>
     );
   }

@@ -17,7 +17,8 @@ const MedSuppDetails = () => {
       { error && <div>{ error }</div> }
       { medSupp && (
         <article>
-          <h2>Device Type: { medSupp.type }</h2>  
+          <h2>Device Type: { medSupp.type }</h2>
+          <p>Device Name: {medSupp.name}</p>  
           <p>Use: { medSupp.use }</p>
           <img src={ medSupp.image } alt={ medSupp.title } />
           <p>Quantity: { medSupp.quantity }</p>

@@ -18,8 +18,9 @@ import ToyDonReq from './ToyDonReq'
 import FoodDonReq from './FoodDonReq'
 
 import MedicationList from './MedicationList'
+import MedSuppList from './MedSuppList'
 import MedCaseList from './MedCaseList'
-
+import TeachingList from './TeachingList'
 
 
 
@@ -166,6 +167,31 @@ export default function Example({title , results , type}) {
                 }
         ]
       }
+      else if(type === "teachingPosts" ){
+        page =<TeachingList teaching={filteredResults}></TeachingList>
+
+        const areaOptions = Array.from(new Set(results.map(item => item.area))).map(area => ({ value: area, checked: false }));
+        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false}));
+        const subjectsOptions = Array.from(new Set(results.map(item => item.subjects))).map(subjects => ({ value: subjects, checked: false}));
+        
+        filters = [
+                {
+                    id: 'area',
+                    name: 'Area',
+                    options: areaOptions
+                },
+                {
+                    id: 'governorate',
+                    name: 'Governorate',
+                    options: governorateOptions
+                },
+                {
+                    id: 'subjects',
+                    name: 'Subjects',
+                    options: subjectsOptions
+                }
+        ]
+      }
       else if(type==='ToyDonReq'){
         page = <ToyDonReq
                toys ={filteredResults}
@@ -229,6 +255,21 @@ export default function Example({title , results , type}) {
             
     ]
     }
+    else if(type === "medSupplies" ){
+        page =<MedSuppList medSupps={filteredResults}></MedSuppList>
+
+        const typeOptions = Array.from(new Set(results.map(item => item.type))).map(type => ({ value: type, checked: false }));
+        
+        filters = [
+                {
+                    id: 'type',
+                    name: 'Type',
+                    options: typeOptions
+                }
+        ]
+      }
+      
+    
 
 
     }
@@ -310,6 +351,32 @@ export default function Example({title , results , type}) {
             if (selectedFilters.length > 0) {
                 let tempItems = selectedFilters.map((selectedCategory) => {
                     let temp = results.filter((item) => item.hospital_area === selectedCategory || item.governorate === selectedCategory || item.hospital_name === selectedCategory);
+                    return temp;
+                });
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        else if(type ==="medSupplies"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.type === selectedCategory );
+                    return temp;
+                });
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+        else if(type ==="teachingPosts"){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.governorate === selectedCategory || item.area === selectedCategory || item.subjects === selectedCategory);
                     return temp;
                 });
                 let merged = [].concat.apply([], tempItems);

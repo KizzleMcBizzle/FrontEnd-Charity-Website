@@ -661,32 +661,44 @@
   ],
   "medicalSupp": [
     {
-      "type": "Gloves",
+      "name": "Gloves",
       "use": "Protection for hands during medical procedures",
       "image": "https://images.wsj.net/im-216848/?width=1280&size=1",
       "quantity": "200",
-      "id": "1"
+      "id": "1",
+      "type":"medical equipment"
     },
     {
-      "type": "Gown",
+      "name": "Gown",
       "use": "Protection against bodily fluids",
       "image": "https://static.scientificamerican.com/sciam/cache/file/0FE4B2DD-6F18-4B70-89C069B5928FC4FE_source.jpg?w=600",
       "quantity": "50",
-      "id": "2"
+      "id": "2",
+      "type":"medical equipment"
     },
     {
-      "type": "Face Shield",
+      "name": "Face Shield",
       "use": "Protection for face and eyes",
       "image": "https://eg.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/022536/1.jpg?4084",
       "quantity": "30",
-      "id": "3"
+      "id": "3",
+      "type":"medical equipment"
     },
     {
-      "type": "Thermometer",
+      "name": "Thermometer",
       "use": "Measuring body temperature",
       "image": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/10/thermometers-1296x728-header.jpg?w=1155&h=1528",
       "quantity": "20",
-      "id": "4"
+      "id": "4",
+      "type":"medical device"
+    },
+    {
+      "name": "Acetaminophen",
+      "use": "Pain relief, fever reduction",
+      "image": "https://www.drugwatch.com/wp-content/uploads/Acetaminophen.jpg",
+      "quantity": "20",
+      "id": "5",
+      "type":"medication"
     }
   ],
   "teaching": [
@@ -696,6 +708,8 @@
       "number_of_students": 25,
       "address": "123 Main Street, Cityville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
+      "area": "Cityville",
+      "governorate": "State",
       "subjects": [
         "Mathematics",
         "Algebra",
@@ -708,6 +722,8 @@
       "number_of_students": 20,
       "address": "456 Elm Street, Townsville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
+      "area": "Townsville",
+      "governorate": "State",
       "subjects": [
         "English",
         "Grammar",
@@ -720,6 +736,8 @@
       "number_of_students": 18,
       "address": "456 Maple Street, Cityville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=456+Maple+Street+Cityville+State+Country",
+      "area": "Cityville",
+      "governorate": "State",
       "subjects": [
         "Physics",
         "Mechanics",
@@ -732,6 +750,8 @@
       "number_of_students": 22,
       "address": "987 Birch Street, Townsville, State, Country",
       "google_map_marker": "https://maps.google.com/?q=987+Birch+Street+Townsville+State+Country",
+      "area": "Townsville",
+      "governorate": "State",
       "subjects": [
         "Spanish",
         "Grammar",

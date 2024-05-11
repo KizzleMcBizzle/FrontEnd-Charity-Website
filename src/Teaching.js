@@ -1,6 +1,6 @@
 
 import useFetch from "./useFetch";
-import TeachingList from "./TeachingList";
+import FilterSideBar from "./FilterSideBar";
 
 const Teaching = () => {
   
@@ -11,7 +11,10 @@ const { error, isPending, data: teachings } = useFetch('http://localhost:4000/te
         <h2>Teaching Posts</h2>
         { error && <div>{ error }</div> }
         { isPending && <div>Loading...</div> }
-        { teachings && <TeachingList teachings={teachings} /> }
+        { teachings && <FilterSideBar
+                      results={teachings}
+                      title="Teaching Posts"
+                      type="teachingPosts" /> }
       </div>
     );
   }

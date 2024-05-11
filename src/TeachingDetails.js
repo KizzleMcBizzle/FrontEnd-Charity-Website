@@ -19,6 +19,8 @@ const TeachingDetails = () => {
         <article>
           <h2>{ teaching.title }</h2>
           <p>Number of Students: { teaching.number_of_students }</p>
+          <p>Area: {teaching.area}</p>
+          <p>Governate: {teaching.governorate}</p>
           <div>Address: { teaching.address }</div>
           <a href={teaching.google_map_marker}>Location</a>
           <h3>Subjects:</h3>
