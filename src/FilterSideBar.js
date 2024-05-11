@@ -169,30 +169,44 @@ export default function Example({title , results , type}) {
         ]
       }
       else if(type === "teachingPosts" ){
-        page =<TeachingList teaching={filteredResults}></TeachingList>
+        page =<TeachingList teachings={filteredResults}></TeachingList>
 
+        const subjectOptions = Array.from(new Set(results.map(item => item.subjects))).map(subjects => ({ value: subjects, checked: false }));
         const areaOptions = Array.from(new Set(results.map(item => item.area))).map(area => ({ value: area, checked: false }));
-        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false}));
-        const subjectsOptions = Array.from(new Set(results.map(item => item.subjects))).map(subjects => ({ value: subjects, checked: false}));
+        const governorateOptions = Array.from(new Set(results.map(item => item.governorate))).map(governorate => ({ value: governorate, checked: false }));
         
         filters = [
+                {
+                    id: 'subjects',
+                    name: 'Subjects',
+                    options: subjectOptions
+                },
                 {
                     id: 'area',
                     name: 'Area',
                     options: areaOptions
                 },
                 {
-                    id: 'governorate',
-                    name: 'Governorate',
-                    options: governorateOptions
-                },
-                {
                     id: 'subjects',
                     name: 'Subjects',
-                    options: subjectsOptions
+                    options: governorateOptions
                 }
         ]
-      }
+    }
+    
+        else if(type === "medSupplies" ){
+            page =<MedSuppList medSupps={filteredResults}></MedSuppList>
+
+            const typeOptions = Array.from(new Set(results.map(item => item.type))).map(type => ({ value: type, checked: false }));
+            
+            filters = [
+                    {
+                        id: 'type',
+                        name: 'Type',
+                        options: typeOptions
+                    }
+            ]
+        }
       else if(type==='ToyDonReq'){
         page = <ToyDonReq
                toys ={filteredResults}

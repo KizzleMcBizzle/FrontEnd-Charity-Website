@@ -193,7 +193,7 @@ export default function Example() {
 
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
-                                <Link to="/">
+                                <Link to="/admin/">
                                     <span className="sr-only">HopeUnity</span>
                                     <img
                                         className="h-10 w-auto"

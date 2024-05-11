@@ -105,7 +105,7 @@ function App() {
               <Route path="/blood" element={<Blood />} />
               <Route path="/bloods/:id" element={<BloodDetails />} />
               <Route path="/medSupp" element={<MedSupp />} />
-              <Route path="/medSupps/:id" element={<MedSuppDetails />} />
+              <Route path="/medSupp/:id" element={<MedSuppDetails />} />
               <Route path="/medCase" element={<MedCase />} />
               <Route path="/medCases/:id" element={<MedCaseDetails />} />
               <Route path="/medication" element={<Medication />} />
