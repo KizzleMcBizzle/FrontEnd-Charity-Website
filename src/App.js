@@ -21,11 +21,9 @@ import ViewOrgsFetch from './ViewOrgsFetch.js';
 import ViewDonorsFetch from './ViewDonorsFetch.js';
 import OrgDetails from './OrgDetails.js';
 import Medication from './Medication';
-import MedSupp from './MedSupp';
 import Teaching from './Teaching';
 import Blood from './Blood';
 import MedCase from './MedCase';
-import MedSuppDetails from './MedSuppDetails';
 import BloodDetails from './BloodDetails';
 import MedicationDetails from './MedicationDetails';
 import TeachingDetails from './TeachingDetails';
@@ -52,6 +50,10 @@ import SchoolStationaryDetails from './SchoolStationaryDetails'
 import VehicleBookingForm from './VehicleBookingForm.js'
 import OrgProfileFetch from './OrgProfileFetch'
 import OrgPassFetch from './OrgPassFetch';
+import MedEquip from './MedEquip.js';
+import MedEquipDetails from './MedEquipDetails.js';
+import MedDevice from './MedDevice.js';
+import MedDeviceDetails from './MedDeviceDetails.js';
 
 
 
@@ -114,8 +116,10 @@ function App() {
               <Route path="donor" element={<Donor/>} />
               <Route path="blood" element={<Blood />} />
               <Route path="bloods/:id" element={<BloodDetails />} />
-              <Route path="medSupp" element={<MedSupp />} />
-              <Route path="medSupp/:id" element={<MedSuppDetails />} />
+              <Route path="medEquipment" element={<MedEquip />} />
+              <Route path="medEquips/:id" element={<MedEquipDetails />} />
+              <Route path="medDevice" element={<MedDevice />} />
+              <Route path="medDevices/:id" element={<MedDeviceDetails />} />
               <Route path="medCase" element={<MedCase />} />
               <Route path="medCases/:id" element={<MedCaseDetails />} />
               <Route path="medication" element={<Medication />} />

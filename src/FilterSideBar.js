@@ -19,7 +19,6 @@ import FoodDonReq from './FoodDonReq'
 import BookDonReq from './BookDonReq'
 
 import MedicationList from './MedicationList'
-import MedSuppList from './MedSuppList'
 import MedCaseList from './MedCaseList'
 import TeachingList from './TeachingList'
 import ClothesDonationList from './ClothesDonationList'
@@ -195,20 +194,6 @@ export default function Example({title , results , type}) {
                 }
         ]
     }
-    
-        else if(type === "medSupplies" ){
-            page =<MedSuppList medSupps={filteredResults}></MedSuppList>
-
-            const typeOptions = Array.from(new Set(results.map(item => item.type))).map(type => ({ value: type, checked: false }));
-            
-            filters = [
-                    {
-                        id: 'type',
-                        name: 'Type',
-                        options: typeOptions
-                    }
-            ]
-        }
       else if(type==='ToyDonReq'){
         page = <ToyDonReq
                toys ={filteredResults}
@@ -391,19 +376,6 @@ export default function Example({title , results , type}) {
             if (selectedFilters.length > 0) {
                 let tempItems = selectedFilters.map((selectedCategory) => {
                     let temp = results.filter((item) => item.hospital_area === selectedCategory || item.governorate === selectedCategory || item.hospital_name === selectedCategory);
-                    return temp;
-                });
-                let merged = [].concat.apply([], tempItems);
-                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
-                setFilteredResults(uniqueItems);
-                } else {
-                setFilteredResults([...results]);
-                }
-        }
-        else if(type ==="medSupplies"){
-            if (selectedFilters.length > 0) {
-                let tempItems = selectedFilters.map((selectedCategory) => {
-                    let temp = results.filter((item) => item.type === selectedCategory );
                     return temp;
                 });
                 let merged = [].concat.apply([], tempItems);
