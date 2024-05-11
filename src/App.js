@@ -36,6 +36,12 @@ import FoodDonReqFetch from './FoodDonReqFetch.js';
 import AuthProvider from "./AuthProvider";
 import PrivateRoute from "./PrivateRoute.js";
 import DonorPrivateRoute from './DonorPrivateRoute.js'
+import BookDonReqFetch from './BookDonReqFetch.js';
+import ViewBookDetails from './ViewBookDetails.js';
+import DonorDetails from './DonorDetails.js'
+import ViewToyDetails from './ViewToyDetails.js';
+import ViewFoodDetails from './ViewFoodDetails.js';
+
 
 
 function App() {
@@ -82,6 +88,7 @@ function App() {
                 <Route path="orgs" element={<ViewOrgsFetch />} />
                 <Route path="donors" element={<ViewDonorsFetch />} />
                 <Route path="orgs/:id" element={<OrgDetails flag={true} />} />
+                <Route path="donors/:id" element={<DonorDetails />} />
               </Routes>
             </>} />
           </Routes>
@@ -90,36 +97,29 @@ function App() {
        
 
         {/*<Route element={<DonorPrivateRoute />}>*/}
-          <Route path="/donor" element={<>
+        <Route path="/donor/*" element={<>
             <Navbar />
-            <Donor />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/donor" element={<Donor/>} />
+              <Route path="/blood" element={<Blood />} />
+              <Route path="/bloods/:id" element={<BloodDetails />} />
+              <Route path="/medSupp" element={<MedSupp />} />
+              <Route path="/medSupps/:id" element={<MedSuppDetails />} />
+              <Route path="/medCase" element={<MedCase />} />
+              <Route path="/medCases/:id" element={<MedCaseDetails />} />
+              <Route path="/medication" element={<Medication />} />
+              <Route path="/medication/:id" element={<MedicationDetails />} />
+              <Route path="/teaching" element={<Teaching />} />
+              <Route path="/teaching/:id" element={<TeachingDetails />} />
+              <Route path="/books" element={ <BookDonReqFetch/>} />
+              <Route path="/books/:id" element={<ViewBookDetails/>} />
+              <Route path="/toys" element={<ToyDonReqFetch/>} />
+              <Route path="/toys/:id" element={<ViewToyDetails/>} />
+              <Route path="/food" element={<FoodDonReqFetch/>} />
+              <Route path="/food/:id" element={<ViewFoodDetails/>} />
+            </Routes>
           </>} />
-          <Route path="/blood" element={<>
-            <Navbar />
-            <Blood />
-          </>} />
-          <Route path="/medSupp" element={<>
-            <Navbar />
-            <MedSupp />
-          </>} />
-          <Route path="/medCase" element={<>
-            <Navbar />
-            <MedCase />
-          </>} />
-          <Route path="/medication" element={<>
-            <Navbar />
-            <Medication />
-          </>} />
-          <Route path="/teaching" element={<>
-            <Navbar />
-            <Teaching />
-          </>} />
-          <Route path="/medSupps/:id" element={<MedSuppDetails />} />
-          <Route path="/medCases/:id" element={<MedCaseDetails />} />
-          <Route path="/bloods/:id" element={<BloodDetails />} />
-          <Route path="/medications/:id" element={<MedicationDetails />} />
-          <Route path="/teachings/:id" element={<TeachingDetails />} />
-          <Route path="/toys" element={<ToyDonReqFetch />} />
         {/*</Route>*/}
 
 

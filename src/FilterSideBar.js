@@ -16,6 +16,7 @@ import ViewDonors from './ViewDonors'
 import BloodList from './BloodList';    
 import ToyDonReq from './ToyDonReq'
 import FoodDonReq from './FoodDonReq'
+import BookDonReq from './BookDonReq'
 
 import MedicationList from './MedicationList'
 import MedSuppList from './MedSuppList'
@@ -252,29 +253,14 @@ export default function Example({title , results , type}) {
                 name: 'Food Type',
                 options: foodType
             }
-            
-    ]
-    }
-    else if(type === "medSupplies" ){
-        page =<MedSuppList medSupps={filteredResults}></MedSuppList>
-
-        const typeOptions = Array.from(new Set(results.map(item => item.type))).map(type => ({ value: type, checked: false }));
-        
-        filters = [
-                {
-                    id: 'type',
-                    name: 'Type',
-                    options: typeOptions
-                }
         ]
-      }
-      
-    
-
+    }else if(type ==='BookDonReq'){
+        page = <BookDonReq
+                books= {filteredResults}/>
 
     }
 
-
+}
 
      const filterByCategory = (categoryName) => {
         

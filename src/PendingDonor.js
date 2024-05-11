@@ -8,6 +8,21 @@ const PendingDonor = () => {
     const { data: donor, error, isPending } = useFetch('http://localhost:4000/donors/' + id);
     const navigate = useNavigate();
 
+    let download = false;
+    let teach = false;
+    let doctor = false;
+
+    if(donor && donor.role.toLowerCase() !== 'Regular'.toLowerCase()){
+        download = true;
+    }
+
+    if(donor && donor.role.toLowerCase()=== 'teacher'.toLowerCase()){
+        teach = true;
+    }
+    if(donor && donor.role.toLowerCase() === 'doctor'.toLowerCase()){
+        doctor = true;
+    }
+
     const handleAccept = () => {
         fetch('http://localhost:4000/donors/' + donor.id, {
             method: 'PUT', // Assuming this updates the donor's status to accepted
@@ -99,20 +114,99 @@ const PendingDonor = () => {
                                     {donor.contactNumber}
                                 </dd>
                             </div>
+                            
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Address
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.address}
+    </dd>
+</div>
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Area
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.area}
+    </dd>
+</div>
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Governorate
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.governorate}
+    </dd>
+</div>
+{ doctor && <dl className="sm:divide-y sm:divide-gray-200">
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Clinic Location
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.clinicLocation}
+    </dd>
+</div>
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Specialty
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.specialty}
+    </dd>
+</div>
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Pro Bono Cases
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.proBonoCases}
+    </dd>
+</div></dl>
+}
+{teach && <dl className="sm:divide-y sm:divide-gray-200">
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Subjects
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.subjects}
+    </dd>
+</div>
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Pro Bono Classes
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.proBonoClasses}
+    </dd>
+</div>
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+    <dt className="text-sm font-medium text-gray-500">
+        Pro Bono Students
+    </dt>
+    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        {donor.proBonoStudents}
+    </dd>
+</div></dl>
+}
                         </dl>
                     </div>
                 </div>
             )}
             <div className="buttons mt-4 px-4 py-5 sm:px-6">
-                <button onClick={handleAccept}
+            <button onClick={handleAccept}
                         className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Accept
                 </button>
+               
                 <button onClick={handleReject}
-                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Reject
+                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Delete Account
                 </button>
-                <button onClick={handleDownload}
-                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Download
-                </button>
+                
+                {download && <button onClick={handleDownload}
+                        className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Download Document
+                </button>}
             </div>
         </div>
     );
