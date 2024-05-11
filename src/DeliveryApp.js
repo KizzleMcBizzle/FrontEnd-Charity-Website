@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import useFetch from './useFetch';
-import './App.css'; 
 
 const DeliveryApp = () => {
   const [deliveryRequests, setDeliveryRequests] = useState([]);
@@ -26,22 +25,21 @@ const DeliveryApp = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Delivery Requests</h1>
+    <div className="bg-f0f0f0 rounded-10 shadow-lg p-40 mx-auto max-w-800">
+      <h1 className="mb-30 text-36 color-333">Delivery Requests</h1>
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      <ul>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
         {deliveryRequests.map(request => (
           <li key={request.id} 
               onClick={() => handleSelectRequest(request)}
-              className={selectedRequest?.id === request.id ? 'selected' : ''}
-              style={{cursor: 'pointer', padding: '20px', margin: '10px 0', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', transition: 'transform 0.2s, box-shadow 0.2s'}}>
+              className={`bg-white p-20 rounded-8 shadow-md transition-transform duration-200 cursor-pointer ${selectedRequest?.id === request.id ? 'transform translate-y-1' : 'hover:translate-y-0.5'}`}>
             <strong>Date:</strong> {request.date}, <strong>Time:</strong> {request.time} <br />
             <strong>Location:</strong> {request.location}
           </li>
         ))}
       </ul>
-      <button onClick={handleConfirmSelection}>Confirm Selection</button>
+      <button className="bg-2196f3 text-white bg-custom-green p-10 md:p-15 rounded-5 md:rounded-full text-16 md:text-20 mt-40 hover:bg-45a049 transition duration-300" onClick={handleConfirmSelection}>Confirm Selection</button>
     </div>
   );
 }

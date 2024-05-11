@@ -4,6 +4,7 @@ import { Bars3Icon, MagnifyingGlassIcon, HeartIcon, DocumentReportIcon, UserIcon
 import {BellIcon, XMarkIcon} from "@heroicons/react/16/solid";
 import logo from './Logo.png'
 import {Link, useNavigate} from "react-router-dom";
+import { useAuth } from './AuthProvider';
 
 const navigation = {
     categories: [
@@ -15,8 +16,8 @@ const navigation = {
             ],
             sections: [
                 {
-                    id: 'Medical',
-                    name: 'Medical',
+                    id: 'Medical Supplies',
+                    name: 'Medical Supplies',
                     items: [
                         { name: 'Medication Requests', href: '/donor/medication' },
                         { name: 'Blood Donations', href: '/donor/blood' },
@@ -62,10 +63,14 @@ const navigation = {
         },
         
     ],
+
+
+
     pages: [
         { name: 'Home', href: '/donor/donor' },
         { name: 'About Us', href: '/donor' },
         { name: 'Contact', href: '#' },
+        {name: 'View Organizations', href: '/donor/view/orgs'}
         
     ],
 }
@@ -77,6 +82,7 @@ function classNames(...classes) {
 export default function Example() {
     const [open, setOpen] = useState(false)
     const navigate = useNavigate();
+    const auth = useAuth();
 
     return (
         <div className="bg-white">
@@ -386,7 +392,7 @@ export default function Example() {
                                                     <div className="py-1">
                                                         <button onClick={() =>navigate("/admin/profile")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</button>
                                                         <button onClick={() =>navigate("/")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</button>
-                                                        <button onClick={() =>navigate("/")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</button>
+                                                        <button onClick={()=>auth.logOut()} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</button>
                                                     </div>
                                                 </Popover.Panel>
                                             </Transition>

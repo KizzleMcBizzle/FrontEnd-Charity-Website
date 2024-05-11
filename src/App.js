@@ -52,6 +52,9 @@ import SchoolStationaryDetails from './SchoolStationaryDetails'
 import VehicleBookingForm from './VehicleBookingForm.js'
 import OrgProfileFetch from './OrgProfileFetch'
 import OrgPassFetch from './OrgPassFetch';
+import Notification from './Notification.js'
+import BookingForm from './BookingForm'
+import DeliveryApp from './DeliveryApp';
 
 
 
@@ -63,7 +66,7 @@ function App() {
     <Routes>
         <Route path="/" element={<>
           <Navbar2 />
-          <Home />
+          <DeliveryApp />
         </>} />
         <Route path="/signin" element={<>
           <Navbar2 />
@@ -133,6 +136,12 @@ function App() {
               <Route path="schoolStationary" element={<SchoolStationaryFetch />} />
               <Route path="schoolStationary/:id" element={<SchoolStationaryDetails />} />
 
+              <Route path="view/*" element={<>
+                <Routes>
+                  <Route path="orgs" element={<ViewOrgsFetch />} />
+                  <Route path="orgs/:id" element={<OrgDetails flag={false} />} />
+                </Routes>
+              </>} />
 
             </Routes>
             </>} />
