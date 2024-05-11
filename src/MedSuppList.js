@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const MedSuppList = ({ medSupps }) => {
 
     const[currMedSupps,setCurrMedSupps] = useState(medSupps)
+    
     useEffect(() => {
         setCurrMedSupps(medSupps);
     }, [medSupps]);

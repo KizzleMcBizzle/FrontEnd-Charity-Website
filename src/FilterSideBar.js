@@ -22,6 +22,7 @@ import MedicationList from './MedicationList'
 import MedSuppList from './MedSuppList'
 import MedCaseList from './MedCaseList'
 import TeachingList from './TeachingList'
+import ClothesDonationList from './ClothesDonationList'
 
 
 
@@ -272,6 +273,37 @@ export default function Example({title , results , type}) {
         page = <BookDonReq
                 books= {filteredResults}/>
 
+    } 
+    else if(type === 'ViewClothes'){
+        page = <ClothesDonationList clothes = {filteredResults} />
+
+        const age = Array.from(new Set(results.map(item => item.age))).map(age => ({ value: age, checked: false }));
+        const gender = Array.from(new Set(results.map(item => item.gender))).map(gender=> ({ value: gender, checked: false}));
+        const season = Array.from(new Set(results.map(item => item.season))).map(season => ({ value: season, checked: false}));
+
+        subCategories = Array.from(new Set(results.map(item => item.type))).map(type => ({ name: type }));
+        
+        filters = [
+            {
+                id: 'age',
+                name: 'Age',
+                options: age
+            },
+            {
+                id: 'gender',
+                name: 'Gender',
+                options: gender
+            },
+            {
+                id: 'season',
+                name: 'Season',
+                options: season
+            }
+
+    ]
+
+
+
     }
 
 }
@@ -286,6 +318,9 @@ export default function Example({title , results , type}) {
         }
         else if(type === 'donorApplicationProBono' || type==='adminViewDonors'){
             filteredItems = results.filter(result => result.role.toLowerCase() === categoryName.toLowerCase());
+        }
+        else if(type==='ViewClothes'){
+            filteredItems = results.filter(result => result.type.toLowerCase() === categoryName.toLowerCase());
         }
 
 
@@ -439,10 +474,24 @@ export default function Example({title , results , type}) {
                 setFilteredResults([...results]);
                 }
         }
+        else if(type === 'ViewClothes'){
+            if (selectedFilters.length > 0) {
+                let tempItems = selectedFilters.map((selectedCategory) => {
+                    let temp = results.filter((item) => item.age === selectedCategory || item.season === selectedCategory || item.gender === selectedCategory );
+                    return temp;
+                });
+                let merged = [].concat.apply([], tempItems);
+                let uniqueItems = merged.filter((item, index) => merged.findIndex((t) => t.id === item.id) === index);
+                setFilteredResults(uniqueItems);
+                } else {
+                setFilteredResults([...results]);
+                }
+        }
+
+        }
 
 
 
-      };
 
     return (
         <div className="bg-white">

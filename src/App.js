@@ -41,7 +41,9 @@ import ViewBookDetails from './ViewBookDetails.js';
 import DonorDetails from './DonorDetails.js'
 import ViewToyDetails from './ViewToyDetails.js';
 import ViewFoodDetails from './ViewFoodDetails.js';
-
+import ClothesDonationList from './ClothesDonationList.js';
+import ClothesFetch from './ClothesFetch.js';
+import ViewClothesDetails from './ViewClothesDetails.js'
 
 
 function App() {
@@ -118,6 +120,9 @@ function App() {
               <Route path="/toys/:id" element={<ViewToyDetails/>} />
               <Route path="/food" element={<FoodDonReqFetch/>} />
               <Route path="/food/:id" element={<ViewFoodDetails/>} />
+              <Route path="/clothes" element={<ClothesFetch/>} />
+              <Route path="/clothes/:id" element={<ViewClothesDetails />} />
+
             </Routes>
           </>} />
         {/*</Route>*/}

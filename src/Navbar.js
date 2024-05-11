@@ -53,6 +53,7 @@ const navigation = {
                     name: 'Essentials',
                     items: [
                         { name: 'Food', href: '/donor/food' },
+                        { name: 'Clothes', href: '/donor/clothes'}
                         
                     ],
                 },
@@ -211,7 +212,7 @@ export default function Example() {
 
                             {/* Logo */}
                             <div className="ml-4 flex lg:ml-0">
-                                <Link to="/">
+                                <Link to="/donor/">
                                     <span className="sr-only">HopeUnity</span>
                                     <img
                                         className="h-10 w-auto"

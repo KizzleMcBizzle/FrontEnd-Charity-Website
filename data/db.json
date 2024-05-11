@@ -895,5 +895,62 @@
       "image": "https://example.com/pride-and-prejudice.jpg",
       "quantityRequired": 20
     }
+  ],
+
+
+
+  "clothes":[
+
+    {
+      "id": "1",
+      "name": "T-shirt",
+      "type": "Shirt",
+      "age": "Adult",
+      "gender": "Unisex",
+      "season": "Summer",
+      "material": "Cotton",
+      "quantity": 100
+    },
+    {
+      "id": "2",
+      "name": "Winter Jacket",
+      "type": "Jacket",
+      "age": "Adult",
+      "gender": "Unisex",
+      "season": "Winter",
+      "material": "Polyester",
+      "quantity": 50
+    },
+    {
+      "id": "3",
+      "name": "Dress Shirt",
+      "type": "Shirt",
+      "age": "Adult",
+      "gender": "Male",
+      "season": "Spring",
+      "material": "Cotton",
+      "quantity": 75
+    },
+    {
+      "id": "4",
+      "name": "Jeans",
+      "type": "Pants",
+      "age": "Adult",
+      "gender": "Female",
+      "season": "Fall",
+      "material": "Denim",
+      "quantity": 60
+    },
+    {
+      "id": "5",
+      "name": "Hoodie",
+      "type": "Sweater",
+      "age": "Child",
+      "gender": "Unisex",
+      "season": "Winter",
+      "material": "Fleece",
+      "quantity": 30
+    }
+
   ]
 }
