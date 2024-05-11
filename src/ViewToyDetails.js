@@ -3,24 +3,24 @@ import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from './useFetch'; // Assuming this is the correct import for useFetch
 import { saveAs } from 'file-saver';
 
-const ViewBookDetails = () => {
+const ViewToyDetails = () => {
     const { id } = useParams();
-    const { data: books, error, isPending } = useFetch('http://localhost:4000/books/' + id);
+    const { data: toys, error, isPending } = useFetch('http://localhost:4000/toys/' + id);
     const navigate = useNavigate();
 
 
     return (
-        <div className="book-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
+        <div className="toy-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {books && (
+            {toys && (
                 <div className="bg-white overflow-hidden shadow rounded-lg border">
                     <div className="px-4 py-5 sm:px-6">
                         <h3 className="text-lg leading-6 font-medium text-gray-900">
-                            Book Details
+                            Toy Details
                         </h3>
                         <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                            Book details.
+                            Toy details.
                         </p>
                     </div>
                     <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
@@ -30,55 +30,31 @@ const ViewBookDetails = () => {
                                     Name
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.name}
+                                    {toys.name}
                                 </dd>
                             </div>
                             <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                 <dt className="text-sm font-medium text-gray-500">
-                                    Author
+                                    Age Range
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.author}
+                                    {toys.age_range}
                                 </dd>
                             </div>
                             <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                 <dt className="text-sm font-medium text-gray-500">
-                                    Language
+                                    Gender
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.language}
+                                    {toys.gender}
                                 </dd>
                             </div>
                             <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                 <dt className="text-sm font-medium text-gray-500">
-                                    Edition
+                                    Category
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.edition}
-                                </dd>
-                            </div>
-                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">
-                                    Summary
-                                </dt>
-                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.summary}
-                                </dd>
-                            </div>
-                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">
-                                    Image
-                                </dt>
-                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.image}
-                                </dd>
-                            </div>
-                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">
-                                    Required Quantity
-                                </dt>
-                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {books.quantityRequired}
+                                    {toys.category}
                                 </dd>
                             </div>
                         </dl>
@@ -97,4 +73,4 @@ const ViewBookDetails = () => {
     
 
 
-export default ViewBookDetails;
+export default ViewToyDetails;

@@ -36,9 +36,12 @@ import FoodDonReqFetch from './FoodDonReqFetch.js';
 import AuthProvider from "./AuthProvider";
 import PrivateRoute from "./PrivateRoute.js";
 import DonorPrivateRoute from './DonorPrivateRoute.js'
-import BookDetails from './ViewBookDetails.js';
 import BookDonReqFetch from './BookDonReqFetch.js';
-import ViewBookDetails from './ViewBookDetails.js';import DonorDetails from './DonorDetails.js'
+import ViewBookDetails from './ViewBookDetails.js';
+import DonorDetails from './DonorDetails.js'
+import ViewToyDetails from './ViewToyDetails.js';
+import ViewFoodDetails from './ViewFoodDetails.js';
+
 
 
 function App() {
@@ -96,7 +99,7 @@ function App() {
         {/*<Route element={<DonorPrivateRoute />}>*/}
           <Route path="/donor" element={<>
             <Navbar />
-            <Donor/>
+            <FoodDonReqFetch/>
           </>} />
           <Route path="/blood" element={<>
             <Navbar />
@@ -125,6 +128,22 @@ function App() {
           <Route path="/Books/:id" element={<>
             <Navbar />
             <ViewBookDetails/>
+          </>} />
+          <Route path="/toys" element={<>
+            <Navbar />
+            <ToyDonReqFetch/>
+          </>} />
+          <Route path="/toys/:id" element={<>
+            <Navbar />
+            <ViewToyDetails/>
+          </>} />
+          <Route path="/food" element={<>
+            <Navbar />
+            <FoodDonReqFetch/>
+          </>} />
+          <Route path="/food/:id" element={<>
+            <Navbar />
+            <ViewFoodDetails/>
           </>} />
           <Route path="/medSupps/:id" element={<MedSuppDetails />} />
           <Route path="/medCases/:id" element={<MedCaseDetails />} />
