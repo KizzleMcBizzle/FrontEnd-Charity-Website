@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function BookingForm() {
   const [showPopup, setShowPopup] = useState(false);
   const [pickupDate, setPickupDate] = useState('');
   const [pickupTime, setPickupTime] = useState('');
   const [timeDifference, setTimeDifference] = useState('');
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission action
@@ -26,7 +29,8 @@ function BookingForm() {
     if (showPopup) {
       const timer = setTimeout(() => {
         setShowPopup(false);
-      }, 5000); // Popup will disappear after 5 seconds
+        navigate('/donor/donor');
+      }, 3000); // Popup will disappear after 5 seconds
       return () => clearTimeout(timer);
     }
   }, [showPopup]);

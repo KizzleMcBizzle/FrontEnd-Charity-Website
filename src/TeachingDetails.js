@@ -1,9 +1,19 @@
 import {  useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import {useAuth} from './AuthProvider';
 
 const TeachingDetails = () => {
+
+  const user = useAuth();
   const { id } = useParams();
   const { data: teaching, error, isPending } = useFetch('http://localhost:4000/teaching/' + id);
+  let flag = false;
+
+  if(user.role.toLowerCase() === 'teacher'){
+    flag = true;
+  }
+
+
   return (
     <div className="teaching-details">
       { isPending && <div>Loading...</div> }

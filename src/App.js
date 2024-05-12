@@ -141,6 +141,8 @@ function App() {
               <Route path="clothes/:id" element={<ViewClothesDetails />} />
               <Route path="schoolStationary" element={<SchoolStationaryFetch />} />
               <Route path="schoolStationary/:id" element={<SchoolStationaryDetails />} />
+              <Route path="booking" element={<BookingForm />} />
+              
 
               <Route path="view/*" element={<>
                 <Routes>

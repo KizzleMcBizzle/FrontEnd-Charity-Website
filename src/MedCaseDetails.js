@@ -1,10 +1,18 @@
 import {  useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import { useAuth } from "./AuthProvider";
 
 const MedCaseDetails = () => {
   const { id } = useParams();
   const { data: medCase, error, isPending } = useFetch('http://localhost:4000/medCase/' + id);
   const navigate = useNavigate();
+  const user = useAuth();
+  console.log(user);
+  let flag = false;
+
+  if(user.role.toLowerCase() === 'doctor'){
+    flag = true;
+  }
 
   const handleClick = () => {
     alert(`You have fulfilled the request succesfully.`);
@@ -68,9 +76,9 @@ const MedCaseDetails = () => {
         </div>
       )}
       <div className="buttons mt-4 px-4 py-5 sm:px-6">
-        <button onClick={handleClick}
+       {flag && <button onClick={handleClick}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Fulfill The Request
-        </button>
+        </button>}
       </div>
     </div>
   );

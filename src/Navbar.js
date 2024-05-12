@@ -30,7 +30,7 @@ const navigation = {
                     name: 'Pro-Bono',
                     items: [
                         { name: 'Teaching Posts', href: '/donor/teaching' },
-                        { name: 'Medical cases', href: '/donor/blood' },
+                        { name: 'Medical cases', href: '/donor/medCase' },
                     
                     ],
                 },

@@ -10,6 +10,7 @@ Modal.setAppElement('#root');
 const ViewToyDetails = () => {
     const { id } = useParams();
     const { data: toys, error, isPending } = useFetch('http://localhost:4000/toys/' + id);
+
     const navigate = useNavigate();
 
     const [quantity, setQuantity] = useState(1);
@@ -74,6 +75,14 @@ const ViewToyDetails = () => {
                                             {toys.category}
                                         </dd>
                                     </div>
+                                    <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            Quantity
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                            {toys.quantity}
+                                        </dd>
+                                    </div>
                                 </dl>
                             </div>
 
@@ -85,7 +94,7 @@ const ViewToyDetails = () => {
                                     <input
                                         type="range"
                                         min="1"
-                                        max="20"
+                                        max={toys.quantity}
                                         value={quantity}
                                         onChange={(e) => setQuantity(e.target.value)}
                                         className="green-thumb-slider slider appearance-none w-64 h-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-full shadow-inner cursor-pointer"
@@ -97,7 +106,7 @@ const ViewToyDetails = () => {
                                 </div>
                                 <p className="text-gray-900">{quantity}</p>
                             </div>
-                            <button onClick={''}
+                             <button onClick={() => navigate('/donor/booking')}
                                     className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
                             </button>
                         </div>
