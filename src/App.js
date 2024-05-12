@@ -66,6 +66,11 @@ import DonationDetailsForToys from './DonationDetailsForToys';
 import OrgNavbar from './OrgNavbar.js';
 import OrgViewPostsFetch from './OrgViewPostsFetch'
 import OrgViewPostDetails from './OrgViewPostDetails'
+import DonorPassFetch from './DonorPassFetch'
+import DonationDetailsForTeaching from './DonationDetailsForTeaching'
+import DonationDetailsForMedCase from './DonationDetailsForMedCase'
+import DonationDetailsForMedicalEquipment from './DonationDetailsForMedicalEquipment'
+import DonationDetailsForMedicalDevices from './DonationDetailsForMedicalDevices'
 
 
 function App() {
@@ -125,6 +130,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="profile" element={<DonorProfileFetch />} />
+              <Route path="changepass" element={<DonorPassFetch />} />
               <Route path="donor" element={<Donor/>} />
               <Route path="blood" element={<Blood />} />
               <Route path="bloods/:id" element={<BloodDetails />} />
@@ -169,15 +175,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/createpost" element={<OrgHomeFetch />} />
           <Route path="profile" element={<OrgProfileFetch />} />
+          <Route path="changepass" element={<OrgPassFetch />} />
           <Route path="myposts" element={<OrgViewPostsFetch />} />
           <Route path="myposts/:id" element={<OrgViewPostDetails />} />
 
 
           
-          <Route path="teaching" element={<OrgPassFetch />} />
-          <Route path="medCase" element={<OrgPassFetch />} />
-          <Route path="medEquip" element={<OrgPassFetch />} />
-          <Route path="medDevice" element={<OrgPassFetch />} />
+          <Route path="teaching" element={<DonationDetailsForTeaching />} />
+          <Route path="medCase" element={<DonationDetailsForMedCase />} />
+          <Route path="medEquip" element={<DonationDetailsForMedicalEquipment />} />
+          <Route path="medDevice" element={<DonationDetailsForMedicalDevices />} />
 
 
 
