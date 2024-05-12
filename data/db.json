@@ -708,45 +708,45 @@
     {
     "deviceType": "wheelchair",
     "use": "for mobility assistance",
-    "image": "/path/to/wheelchair.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRthctF_SB25sZotglqWbld3fEsLLfj2Q7HUwG6ok2CKA&s",
     "quantity": 5,
     "id":"1"
   },
   {
     "deviceType": "oxygen tank",
     "use": "for respiratory support",
-    "image": "/path/to/oxygen_tank.jpg",
+    "image": "https://m.media-amazon.com/images/I/61Dif262s+L.jpg",
     "quantity": 10,
     "id":"2"
   },
   {
     "deviceType": "hospital bed",
     "use": "for patient care",
-    "image": "/path/to/hospital_bed.jpg",
+    "image": "https://m.media-amazon.com/images/I/61NYFV+rKRL._AC_SL1500_.jpg",
     "quantity": 3,
     "id":"3"
   }
   ],
   "medicalDevices":[
     {
-    "id": 1,
+    "id": "1",
     "deviceType": "Defibrillator",
     "use": "For cardiac arrest treatment",
-    "image": "https://example.com/defibrillator.jpg",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/6/315659699/YM/SU/TB/29087894/philips-defibrillator.jpg",
     "quantity": 5
   },
   {
-    "id": 2,
+    "id": "2",
     "deviceType": "Insulin Pump",
     "use": "For diabetes management",
-    "image": "https://example.com/insulin_pump.jpg",
+    "image": "https://www.omnipod.com/sites/default/files/2023-10/Omnipod-5_POD_PDM_Smaller_Shadow_RGB_400x600.png",
     "quantity": 10
   },
   {
-    "id": 3,
+    "id": "3",
     "deviceType": "Ventilator",
     "use": "For respiratory support",
-    "image": "https://example.com/ventilator.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Servo_I_Ventilator.jpg",
     "quantity": 3
   }
   ],
