@@ -9,6 +9,10 @@ const ViewFoodDetails = ({id, status}) => {
     const navigate = useNavigate();
 
     const [quantity,setQuantity] = useState(1);
+    let text = "False"
+    if(status){
+        text = "True";
+    }
 
 
     return (
@@ -56,7 +60,7 @@ const ViewFoodDetails = ({id, status}) => {
                                     Fulfilled
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {status}
+                                    {text}
                                 </dd>
                             </div>
                         </dl>
@@ -69,7 +73,7 @@ const ViewFoodDetails = ({id, status}) => {
                                     className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
                             </button>
                             <button onClick={() => navigate('/org/myposts')}
-                                    className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
+                                    className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-700 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
                             </button>
                         </div>
            </>
