@@ -713,21 +713,21 @@
   ],
   "medicalDevices":[
     {
-    "id": 1,
+    "id": "1",
     "deviceType": "Defibrillator",
     "use": "For cardiac arrest treatment",
     "image": "https://example.com/defibrillator.jpg",
     "quantity": 5
   },
   {
-    "id": 2,
+    "id": "2",
     "deviceType": "Insulin Pump",
     "use": "For diabetes management",
     "image": "https://example.com/insulin_pump.jpg",
     "quantity": 10
   },
   {
-    "id": 3,
+    "id": "3",
     "deviceType": "Ventilator",
     "use": "For respiratory support",
     "image": "https://example.com/ventilator.jpg",

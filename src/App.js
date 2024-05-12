@@ -57,6 +57,7 @@ import MedDeviceDetails from './MedDeviceDetails.js';
 import Notification from './Notification.js'
 import BookingForm from './BookingForm'
 import DeliveryApp from './DeliveryApp';
+import DonorProfileFetch from './DonorProfileFetch.js'
 
 
 
@@ -116,11 +117,12 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="profile" element={<DonorProfileFetch />} />
               <Route path="donor" element={<Donor/>} />
               <Route path="blood" element={<Blood />} />
               <Route path="bloods/:id" element={<BloodDetails />} />
-              <Route path="medEquipment" element={<MedEquip />} />
-              <Route path="medEquips/:id" element={<MedEquipDetails />} />
+              <Route path="medEquip" element={<MedEquip />} />
+              <Route path="medEquip/:id" element={<MedEquipDetails />} />
               <Route path="medDevice" element={<MedDevice />} />
               <Route path="medDevices/:id" element={<MedDeviceDetails />} />
               <Route path="medCase" element={<MedCase />} />
