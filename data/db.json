@@ -1169,71 +1169,90 @@
       "category": "medication",
       "objectID": "1",
       "id": "1",
-      "status": true,
-      "name": "Fluoxetine"
+      "status": "True",
+      "name": "Fluoxetine",
+      "Fulfilled": "Fulfilled"
     },
     {
       "category": "Clothes",
       "objectID": "2",
       "id": "2",
-      "status": false,
-      "name": "Winter Jacket"
+      "status": "False",
+      "name": "Winter Jacket",
+      "Fulfilled": "Not Fullfilled"
     },
     {
       "category": "toys",
       "objectID": "3",
       "id": "3",
-      "status": false,
-      "name": "Toy 3"
+      "status": "False",
+      "name": "Toy 3",
+      "Fulfilled": "Not Fullfilled"
     },
     {
       "category": "books",
       "objectID": "3",
       "id": "4",
-      "status": false,
-      "name": "Chemistry: The Central Science"
+      "status": "False",
+      "name": "Chemistry: The Central Science",
+      "Fulfilled": "Not Fullfilled"
     },
     {
       "category": "stationaryItems",
       "objectID": "3",
       "id": "5",
-      "status": false,
-      "name": "Eraser"
+      "status": "False",
+      "name": "Eraser",
+      "Fulfilled": "Not Fullfilled"
+
     },
     {
       "category": "Food",
       "objectID": "3",
       "id": "6",
-      "status": true,
-      "name": "Beans"
+      "status": "True",
+      "name": "Beans",
+      "Fulfilled": "Fulfilled"
     },
     {
       "category": "blood",
       "objectID": "3",
       "id": "7",
-      "status": false,
-      "name": "A+"
+      "status": "False",
+      "name": "A+",
+      "Fulfilled": "Not Fullfilled"
     },
     {
       "category": "medCase",
       "objectID": "1",
       "id": "8",
-      "status": false,
-      "name": "John Doe"
+      "status": "True",
+      "name": "John Doe",
+      "Fulfilled": "Fulfilled"
     },
     {
       "category": "medicalEquipment",
       "objectID": "3",
       "id": "9",
-      "status": true,
-      "name": "Hospital Bed"
+      "status": "True",
+      "name": "Hospital Bed",
+      "Fulfilled": "Fulfilled"
     },
     {
       "category": "medicalDevices",
       "objectID": "2",
       "id": "10",
-      "status": false,
-      "name": "Insulin Pod"
+      "status": "False",
+      "name": "Insulin Pod",
+      "Fulfilled": "Not Fullfilled"
+    },
+    {
+      "name": "Basic Spanish Language Skills",
+      "category": "teaching",
+      "objectID": "4",
+      "id": "11",
+      "status": "True",
+      "Fulfilled": "Fulfilled"
     }
   ]
 }

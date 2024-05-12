@@ -83,7 +83,7 @@ const MedDeviceDetails = ({id, status}) => {
                                           Fulfilled
                                       </dt>
                                       <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                          {text}
+                                          {status}
                                       </dd>
                                   </div>
                               </dl>

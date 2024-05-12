@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import useFetch from './useFetch';
+import { useNavigate } from 'react-router-dom';
 
 const DeliveryApp = () => {
   const [deliveryRequests, setDeliveryRequests] = useState([]);
   const [selectedRequest, setSelectedRequest] = useState(null);
   const { error, isPending, data: pickup_req } = useFetch('http://localhost:4000/pickup_req');
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (pickup_req) {
@@ -18,7 +20,8 @@ const DeliveryApp = () => {
 
   const handleConfirmSelection = () => {
     if (selectedRequest) {
-      alert(`Confirmed delivery request for ${selectedRequest.location} on ${selectedRequest.date} at ${selectedRequest.time}`);
+      setTimeout(() => {alert(`Confirmed delivery request for ${selectedRequest.location} on ${selectedRequest.date} at ${selectedRequest.time}`);
+                        navigate(-1);}, 1000   );
     } else {
       alert('Please select a delivery request.');
     }

@@ -323,6 +323,8 @@ export default function Example({title , results , type}) {
     }else if(type === "OrgViewPosts"){
         placeholder = "Search by post name"
         page = <OrgViewPosts posts = {filteredResults}/>
+
+        subCategories = Array.from(new Set(results.map(item => item.Fulfilled))).map(status => ({ name: status }));
     }
 
 }
@@ -340,6 +342,8 @@ export default function Example({title , results , type}) {
         }
         else if(type==='ViewClothes'){
             filteredItems = results.filter(result => result.type.toLowerCase() === categoryName.toLowerCase());
+        }else if(type === "OrgViewPosts"){
+            filteredItems = results.filter(result => result.Fulfilled === categoryName);
         }
 
 

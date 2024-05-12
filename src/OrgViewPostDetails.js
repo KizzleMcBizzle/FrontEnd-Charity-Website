@@ -14,6 +14,7 @@ import OrgBloodPost from './OrgBloodPost'
 import OrgMedCasePost from './OrgMedCasePost'
 import OrgMedEquipPost from './OrgMedEquipPost'
 import OrgMedDevicePost from './OrgMedDevicePost'
+import OrgTeachingPost from './OrgTeachingPost'
 
 
 const OrgViewPostDetails = () => {
@@ -54,6 +55,9 @@ const OrgViewPostDetails = () => {
                 break;
             case "medicaldevices":
                 page = <OrgMedDevicePost id={post.objectID} status={post.status}/>
+                break;
+            case "teaching":
+                page = <OrgTeachingPost id={post.objectID} status={post.status}/>;
                 break;
             default:
                 page = <OrgMedicationPost id={post.objectID} status={post.status}/>

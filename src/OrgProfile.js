@@ -1,10 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 
 const OrgProfile = ({ org }) => {
     const passSize = org.password.length;
     const passwordEncrypted = '*'.repeat(passSize);
+    const navigate = useNavigate();
+    const user = useAuth();
 
-    return (
+    return (<>
         <div className="bg-white overflow-hidden shadow rounded-lg border">
             <div className="px-4 py-5 sm:px-6">
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
@@ -51,6 +54,11 @@ const OrgProfile = ({ org }) => {
                 </dl>
             </div>
         </div>
+
+<button onClick={() => user.logOut()}
+className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Delete Account
+</button>
+</>
     );
 }
 

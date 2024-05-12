@@ -9,44 +9,14 @@ import { useAuth } from './AuthProvider';
 
 const navigation = {
     categories: [
-        {
-            id: 'Requests',
-            name: 'Requests',
-            featured: [
-            ],
-            sections: [
-                {
-                    id: 'Applications',
-                    name: 'Applications',
-                    items: [
-                        { name: 'Donors', href: '/admin/req/donors' },
-                        { name: 'Organizations', href: '/admin/req/orgs' },
-                    ],
-                },
-            ],
-        },
-        {
-            id: 'View',
-            name: 'View',
-            featured: [
-            ],
-            sections: [
-                {
-                    id: 'Registered',
-                    name: 'Registered',
-                    items: [
-                        { name: 'Donors', href: '/admin/view/donors' },
-                        { name: 'Organizations', href: '/admin/view/orgs' },
-                    ],
-                },
-            ],
-        },
+        
     ],
     pages: [
         { name: 'About Us', href: '/org/' },
         { name: 'Contact', href: '#' },
         { name: 'Create Post', href: '/org/createpost' },
-        { name: 'View Posts', href: '/org/myposts' }
+        { name: 'View Posts', href: '/org/myposts' },
+        { name: 'Schedule Drop-off', href: '/org/schedule' }
     ],
 }
 
@@ -326,8 +296,8 @@ export default function Example() {
                                             >
                                                 <Popover.Panel className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                     <div className="py-1">
-                                                        <Link to="/org/post" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">A donor has fulfilled one of your posts!</Link>
-                                                        <Link to="/org/post" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">A donor has fulfilled one of your posts!</Link>
+                                                        <Link to="/org/myposts/1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">A donor has fulfilled one of your posts!</Link>
+                                                        <Link to="/org/myposts/2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">A donor has fulfilled one of your posts!</Link>
                                                     </div>
                                                 </Popover.Panel>
                                             </Transition>

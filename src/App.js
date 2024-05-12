@@ -178,6 +178,7 @@ function App() {
           <Route path="changepass" element={<OrgPassFetch />} />
           <Route path="myposts" element={<OrgViewPostsFetch />} />
           <Route path="myposts/:id" element={<OrgViewPostDetails />} />
+          <Route path="schedule" element={<DeliveryApp />} />
 
 
           
