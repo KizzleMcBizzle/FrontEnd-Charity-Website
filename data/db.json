@@ -79,7 +79,8 @@
       "organizationAddress": "123 Main Street, Exampleville",
       "area": "Example Area",
       "governorate": "Example Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "3",
@@ -95,7 +96,8 @@
       "organizationAddress": "456 Hospital Avenue, Hospitalville",
       "area": "Hospital Area",
       "governorate": "Hospital Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "4",
@@ -111,7 +113,8 @@
       "organizationAddress": "789 Church Street, Churchtown",
       "area": "Church Street",
       "governorate": "Church Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "5",
@@ -127,7 +130,8 @@
       "organizationAddress": "101 Mosque Road, Mosquetown",
       "area": "Mosque Road",
       "governorate": "Mosque Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "6",
@@ -143,7 +147,8 @@
       "organizationAddress": "11 Orphanage Lane, Orphanagetown",
       "area": "Orphanage Lane",
       "governorate": "Orphanage Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "7",
@@ -159,7 +164,8 @@
       "organizationAddress": "22 School Street, Schoolville",
       "area": "School Street",
       "governorate": "School Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "8",
@@ -175,7 +181,8 @@
       "organizationAddress": "33 Community Center Avenue, Communitytown",
       "area": "Community Center Avenue",
       "governorate": "Community Center Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "9",
@@ -191,7 +198,8 @@
       "organizationAddress": "44 Animal Shelter Lane, Animaltown",
       "area": "Animal Shelter Lane",
       "governorate": "Animal Shelter Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "11",
@@ -207,7 +215,8 @@
       "organizationAddress": "55 Food Bank Street, Foodtown",
       "area": "Food Bank Street",
       "governorate": "Food Bank Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "12",
@@ -223,7 +232,8 @@
       "organizationAddress": "66 Community Garden Lane, Gardentown",
       "area": "Community Garden Lane",
       "governorate": "Community Garden Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "13",
@@ -239,7 +249,8 @@
       "organizationAddress": "77 Community Center Road, Roadtown",
       "area": "Community Center Road",
       "governorate": "Community Center Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "14",
@@ -255,7 +266,8 @@
       "organizationAddress": "88 Library Avenue, Librarytown",
       "area": "Library Avenue",
       "governorate": "Library Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "15",
@@ -271,7 +283,8 @@
       "organizationAddress": "99 Animal Shelter Road, Sheltertown",
       "area": "Animal Shelter Road",
       "governorate": "Animal Shelter Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "16",
@@ -287,7 +300,8 @@
       "organizationAddress": "111 School Avenue, Schooldistrict",
       "area": "School Avenue",
       "governorate": "School Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "87ca",
@@ -303,8 +317,10 @@
       "organizationAddress": "Some Random Address",
       "area": "dwqqwddqw",
       "governorate": "dqwqwddq",
-      "document": "dqwqwddq_document"
-    },
+      "document": "dqwqwddq_document",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
+    }
+  ,
     {
       "id": "8511",
       "firstName": "Omar",
@@ -320,7 +336,7 @@
       "area": "dqwqwd",
       "governorate": "wqddqw",
       "document": "dwqqwd_document",
-      "googleMapsUrl": "https://www.google.com/maps/?q=30.297017883372074,31.376953125"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "8f90",
@@ -337,7 +353,7 @@
       "area": "dwaawd",
       "governorate": "dwadaw",
       "document": "dwadwa_document",
-      "googleMapsUrl": "https://www.google.com/maps/?q=29.958429656767485,31.309833526611328"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     }
   ],
   "donors": [
@@ -692,21 +708,21 @@
     {
     "deviceType": "wheelchair",
     "use": "for mobility assistance",
-    "image": "/path/to/wheelchair.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRthctF_SB25sZotglqWbld3fEsLLfj2Q7HUwG6ok2CKA&s",
     "quantity": 5,
     "id":"1"
   },
   {
     "deviceType": "oxygen tank",
     "use": "for respiratory support",
-    "image": "/path/to/oxygen_tank.jpg",
+    "image": "https://m.media-amazon.com/images/I/61Dif262s+L.jpg",
     "quantity": 10,
     "id":"2"
   },
   {
     "deviceType": "hospital bed",
     "use": "for patient care",
-    "image": "/path/to/hospital_bed.jpg",
+    "image": "https://m.media-amazon.com/images/I/61NYFV+rKRL._AC_SL1500_.jpg",
     "quantity": 3,
     "id":"3"
   }
@@ -716,21 +732,21 @@
     "id": "1",
     "deviceType": "Defibrillator",
     "use": "For cardiac arrest treatment",
-    "image": "https://example.com/defibrillator.jpg",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/6/315659699/YM/SU/TB/29087894/philips-defibrillator.jpg",
     "quantity": 5
   },
   {
     "id": "2",
     "deviceType": "Insulin Pump",
     "use": "For diabetes management",
-    "image": "https://example.com/insulin_pump.jpg",
+    "image": "https://www.omnipod.com/sites/default/files/2023-10/Omnipod-5_POD_PDM_Smaller_Shadow_RGB_400x600.png",
     "quantity": 10
   },
   {
     "id": "3",
     "deviceType": "Ventilator",
     "use": "For respiratory support",
-    "image": "https://example.com/ventilator.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Servo_I_Ventilator.jpg",
     "quantity": 3
   }
   ],
