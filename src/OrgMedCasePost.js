@@ -9,9 +9,9 @@ const MedCaseDetails = ({id, status}) => {
   
   let text;
     if(status){
-        text = "true"
+        text = "True"
     }   
-    else text = "false";
+    else text = "False";
 
 
   const handleClick = () => {

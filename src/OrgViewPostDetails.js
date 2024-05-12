@@ -21,6 +21,7 @@ const OrgViewPostDetails = () => {
     const { data: post, error, isPending } = useFetch('http://localhost:4000/DonationPosts/' + id);
     let page = <></>;
 
+    
 
     if(post){
         switch (post.category.toLowerCase()) {

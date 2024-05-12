@@ -12,6 +12,11 @@ const ViewToyDetails = ({id, status}) => {
 
     const navigate = useNavigate();
 
+    let text = "False"
+    if(status){
+        text = "True";
+    }
+
     const [quantity, setQuantity] = useState(1);
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -87,7 +92,7 @@ const ViewToyDetails = ({id, status}) => {
                                             Fulfilled
                                         </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {status}
+                                            {text}
                                         </dd>
                                     </div>
                                 </dl>

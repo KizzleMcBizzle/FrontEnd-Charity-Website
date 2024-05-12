@@ -8,7 +8,10 @@ const ViewStationaryDetails = ({id, status}) => {
     const navigate = useNavigate();
 
     const [quantity, setQuantity] = useState(1);
-
+    let text = "False"
+    if(status){
+        text = "True";
+    }
 
     return (
         <div className="toy-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
@@ -54,7 +57,7 @@ const ViewStationaryDetails = ({id, status}) => {
                                     Fulfilled
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {status}
+                                    {text}
                                 </dd>
                             </div>
                         </dl>

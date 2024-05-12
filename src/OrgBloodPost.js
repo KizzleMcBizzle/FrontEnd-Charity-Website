@@ -5,6 +5,11 @@ const BloodDetails = ({id, status}) => {
   const { data: blood, error, isPending } = useFetch('http://localhost:4000/blood/' + id);
   const navigate = useNavigate();
 
+  let text = "False"
+    if(status){
+        text = "True";
+    }
+
   return (
     <div className="donor-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4">
       { isPending && <div>Loading...</div> }
@@ -47,7 +52,7 @@ const BloodDetails = ({id, status}) => {
               </div>
               <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">Fulfilled</dt>
-                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{status}</dd>
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{text}</dd>
               </div>
             </dl>
           </div>

@@ -6,7 +6,10 @@ import useFetch from './useFetch'; // Assuming this is the correct import for us
 const ViewToyDetails = ({id, status}) => {
     const { data: clothes, error, isPending } = useFetch('http://localhost:4000/clothes/' + id);
 
-    
+    let text = "False"
+    if(status){
+        text = "True";
+    }
     const navigate = useNavigate();
 
 
@@ -86,7 +89,7 @@ const ViewToyDetails = ({id, status}) => {
                                     Fulfilled
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    {status}
+                                    {text}
                                 </dd>
                             </div>
                         </dl>
@@ -95,7 +98,7 @@ const ViewToyDetails = ({id, status}) => {
                 </div>
                 <div className="flex items-center space-x-4 mt-3">
         
-                            <button onClick={() => navigate('/org/myposts')} 
+                            <button onClick={() => navigate('/org/Clothes')} 
                                     className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Edit Post
                             </button>
                             <button onClick={() => navigate('/org/myposts')} 

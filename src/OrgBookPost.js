@@ -10,6 +10,10 @@ Modal.setAppElement('#root');
 const OrgBookPost = ({id, status}) => {
     const { data: books, error, isPending } = useFetch('http://localhost:4000/books/' + id);
     const navigate = useNavigate();
+    let text = "False"
+    if(status){
+        text = "True";
+    }
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [quantity, setQuantity] = useState(1);
@@ -98,7 +102,7 @@ const OrgBookPost = ({id, status}) => {
                                             Fulfilled
                                         </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {status}
+                                            {text}
                                         </dd>
                                     </div>
                                 </dl>
