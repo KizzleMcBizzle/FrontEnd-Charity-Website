@@ -58,7 +58,12 @@ import Notification from './Notification.js'
 import BookingForm from './BookingForm'
 import DeliveryApp from './DeliveryApp';
 import DonorProfileFetch from './DonorProfileFetch.js'
-
+import OrgHomeFetch from './OrgHomeFetch'
+import DonationDetailsForFood from './DonationDetailsForFood'
+import DonationDetailsForMedications from './DonationDetailsForMedications'
+import DonationDetailsForSchoolSupp from './DonationDetailsForSchoolSupp'
+import DonationDetailsForToys from './DonationDetailsForToys';
+import OrgNavbar from './OrgNavbar.js';
 
 
 function App() {
@@ -157,10 +162,25 @@ function App() {
         {/*</Route>*/}
 
         <Route path="/org/*" element={<>
-          
+          <OrgNavbar />
           <Routes>
-          <Route path="/" element={<OrgProfileFetch />} />
-          <Route path="changepass" element={<OrgPassFetch />} />
+          <Route path="/" element={<OrgHomeFetch />} />
+          <Route path="profile" element={<OrgProfileFetch />} />
+
+          
+          <Route path="teaching" element={<OrgPassFetch />} />
+          <Route path="medCase" element={<OrgPassFetch />} />
+          <Route path="medEquip" element={<OrgPassFetch />} />
+          <Route path="medDevice" element={<OrgPassFetch />} />
+
+          <Route path="medication" element={<DonationDetailsForMedications />} />
+          <Route path="Clothes" element={<DonationDetailsForClothes />} />
+          <Route path="Toys" element={<DonationDetailsForToys />} />
+         
+          <Route path="schoolSupplies" element={<DonationDetailsForSchoolSupp />} />
+          <Route path="Food" element={<DonationDetailsForFood />} />
+          <Route path="blood" element={<DonationDetailsForBloodDonation/>} />
+          
           
           </Routes>
           
