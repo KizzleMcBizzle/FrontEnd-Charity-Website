@@ -1209,61 +1209,71 @@
       "category":"medication",
       "objectID": "1",
       "id" : "1",
-      "status": true
+      "status": true,
+      "name" : "Fluoxetine"
     },
     {
       "category":"Clothes",
       "objectID": "2",
       "id" : "2",
-      "status": false
+      "status": false,
+      "name" :"Winter Jacket"
     },
     {
       "category":"toys",
       "objectID": "3",
       "id" : "3",
-      "status": false
+      "status": false,
+      "name" :"Toy 3"
     },
     {
       "category":"books",
       "objectID": "3",
       "id" : "4",
-      "status": false
+      "status": false,
+      "name" :"Chemistry: The Central Science"
     },
     {
       "category":"stationaryItems",
       "objectID": "3",
       "id" : "5",
-      "status": false
+      "status": false,
+      "name" :"Eraser"
     },
     {
       "category":"Food",
       "objectID": "3",
       "id" : "6",
-      "status": true
+      "status": true,
+      "name" :"Beans"
     },
     {
       "category":"blood",
       "objectID": "3",
       "id" : "7",
-      "status": false
+      "status": false,
+      "name" :"A+"
     },
     {
       "category":"medCase",
       "objectID": "1",
       "id" : "8",
-      "status": false
+      "status": false,
+      "name" :"John Doe"
     },
     {
       "category":"medicalEquipment",
       "objectID": "3",
       "id" : "9",
-      "status": true
+      "status": true,
+      "name" :"Hospital Bed"
     },
     {
       "category":"medicalDevices",
       "objectID": "2",
       "id" : "10",
-      "status": false
+      "status": false,
+      "name" :"Insulin Pod"
     }
   ]
 }

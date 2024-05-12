@@ -25,6 +25,8 @@ import ClothesDonationList from './ClothesDonationList'
 import SchoolStationaryList from './SchoolStationaryList'
 import MedDeviceList from './MedDeviceList'
 import MedEquipList from './MedEquipList'
+import OrgViewPosts from './OrgViewPosts';
+
 
 
 
@@ -318,6 +320,9 @@ export default function Example({title , results , type}) {
         placeholder = "Serach by name"
         page = <SchoolStationaryList clothes={filteredResults}/>
 
+    }else if(type === "OrgViewPosts"){
+        placeholder = "Search by post name"
+        page = <OrgViewPosts posts = {filteredResults}/>
     }
 
 }
