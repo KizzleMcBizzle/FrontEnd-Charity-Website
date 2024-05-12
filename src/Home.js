@@ -49,46 +49,84 @@ const Home = () => {
                 <div className="mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Our Causes</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Health Sector Donations */}
                         <div className="bg-white rounded-lg shadow-md p-6">
                             <h3 className="text-xl md:text-2xl font-bold mb-4">Health Sector Donations</h3>
                             <p className="text-gray-700 mb-4">
                                 Help save lives by donating blood, medications, and medical supplies to hospitals and individuals in need.
                             </p>
-                            <Link to="/signin" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
                                 Donate Now
                             </Link>
                         </div>
-
-                        {/* School Supplies Donations */}
                         <div className="bg-white rounded-lg shadow-md p-6">
                             <h3 className="text-xl md:text-2xl font-bold mb-4">School Supplies Donations</h3>
                             <p className="text-gray-700 mb-4">
                                 Support education by providing school books, supplies, and offering pro-bono teaching opportunities.
                             </p>
-                            <Link to="/signin" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
                                 Donate Now
                             </Link>
                         </div>
-
-                        {/* Refugee and Poverty Line Needs */}
                         <div className="bg-white rounded-lg shadow-md p-6">
                             <h3 className="text-xl md:text-2xl font-bold mb-4">Refugee and Poverty Line Needs</h3>
                             <p className="text-gray-700 mb-4">
                                 Assist families in need with essentials such as clothing, kitchen supplies, food, and electrical appliances.
                             </p>
-                            <Link to="/signin" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
                                 Donate Now
                             </Link>
                         </div>
-
-                        {/* Orphanage Donations */}
                         <div className="bg-white rounded-lg shadow-md p-6">
                             <h3 className="text-xl md:text-2xl font-bold mb-4">Orphanage Donations</h3>
                             <p className="text-gray-700 mb-4">
                                 Bring joy to children by donating clothes, toys, school supplies, and luxury foods to orphanages.
                             </p>
-                            <Link to="/signin" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                                Donate Now
+                            </Link>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-6">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Elderly Care Donations</h3>
+                            <p className="text-gray-700 mb-4">
+                                Show love and care to the elderly by donating medical equipment, food, and companionship.
+                            </p>
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                                Donate Now
+                            </Link>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-6">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Food Bank Donations</h3>
+                            <p className="text-gray-700 mb-4">
+                                Help fight hunger by donating non-perishable food items and volunteering at local food banks.
+                            </p>
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                                Donate Now
+                            </Link>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-6">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Clothing Drive Donations</h3>
+                            <p className="text-gray-700 mb-4">
+                                Provide warmth and comfort by donating clothes, shoes, and blankets to those in need.
+                            </p>
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                                Donate Now
+                            </Link>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-6">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Pro bono teaching and pro bono doctor appointments</h3>
+                            <p className="text-gray-700 mb-4">
+                                Offer your time and expertise by providing free teaching sessions or medical consultations.
+                            </p>
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
+                                Donate Now
+                            </Link>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md p-6">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Blood Drive Donations</h3>
+                            <p className="text-gray-700 mb-4">
+                                Save lives by donating blood and plasma to hospitals and blood banks.
+                            </p>
+                            <Link to="/donor/donor" className="bg-custom-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300">
                                 Donate Now
                             </Link>
                         </div>
