@@ -9,7 +9,7 @@ const DonationDetailsForSchoolSupplies = () => {
   const [language, setLanguage] = useState('');
   const [edition, setEdition] = useState('');
   const [summary, setSummary] = useState('');
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState('');
   const [quantityRequired, setQuantityRequired] = useState('');
 
   const handleCategoryChange = (e) => {
@@ -22,37 +22,17 @@ const DonationDetailsForSchoolSupplies = () => {
     setLanguage('');
     setEdition('');
     setSummary('');
-    setImage(null);
+    setImage('');
     setQuantityRequired('');
-  };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setImage(file);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validation
-    if (!category || !name || !quantityRequired || !image) {
-      alert('All fields are required');
+    if (!category || !name || !quantity || !quantityRequired) {
+      alert('Please fill in all required fields.');
       return;
     }
-    const formData = new FormData();
-    formData.append('category', category);
-    formData.append('name', name);
-    formData.append('type', type);
-    formData.append('quantity', quantity);
-    formData.append('author', author);
-    formData.append('language', language);
-    formData.append('edition', edition);
-    formData.append('summary', summary);
-    formData.append('image', image);
-    formData.append('quantityRequired', quantityRequired);
-
-    // Now you can send formData to your backend
-
-    console.log('Submitted school supplies donation:', formData);
+    console.log('Submitted school supplies donation:', { category, name, type, quantity, author, language, edition, summary, image, quantityRequired });
   };
 
   return (
@@ -67,12 +47,51 @@ const DonationDetailsForSchoolSupplies = () => {
             <option value="Books">Books</option>
           </select>
         </div>
-        {/* Rest of the form fields */}
+        {/* Conditional rendering based on the selected category */}
+        {category === 'StationaryItems' && (
+          <>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
+              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="type" className="block text-gray-700 mb-2">Type:</label>
+              <input type="text" id="type" value={type} onChange={(e) => setType(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter type" required />
+            </div>
+          </>
+        )}
+        {category === 'Books' && (
+          <>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
+              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="author" className="block text-gray-700 mb-2">Author:</label>
+              <input type="text" id="author" value={author} onChange={(e) => setAuthor(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter author" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="language" className="block text-gray-700 mb-2">Language:</label>
+              <input type="text" id="language" value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter language" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="edition" className="block text-gray-700 mb-2">Edition:</label>
+              <input type="text" id="edition" value={edition} onChange={(e) => setEdition(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter edition" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="summary" className="block text-gray-700 mb-2">Summary:</label>
+              <input type="text" id="summary" value={summary} onChange={(e) => setSummary(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter summary" required />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="image" className="block text-gray-700 mb-2">Image:</label>
+              <input type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" required />
+            </div>
+          </>
+        )}
         <div className="mb-4">
-          <label htmlFor="image" className="block text-gray-700 mb-2">Image:</label>
-          <input type="file" id="image" onChange={handleImageChange} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" required />
+          <label htmlFor="quantityRequired" className="block text-gray-700 mb-2">Quantity Required:</label>
+          <input type="number" id="quantityRequired" value={quantityRequired} onChange={(e) => setQuantityRequired(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity required" required />
         </div>
-        {/* Rest of the form fields */}
         <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
       </form>
     </div>
