@@ -1207,43 +1207,63 @@
   "DonationPosts":[
     {
       "category":"medication",
-      "objectID": "1"
+      "objectID": "1",
+      "id" : "1",
+      "status": true
     },
     {
       "category":"Clothes",
-      "objectID": "2"
+      "objectID": "2",
+      "id" : "2",
+      "status": false
     },
     {
       "category":"toys",
-      "objectID": "3"
+      "objectID": "3",
+      "id" : "3",
+      "status": false
     },
     {
       "category":"books",
-      "objectID": "3"
+      "objectID": "3",
+      "id" : "4",
+      "status": false
     },
     {
       "category":"stationaryItems",
-      "objectID": "3"
+      "objectID": "3",
+      "id" : "5",
+      "status": false
     },
     {
       "category":"Food",
-      "objectID": "3"
+      "objectID": "3",
+      "id" : "6",
+      "status": true
     },
     {
       "category":"blood",
-      "objectID": "3"
+      "objectID": "3",
+      "id" : "7",
+      "status": false
     },
     {
       "category":"medCase",
-      "objectID": "1"
+      "objectID": "1",
+      "id" : "8",
+      "status": false
     },
     {
       "category":"medicalEquipment",
-      "objectID": "3"
+      "objectID": "3",
+      "id" : "9",
+      "status": true
     },
     {
       "category":"medicalDevices",
-      "objectID": "2"
+      "objectID": "2",
+      "id" : "10",
+      "status": false
     }
   ]
 }
