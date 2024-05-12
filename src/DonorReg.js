@@ -294,32 +294,49 @@ export default function DonorReg() {
 )}
 {volunteer && (
     <div>
-        <label htmlFor="donorDocument" className="block text-sm font-medium leading-6 text-gray-900">
-            Document Upload for Donor Verification
+        <label htmlFor="image" className="block text-sm font-medium leading-6 text-gray-900">
+            Document
         </label>
-        <input id="donorDocument" name="donorDocument" type="file" required
-               className="hidden" onChange={handleFileUpload}/>
-        <label htmlFor="donorDocument"
-               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-blue sm:text-sm sm:leading-6 cursor-pointer bg-custom-blue text-center">
-            Choose File
+        <input
+            id="image"
+            name="image"
+            type="file"
+            onChange={handleFileUpload}
+            className="hidden"
+        />
+        <label
+            htmlFor="image"
+            className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6 cursor-pointer bg-custom-green text-white text-center"
+        >
+            Choose Document
         </label>
-        {loading ? <ClipLoader/> : fileName &&
-            <p className="text-sm text-gray-500 mt-2">Uploaded file: {fileName}</p>}
+        {loading ? (
+            <div className="flex justify-center mt-2">
+                <ClipLoader/>
+            </div>
+        ) : (
+            fileName && (
+                <p className="text-sm text-gray-500 mt-2">Uploaded file: {fileName}</p>
+            )
+        )}
         <p className="text-sm text-gray-500 mt-4">
-            As a Donor, upload document(s) to prove that you are a doctor or teacher so that you can verify your qualifications and contribute to relevant initiatives, ensuring that your skills are utilized appropriately.
+            As an Organization representative, upload document(s) to prove that you are a part of this organization and
+            that it is what it claims to be (school/hospital/church/mosque/non-profit) to establish trust and
+            credibility within the platform's community, facilitating partnership opportunities and resource
+            mobilization.
         </p>
     </div>
 )}
-<div>
-    <button
-        type="submit"
-        className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transform transition-transform duration-500 ease-in-out hover:scale-105"
-    >
-        Register
-    </button>
-</div>
-</form>
-</div>
-</div>
-);
+                    <div>
+                        <button
+                            type="submit"
+                            className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transform transition-transform duration-500 ease-in-out hover:scale-105"
+                        >
+                            Register
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
 }

@@ -20,45 +20,69 @@ const DonationDetailsForToys = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 py-6">
-      <h2 className="text-lg font-semibold mb-6">Enter Toy Donation Details</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter toy name" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="ageRange" className="block text-gray-700 mb-2">Age Range:</label>
-          <select id="ageRange" value={ageRange} onChange={(e) => setAgeRange(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500">
-            <option value="">Select age range</option>
-            {ageRangeOptions.map((option) => (
-              <option key={option} value={option}>{option}</option>
-            ))}
-          </select>
-        </div>
-        <div className="mb-4">
-          <label htmlFor="gender" className="block text-gray-700 mb-2">Gender:</label>
-          <select id="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500">
-            <option value="">Select gender</option>
-            {genderOptions.map((option) => (
-              <option key={option} value={option}>{option}</option>
-            ))}
-          </select>
-        </div>
-        <div className="mb-4">
-          <label htmlFor="category" className="block text-gray-700 mb-2">Category:</label>
-          <select id="category" value={category} onChange={(e) => setCategory(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500">
-            <option value="">Select category</option>
-            {categoryOptions.map((option) => (
-              <option key={option} value={option}>{option}</option>
-            ))}
-          </select>
-        </div>
-        <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
-      </form>
+    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" id="org-reg" onSubmit={handleSubmit}>
+      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Enter Toy Donation Details
+        </h2>
+      </div>
+
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form className="space-y-6" action="#" method="POST">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
+              Name
+            </label>
+            <input id="name" name="name" type="text" required
+                   value={name}
+                   onChange={(e) => setName(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <label htmlFor="ageRange" className="block text-sm font-medium leading-6 text-gray-900">
+              Age Range
+            </label>
+            <select id="ageRange" value={ageRange} onChange={(e) => setAgeRange(e.target.value)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6">
+              <option value="">Select age range</option>
+              {ageRangeOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="gender" className="block text-sm font-medium leading-6 text-gray-900">
+              Gender
+            </label>
+            <select id="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6">
+              <option value="">Select gender</option>
+              {genderOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="category" className="block text-sm font-medium leading-6 text-gray-900">
+              Category
+            </label>
+            <select id="category" value={category} onChange={(e) => setCategory(e.target.value)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6">
+              <option value="">Select category</option>
+              {categoryOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <button
+                type="submit"
+                className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transform transition-transform duration-500 ease-in-out hover:scale-105"
+            >
+              Post
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default DonationDetailsForToys;
-

@@ -10,7 +10,6 @@ const DonationDetailsForTeaching = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validation
     if (!title || !area || !governorate || !numberOfStudents || !address || !subjects) {
       alert('All fields are required');
       return;
@@ -23,39 +22,83 @@ const DonationDetailsForTeaching = () => {
       address,
       subjects
     });
-    // Additional logic here (e.g., sending data to backend)
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 py-6">
-      <h2 className="text-lg font-semibold mb-6">Enter Teaching Donation Details</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="title" className="block text-gray-700 mb-2">Title:</label>
-          <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter title" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="area" className="block text-gray-700 mb-2">Area:</label>
-          <input type="text" id="area" value={area} onChange={(e) => setArea(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter area" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="governorate" className="block text-gray-700 mb-2">Governorate:</label>
-          <input type="text" id="governorate" value={governorate} onChange={(e) => setGovernorate(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter governorate" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="numberOfStudents" className="block text-gray-700 mb-2">Number of Students:</label>
-          <input type="number" id="numberOfStudents" value={numberOfStudents} onChange={(e) => setNumberOfStudents(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter number of students" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="address" className="block text-gray-700 mb-2">Address:</label>
-          <input type="text" id="address" value={address} onChange={(e) => setAddress(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter address" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="subjects" className="block text-gray-700 mb-2">Subjects:</label>
-          <input type="text" id="subjects" value={subjects} onChange={(e) => setSubjects(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter subjects" />
-        </div>
-        <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
-      </form>
+    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" id="org-reg" onSubmit={handleSubmit}>
+      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Enter Teaching Donation Details
+        </h2>
+      </div>
+
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form className="space-y-6" action="#" method="POST">
+          <div>
+            <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
+              Title
+            </label>
+            <input id="title" name="title" type="text" required
+                   value={title}
+                   onChange={(e) => setTitle(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <label htmlFor="area" className="block text-sm font-medium leading-6 text-gray-900">
+              Area
+            </label>
+            <input id="area" name="area" type="text" required
+                   value={area}
+                   onChange={(e) => setArea(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <label htmlFor="governorate" className="block text-sm font-medium leading-6 text-gray-900">
+              Governorate
+            </label>
+            <input id="governorate" name="governorate" type="text" required
+                   value={governorate}
+                   onChange={(e) => setGovernorate(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <label htmlFor="numberOfStudents" className="block text-sm font-medium leading-6 text-gray-900">
+              Number of Students
+            </label>
+            <input id="numberOfStudents" name="numberOfStudents" type="number" required
+                   value={numberOfStudents}
+                   min={1}
+                   onChange={(e) => setNumberOfStudents(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <label htmlFor="address" className="block text-sm font-medium leading-6 text-gray-900">
+              Address
+            </label>
+            <input id="address" name="address" type="text" required
+                   value={address}
+                   onChange={(e) => setAddress(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <label htmlFor="subjects" className="block text-sm font-medium leading-6 text-gray-900">
+              Subjects
+            </label>
+            <input id="subjects" name="subjects" type="text" required
+                   value={subjects}
+                   onChange={(e) => setSubjects(e.target.value)}
+                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+          </div>
+          <div>
+            <button
+                type="submit"
+                className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transform transition-transform duration-500 ease-in-out hover:scale-105"
+            >
+              Post
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

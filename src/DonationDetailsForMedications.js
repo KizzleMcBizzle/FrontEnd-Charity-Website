@@ -18,28 +18,87 @@ const DonationDetailsForMedications = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 py-6">
-      <h2 className="text-lg font-semibold mb-6">Enter Medication Donation Details</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" required />
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            Enter Medication Donation Details
+          </h2>
         </div>
-        <div className="mb-4">
-          <label htmlFor="use" className="block text-gray-700 mb-2">Use:</label>
-          <input type="text" id="use" value={use} onChange={(e) => setUse(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter use" required />
+
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
+                Name
+              </label>
+              <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"
+                  placeholder="Enter name"
+              />
+            </div>
+            <div>
+              <label htmlFor="use" className="block text-sm font-medium leading-6 text-gray-900">
+                Use
+              </label>
+              <input
+                  id="use"
+                  name="use"
+                  type="text"
+                  required
+                  value={use}
+                  onChange={(e) => setUse(e.target.value)}
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"
+                  placeholder="Enter use"
+              />
+            </div>
+            <div>
+              <label htmlFor="disease" className="block text-sm font-medium leading-6 text-gray-900">
+                Disease
+              </label>
+              <input
+                  id="disease"
+                  name="disease"
+                  type="text"
+                  required
+                  value={disease}
+                  onChange={(e) => setDisease(e.target.value)}
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"
+                  placeholder="Enter disease"
+              />
+            </div>
+            <div>
+              <label htmlFor="quantity" className="block text-sm font-medium leading-6 text-gray-900">
+                Quantity
+              </label>
+              <input
+                  id="quantity"
+                  name="quantity"
+                  type="number"
+                  min={1}
+                  required
+                  value={quantity}
+                  onChange={(e) => setQuantity(e.target.value)}
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"
+                  placeholder="Enter quantity"
+              />
+            </div>
+            <div>
+              <button
+                  type="submit"
+                  className="flex w-full justify-center rounded-md bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transform transition-transform duration-500 ease-in-out hover:scale-105"
+              >
+                Post
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="mb-4">
-          <label htmlFor="disease" className="block text-gray-700 mb-2">Disease:</label>
-          <input type="text" id="disease" value={disease} onChange={(e) => setDisease(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter disease" required />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="quantity" className="block text-gray-700 mb-2">Quantity:</label>
-          <input type="text" id="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity" required />
-        </div>
-        <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
-      </form>
-    </div>
+      </div>
   );
 };
 
