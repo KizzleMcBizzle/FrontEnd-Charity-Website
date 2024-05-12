@@ -72,6 +72,7 @@ import DonationDetailsForMedCase from './DonationDetailsForMedCase'
 import DonationDetailsForMedicalEquipment from './DonationDetailsForMedicalEquipment'
 import DonationDetailsForMedicalDevices from './DonationDetailsForMedicalDevices'
 import OrgPrivateRoute from './OrgPrivateRoute.js'
+import Contact from './Contact.js'
 
 
 function App() {
@@ -95,6 +96,10 @@ function App() {
         <Route path="/org-register" element={<>
           <Navbar2 />
           <OrgReg />
+        </>} />
+        <Route path="/contact" element={<>
+          <Navbar2 />
+          <Contact />
         </>} />
 
         
@@ -130,6 +135,8 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="contact" element={<Contact />} />
+
               <Route path="profile" element={<DonorProfileFetch />} />
               <Route path="changepass" element={<DonorPassFetch />} />
               <Route path="donor" element={<Donor/>} />
@@ -176,7 +183,8 @@ function App() {
           <OrgNavbar />
           <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/createpost" element={<OrgHomeFetch />} />
+          <Route path="createpost" element={<OrgHomeFetch />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="profile" element={<OrgProfileFetch />} />
           <Route path="changepass" element={<OrgPassFetch />} />
           <Route path="myposts" element={<OrgViewPostsFetch />} />
