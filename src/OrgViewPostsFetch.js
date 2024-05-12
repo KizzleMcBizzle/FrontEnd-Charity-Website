@@ -15,7 +15,7 @@ const ViewOrgsFetch = () => {
             <div className="flex justify-center items-center h-screen">
                 <div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-custom-green"/>
             </div>
-        }
+        } 
         {posts &&  <OrgViewPosts posts = {posts}/>}
         
     </div>

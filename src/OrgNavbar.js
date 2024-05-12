@@ -45,8 +45,8 @@ const navigation = {
     pages: [
         { name: 'About Us', href: '/org/' },
         { name: 'Contact', href: '#' },
-        { name: 'Create Post', href: '/org/create-post' },
-        { name: 'View Posts', href: '/org/view-posts' }
+        { name: 'Create Post', href: '/org/createpost' },
+        { name: 'View Posts', href: '/org/myposts' }
     ],
 }
 

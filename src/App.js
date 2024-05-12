@@ -64,6 +64,8 @@ import DonationDetailsForMedications from './DonationDetailsForMedications'
 import DonationDetailsForSchoolSupp from './DonationDetailsForSchoolSupp'
 import DonationDetailsForToys from './DonationDetailsForToys';
 import OrgNavbar from './OrgNavbar.js';
+import OrgViewPostsFetch from './OrgViewPostsFetch'
+import OrgViewPostDetails from './OrgViewPostDetails'
 
 
 function App() {
@@ -164,14 +166,21 @@ function App() {
         <Route path="/org/*" element={<>
           <OrgNavbar />
           <Routes>
-          <Route path="/" element={<OrgHomeFetch />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/createpost" element={<OrgHomeFetch />} />
           <Route path="profile" element={<OrgProfileFetch />} />
+          <Route path="myposts" element={<OrgViewPostsFetch />} />
+          <Route path="myposts/:id" element={<OrgViewPostDetails />} />
+
 
           
           <Route path="teaching" element={<OrgPassFetch />} />
           <Route path="medCase" element={<OrgPassFetch />} />
           <Route path="medEquip" element={<OrgPassFetch />} />
           <Route path="medDevice" element={<OrgPassFetch />} />
+
+
+
 
           <Route path="medication" element={<DonationDetailsForMedications />} />
           <Route path="Clothes" element={<DonationDetailsForClothes />} />
