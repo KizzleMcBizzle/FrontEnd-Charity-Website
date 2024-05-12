@@ -7,7 +7,6 @@ const DeliveryApp = () => {
   const [selectedRequest, setSelectedRequest] = useState(null);
   const { error, isPending, data: pickup_req } = useFetch('http://localhost:4000/pickup_req');
   const navigate = useNavigate();
-
   useEffect(() => {
     if (pickup_req) {
       setDeliveryRequests(pickup_req);
@@ -28,21 +27,36 @@ const DeliveryApp = () => {
   };
 
   return (
-    <div className="bg-f0f0f0 rounded-10 shadow-lg p-40 mx-auto max-w-800">
-      <h1 className="mb-30 text-36 color-333">Delivery Requests</h1>
-      {isPending && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
-        {deliveryRequests.map(request => (
-          <li key={request.id} 
-              onClick={() => handleSelectRequest(request)}
-              className={`bg-white p-20 rounded-8 shadow-md transition-transform duration-200 cursor-pointer ${selectedRequest?.id === request.id ? 'transform translate-y-1' : 'hover:translate-y-0.5'}`}>
-            <strong>Date:</strong> {request.date}, <strong>Time:</strong> {request.time} <br />
-            <strong>Location:</strong> {request.location}
-          </li>
-        ))}
-      </ul>
-      <button className="bg-2196f3 text-white bg-custom-green p-10 md:p-15 rounded-5 md:rounded-full text-16 md:text-20 mt-40 hover:bg-45a049 transition duration-300" onClick={handleConfirmSelection}>Confirm Selection</button>
+    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" id="org-reg">
+      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Delivery Requests
+        </h2>
+      </div>
+
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        {isPending && <div>Loading...</div>}
+        {error && <div>{error}</div>}
+        <ul className="grid grid-cols-1 gap-10">
+          {deliveryRequests.map(request => (
+            <li key={request.id}
+                onClick={() => handleSelectRequest(request)}
+                className={`bg-gray-50 p-4 rounded-8 shadow-md transition-transform duration-200 cursor-pointer ${selectedRequest?.id === request.id ? 'transform translate-y-1' : 'hover:translate-y-0.5'}`}>
+              <strong>Date:</strong> {request.date}, <strong>Time:</strong> {request.time} <br />
+              <strong>Location:</strong> {request.location}
+            </li>
+          ))}
+        </ul>
+        <div>
+          <button
+              type="submit"
+              className="flex w-full justify-center rounded-md mt-4 bg-custom-green px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-custom-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transform transition-transform duration-500 ease-in-out hover:scale-105"
+              onClick={handleConfirmSelection}
+          >
+            Confirm Selection
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
