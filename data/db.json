@@ -773,7 +773,7 @@
       "governorate": "State",
       "number_of_students": 25,
       "address": "123 Main Street, Cityville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "subjects": "Mathematics",
       "name": "Introduction to Mathematics"
     },
@@ -784,7 +784,7 @@
       "governorate": "Cairo",
       "number_of_students": 20,
       "address": "456 Elm Street, Townsville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "subjects": "English",
       "name": "Basic English Language Skills"
     },
@@ -795,7 +795,7 @@
       "governorate": "Giza",
       "number_of_students": 18,
       "address": "456 Maple Street, Cityville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=456+Maple+Street+Cityville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "subjects": "Physics",
       "name": "Introduction to Physics"
     },
@@ -806,7 +806,7 @@
       "governorate": "State",
       "number_of_students": 22,
       "address": "987 Birch Street, Townsville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=987+Birch+Street+Townsville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "subjects": "Spanish",
       "name": "Basic Spanish Language Skills"
 
@@ -818,7 +818,7 @@
       "age": 30,
       "gender": "Male",
       "weight": "70kg",
-      "location": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "address": "123 Main Street, Cityville, State, Country",
       "organizationName": "Medical Care Organization",
       "medicalSpecialty": "General Surgery",
@@ -832,7 +832,7 @@
       "age": 25,
       "gender": "Female",
       "weight": "60kg",
-      "location": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "address": "456 Elm Street, Townsville, State, Country",
       "organizationName": "Healthcare Services",
       "medicalSpecialty": "Cardiology",
@@ -846,7 +846,7 @@
       "age": 40,
       "gender": "Male",
       "weight": "80kg",
-      "location": "https://maps.google.com/?q=789+Oak+Street+Cityville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "address": "789 Oak Street, Cityville, State, Country",
       "organizationName": "Medical Care Organization",
       "medicalSpecialty": "Neurology",
