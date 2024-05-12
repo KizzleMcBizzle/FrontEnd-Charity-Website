@@ -13,7 +13,7 @@ const navigation = {
     ],
     pages: [
         { name: 'About Us', href: '/org/' },
-        { name: 'Contact', href: '#' },
+        { name: 'Contact', href: '/org/contact' },
         { name: 'Create Post', href: '/org/createpost' },
         { name: 'View Posts', href: '/org/myposts' },
         { name: 'Schedule Drop-off', href: '/org/schedule' }

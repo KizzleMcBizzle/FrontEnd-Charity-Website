@@ -70,7 +70,7 @@ const navigation = {
     pages: [
         { name: 'Home', href: '/donor/donor' },
         { name: 'About Us', href: '/donor' },
-        { name: 'Contact', href: '#' },
+        { name: 'Contact', href: '/donor/contact' },
         {name: 'View Organizations', href: '/donor/view/orgs'}
         
     ],
