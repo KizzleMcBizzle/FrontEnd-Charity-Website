@@ -109,4 +109,18 @@ body {
     border-radius: 30px;
     margin-top: 40px;
   }
+.green-thumb-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: green;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.green-thumb-slider:hover::-webkit-slider-thumb {
+  background: #4CAF50;
+}
   
