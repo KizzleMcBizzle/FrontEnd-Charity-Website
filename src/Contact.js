@@ -10,21 +10,21 @@ const Contact = () => {
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md">
           <h3 className="text-xl md:text-2xl font-bold mb-4">Our Address</h3>
           <p className="text-gray-700 mb-4">
             1234 Street Name, City, State, Country
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md mt-6">
           <h3 className="text-xl md:text-2xl font-bold mb-4">Email</h3>
           <p className="text-gray-700 mb-4">
             info@example.com
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md mt-6">
           <h3 className="text-xl md:text-2xl font-bold mb-4">Phone</h3>
           <p className="text-gray-700 mb-4">
             +1 (234) 567-8901
