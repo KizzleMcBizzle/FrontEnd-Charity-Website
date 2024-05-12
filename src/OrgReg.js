@@ -9,7 +9,7 @@ import {toast} from "react-toastify";
 export default function OrgReg() {
     const [fileName, setFileName] = useState('');
     const [loading, setLoading] = useState(false);
-    const [markerPosition, setMarkerPosition] = useState({ lat: 0, lng: 0 });
+    const [markerPosition, setMarkerPosition] = useState({ lat: 29.987350, lng: 31.438084 });
     const [mapLoaded, setMapLoaded] = useState(false);
 
     const handleFileUpload = (event) => {
@@ -48,8 +48,16 @@ export default function OrgReg() {
     const [area, setArea] = useState('');
     const [governorate, setGovernorate] = useState('');
     const [document, setDocument] = useState('');
-
+    const [address, setAddress] = useState('');
     const navigate = useNavigate();
+
+    const getAddress = async (lat, lng) => {
+        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w`);
+        const data = await response.json();
+        if (data.results[0]) {
+            setAddress(data.results[0].formatted_address);
+        }
+    }
 
     const handlesubmit = (e) => {
         e.preventDefault();
@@ -195,9 +203,9 @@ export default function OrgReg() {
                     {/* This is supposed to be the Google Maps marker, but it's not working
                      will try and fix it later*/}
                     <div>
-                        <label htmlFor="area" className="block text-sm font-medium leading-6 text-gray-900">
-                            Google Marker
-                        </label>
+                        <div className="w-1/2 p-4">
+                            <p className="text-sm font-medium leading-6 text-gray-900">{address}</p>
+                        </div>
                         <div className="relative h-64 w-full rounded-md overflow-hidden">
                             <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
                                 <GoogleMap
@@ -208,7 +216,10 @@ export default function OrgReg() {
                                     <Marker
                                         position={markerPosition}
                                         onDragEnd={(event) => {
-                                            setMarkerPosition({lat: event.latLng.lat(), lng: event.latLng.lng()});
+                                            const newLat = event.latLng.lat();
+                                            const newLng = event.latLng.lng();
+                                            setMarkerPosition({lat: newLat, lng: newLng});
+                                            getAddress(newLat, newLng);
                                         }}
                                         draggable={true}
                                     />
@@ -218,7 +229,7 @@ export default function OrgReg() {
                     </div>
                     <div>
                         <label htmlFor="orgDocument" className="block text-sm font-medium leading-6 text-gray-900">
-                            Document Upload for Organization Verification
+                        Document Upload for Organization Verification
                         </label>
                         <input id="orgDocument" name="orgDocument" type="file" required
                                className="hidden" onChange={handleFileUpload}/>

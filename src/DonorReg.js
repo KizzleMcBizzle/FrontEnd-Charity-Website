@@ -26,11 +26,22 @@ export default function DonorReg() {
     const [subjects, setSubjects] = useState('');
     const [proBonoClasses, setProBonoClasses] = useState('');
     const [proBonoStudents, setProBonoStudents] = useState('');
-    const [markerPosition, setMarkerPosition] = useState({ lat: 0, lng: 0 });
+    const [markerPosition, setMarkerPosition] = useState({ lat: 29.987350, lng: 31.438084 });
     const [fileName, setFileName] = useState('');
     const [loading, setLoading] = useState(false);
     const [mapLoaded, setMapLoaded] = useState(false);
     const [document, setDocument] = useState('');
+    const [mapAddress, setMapAddress] = useState('');
+
+
+
+    const getAddress = async (lat, lng) => {
+        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w`);
+        const data = await response.json();
+        if (data.results[0]) {
+            setMapAddress(data.results[0].formatted_address);
+        }
+    }
 
     const handleFileUpload = (event) => {
         setLoading(true);
@@ -62,7 +73,7 @@ export default function DonorReg() {
         e.preventDefault();
         const googleMapsUrl = `https://www.google.com/maps/?q=${markerPosition.lat},${markerPosition.lng}`;
         let regobj = {
-            firstName, lastName, name: firstName + " " + lastName, verified, email, password, contactNumber, address, area, governorate,
+            firstName, lastName, name: firstName + " " + lastName, verified, email, password, contactNumber, address: mapAddress, area, governorate,
             role, clinicLocation, specialty, proBonoCases, subjects, proBonoClasses,
             proBonoStudents, document, googleMapsUrl
         };
@@ -154,7 +165,7 @@ export default function DonorReg() {
                             Address
                         </label>
                         <input id="address" name="address" type="text" required
-                               value={address} onChange={(e) => setAddress(e.target.value)}
+                               value={mapAddress} onChange={(e) => setMapAddress(e.target.value)}
                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
                     </div>
                     <div>
@@ -225,28 +236,31 @@ export default function DonorReg() {
                    value={proBonoCases} onChange={(e) => setProBonoCases(e.target.value)}
                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
-            <div>
-                <label htmlFor="area" className="block text-sm font-medium leading-6 text-gray-900">
-                    Google Marker
-                </label>
-                <div className="relative h-64 w-full rounded-md overflow-hidden">
-                    <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
-                        <GoogleMap
-                            mapContainerStyle={{height: "100%", width: "100%"}}
-                            center={markerPosition}
-                            zoom={8}
-                        >
-                            <Marker
-                                position={markerPosition}
-                                onDragEnd={(event) => {
-                                    setMarkerPosition({lat: event.latLng.lat(), lng: event.latLng.lng()});
-                                }}
-                                draggable={true}
-                            />
-                        </GoogleMap>
-                    </LoadScript>
-                </div>
+        <div>
+            <div className="w-1/2 p-4">
+                <p className="text-sm font-medium leading-6 text-gray-900">{mapAddress}</p>
             </div>
+            <div className="relative h-64 w-full rounded-md overflow-hidden">
+                <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
+                    <GoogleMap
+                        mapContainerStyle={{height: "100%", width: "100%"}}
+                        center={markerPosition}
+                        zoom={8}
+                    >
+                        <Marker
+                            position={markerPosition}
+                            onDragEnd={(event) => {
+                                const newLat = event.latLng.lat();
+                                const newLng = event.latLng.lng();
+                                setMarkerPosition({lat: newLat, lng: newLng});
+                                getAddress(newLat, newLng);
+                            }}
+                            draggable={true}
+                        />
+                    </GoogleMap>
+                </LoadScript>
+            </div>
+        </div>
     </>
                     )}
                     {volunteer && role === 'teacher' && (
@@ -266,7 +280,7 @@ export default function DonorReg() {
                                 </label>
                                 <input id="proBonoClasses" name="proBonoClasses" type="number" min="0" required
                                        value={proBonoClasses} onChange={(e) => setProBonoClasses(e.target.value)}
-                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
+                                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-custom-green sm:text-sm sm:leading-6"/>
         </div>
         <div>
             <label htmlFor="proBonoStudents" className="block text-sm font-medium leading-6 text-gray-900">
