@@ -91,6 +91,30 @@ const TeachingDetails = ({id, status}) => {
                             ></iframe>
                         </dd>
                     </div>
+                    <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Teacher Name
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    Frank Martinez
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Email
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                    frank.martinez@example.com
+                                </dd>
+                            </div>
+                            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                <dt className="text-sm font-medium text-gray-500">
+                                    Contact Number
+                                </dt>
+                                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                8765432109
+                                </dd>
+                            </div>
                 </dl>
             </div>
 
@@ -100,7 +124,7 @@ const TeachingDetails = ({id, status}) => {
         
         <div className="flex items-center space-x-4 mt-3">
 
-<button onClick={() => navigate('/org/medication')}
+<button onClick={() => navigate('/org/teaching')}
         className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Edit Post
 </button>
 <button onClick={() => navigate('/org/myposts')}

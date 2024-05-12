@@ -392,7 +392,6 @@ export default function Example() {
                                                 <Popover.Panel className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                     <div className="py-1">
                                                         <button onClick={() =>navigate("/donor/profile")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</button>
-                                                        <button onClick={() =>navigate("/")} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</button>
                                                         <button onClick={()=>auth.logOut()} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</button>
                                                     </div>
                                                 </Popover.Panel>

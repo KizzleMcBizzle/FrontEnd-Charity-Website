@@ -71,6 +71,7 @@ import DonationDetailsForTeaching from './DonationDetailsForTeaching'
 import DonationDetailsForMedCase from './DonationDetailsForMedCase'
 import DonationDetailsForMedicalEquipment from './DonationDetailsForMedicalEquipment'
 import DonationDetailsForMedicalDevices from './DonationDetailsForMedicalDevices'
+import OrgPrivateRoute from './OrgPrivateRoute.js'
 
 
 function App() {
@@ -124,7 +125,7 @@ function App() {
         </>} />
         </ Route>
             
-        {/*<Route element={<DonorPrivateRoute />}>*/}
+        <Route element={<DonorPrivateRoute />}>
         <Route path="/donor/*" element={<>
             <Navbar />
             <Routes>
@@ -167,8 +168,10 @@ function App() {
             </Routes>
             </>} />
             
-        {/*</Route>*/}
+        </Route>
 
+
+        <Route element={<OrgPrivateRoute />} >
         <Route path="/org/*" element={<>
           <OrgNavbar />
           <Routes>
@@ -205,7 +208,7 @@ function App() {
 
 
             
-        
+      </ Route>
 
 
 

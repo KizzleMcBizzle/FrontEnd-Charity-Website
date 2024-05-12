@@ -321,7 +321,7 @@ export default function Example({title , results , type}) {
         page = <SchoolStationaryList clothes={filteredResults}/>
 
     }else if(type === "OrgViewPosts"){
-        placeholder = "Search by post name"
+        placeholder = "Search by post title"
         page = <OrgViewPosts posts = {filteredResults}/>
 
         subCategories = Array.from(new Set(results.map(item => item.Fulfilled))).map(status => ({ name: status }));

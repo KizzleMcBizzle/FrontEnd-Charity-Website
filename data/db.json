@@ -1171,7 +1171,8 @@
       "id": "1",
       "status": "True",
       "name": "Fluoxetine",
-      "Fulfilled": "Fulfilled"
+      "Fulfilled": "Fulfilled",
+      "subtitle" : "Medication"
     },
     {
       "category": "Clothes",
@@ -1179,15 +1180,17 @@
       "id": "2",
       "status": "False",
       "name": "Winter Jacket",
-      "Fulfilled": "Not Fullfilled"
+      "Fulfilled": "Not Fullfilled",
+      "subtitle" : "Clothes"
     },
     {
       "category": "toys",
       "objectID": "3",
       "id": "3",
       "status": "False",
-      "name": "Toy 3",
-      "Fulfilled": "Not Fullfilled"
+      "name": "Lego EV3",
+      "Fulfilled": "Not Fullfilled",
+      "subtitle" : "Toys"
     },
     {
       "category": "books",
@@ -1195,7 +1198,8 @@
       "id": "4",
       "status": "False",
       "name": "Chemistry: The Central Science",
-      "Fulfilled": "Not Fullfilled"
+      "Fulfilled": "Not Fullfilled",
+      "subtitle" : "Educational Books"
     },
     {
       "category": "stationaryItems",
@@ -1203,7 +1207,8 @@
       "id": "5",
       "status": "False",
       "name": "Eraser",
-      "Fulfilled": "Not Fullfilled"
+      "Fulfilled": "Not Fullfilled",
+      "subtitle" : "School Stationary"
 
     },
     {
@@ -1212,7 +1217,8 @@
       "id": "6",
       "status": "True",
       "name": "Beans",
-      "Fulfilled": "Fulfilled"
+      "Fulfilled": "Fulfilled",
+      "subtitle" : "Food"
     },
     {
       "category": "blood",
@@ -1220,7 +1226,8 @@
       "id": "7",
       "status": "False",
       "name": "A+",
-      "Fulfilled": "Not Fullfilled"
+      "Fulfilled": "Not Fullfilled",
+      "subtitle" : "Blood Donation"
     },
     {
       "category": "medCase",
@@ -1228,7 +1235,8 @@
       "id": "8",
       "status": "True",
       "name": "John Doe",
-      "Fulfilled": "Fulfilled"
+      "Fulfilled": "Fulfilled",
+      "subtitle" : "Medical Case"
     },
     {
       "category": "medicalEquipment",
@@ -1236,7 +1244,8 @@
       "id": "9",
       "status": "True",
       "name": "Hospital Bed",
-      "Fulfilled": "Fulfilled"
+      "Fulfilled": "Fulfilled",
+      "subtitle" : "Medical Equipment"
     },
     {
       "category": "medicalDevices",
@@ -1244,7 +1253,8 @@
       "id": "10",
       "status": "False",
       "name": "Insulin Pod",
-      "Fulfilled": "Not Fullfilled"
+      "Fulfilled": "Not Fullfilled",
+      "subtitle" : "Medical Device"
     },
     {
       "name": "Basic Spanish Language Skills",
@@ -1252,7 +1262,8 @@
       "objectID": "4",
       "id": "11",
       "status": "True",
-      "Fulfilled": "Fulfilled"
+      "Fulfilled": "Fulfilled",
+      "subtitle" : "Pro-Bono Teaching"
     }
   ]
 }
