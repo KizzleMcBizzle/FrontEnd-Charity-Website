@@ -9,7 +9,7 @@ const TeachingDetails = () => {
   const { data: teaching, error, isPending } = useFetch('http://localhost:4000/teaching/' + id);
   let flag = false;
 
-  if(user.role.toLowerCase() === 'teacher'){
+  if( user.role && user.role.toLowerCase() === 'teacher'){
     flag = true;
   }
 

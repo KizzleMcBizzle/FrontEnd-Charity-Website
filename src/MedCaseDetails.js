@@ -10,7 +10,7 @@ const MedCaseDetails = () => {
   console.log(user);
   let flag = false;
 
-  if(user.role.toLowerCase() === 'doctor'){
+  if(user.role && user.role.toLowerCase() === 'doctor'){
     flag = true;
   }
 

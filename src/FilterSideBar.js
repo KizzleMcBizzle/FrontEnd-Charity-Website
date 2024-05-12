@@ -44,7 +44,7 @@ export default function Example({title , results , type}) {
 
     const [selectedFilters, setSelectedFilters] = useState([]);
 
-    
+    let placeholder;
     let page = <></>;
     let subCategories =[];
     let filters = [];
@@ -60,6 +60,7 @@ export default function Example({title , results , type}) {
         
         /*check type*/
       if (type === 'adminReqOrgs' || type ==='adminViewOrgs') {
+        
         if(type==='adminReqOrgs'){
             page =<OrgUseReq
                    orgs ={filteredResults}
@@ -70,7 +71,7 @@ export default function Example({title , results , type}) {
 
         }
 
-
+        placeholder = "Serach by organization"
         /*fetches all subcategories from the result*/
         subCategories = Array.from(new Set(results.map(item => item.organizationType))).map(role => ({ name: role }));
 
@@ -93,6 +94,7 @@ export default function Example({title , results , type}) {
         ]
       } 
       else if (type === 'donorApplicationProBono' || type==='adminViewDonors') {
+        placeholder = "Serach by donor name"
            if(type === 'donorApplicationProBono'){
                 page = <DonUseReq donors = {filteredResults}/>;
             }else if(type==='adminViewDonors'){
@@ -103,6 +105,7 @@ export default function Example({title , results , type}) {
             subCategories = Array.from(new Set(results.map(item => item.role))).map(role => ({ name: role }));    
       }
       else if(type === "medicationReq" ){
+        placeholder = "Serach by medication"
         page =<MedicationList medications={filteredResults}></MedicationList>
 
         const diseaseOptions = Array.from(new Set(results.map(item => item.disease))).map(dis => ({ value: dis, checked: false }));
@@ -116,6 +119,7 @@ export default function Example({title , results , type}) {
         ]
       }
       else if(type === "medicalCase" ){
+        placeholder = "Serach by patient name"
         page =<MedCaseList medCases={filteredResults}></MedCaseList>
 
         const specialityOptions = Array.from(new Set(results.map(item => item.medicalSpecialty))).map(speciality => ({ value: speciality, checked: false }));
@@ -147,6 +151,7 @@ export default function Example({title , results , type}) {
         ]
       }
       else if(type === "bloodDonations" ){
+        placeholder = "Serach by blood type"
         page =<BloodList bloods={filteredResults}></BloodList>
 
         const areaOptions = Array.from(new Set(results.map(item => item.hospital_area))).map(area => ({ value: area, checked: false }));
@@ -172,6 +177,7 @@ export default function Example({title , results , type}) {
         ]
       }
       else if(type === "teachingPosts" ){
+        placeholder = "Serach by title"
         page =<TeachingList teachings={filteredResults}></TeachingList>
 
         const subjectOptions = Array.from(new Set(results.map(item => item.subjects))).map(subjects => ({ value: subjects, checked: false }));
@@ -197,6 +203,7 @@ export default function Example({title , results , type}) {
         ]
     }
       else if(type==='ToyDonReq'){
+        placeholder = "Serach by toy name"
         page = <ToyDonReq
                toys ={filteredResults}
               />;
@@ -234,6 +241,7 @@ export default function Example({title , results , type}) {
     ]
 
     } else if(type==='FoodDonReq'){
+        placeholder = "Serach by food name"
         page = <FoodDonReq
                food ={filteredResults}
               />;
@@ -258,20 +266,24 @@ export default function Example({title , results , type}) {
             }
         ]
     }else if(type ==='BookDonReq'){
+        placeholder = "Serach by book name"
         page = <BookDonReq
                 books= {filteredResults}/>
 
     }else if(type ==='medDevice'){
+        placeholder = "Serach by device name"
         page = <MedDeviceList
                 medDevices= {filteredResults}/>
 
     } 
     else if(type ==='medEquipment'){
+        placeholder = "Serach by equipment name"
         page = <MedEquipList
                 medEquips= {filteredResults}/>
 
     } 
     else if(type === 'ViewClothes'){
+        placeholder = "Serach by clothes type"
         page = <ClothesDonationList clothes = {filteredResults} />
 
         const age = Array.from(new Set(results.map(item => item.age))).map(age => ({ value: age, checked: false }));
@@ -303,6 +315,7 @@ export default function Example({title , results , type}) {
 
     }
     else if(type === 'ViewSchoolStationary'){
+        placeholder = "Serach by name"
         page = <SchoolStationaryList clothes={filteredResults}/>
 
     }
@@ -603,7 +616,7 @@ export default function Example({title , results , type}) {
                                         <input
                                             type="text"
                                             className="transition-all duration-500 ease-in-out border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:border-custom-green"
-                                            placeholder="Search by charity name"
+                                            placeholder={placeholder}
                                             value = {searchItem}
                                             onChange={handleInputChange}
                                         />
