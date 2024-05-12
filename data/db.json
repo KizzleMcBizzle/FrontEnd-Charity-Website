@@ -79,7 +79,8 @@
       "organizationAddress": "123 Main Street, Exampleville",
       "area": "Example Area",
       "governorate": "Example Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "3",
@@ -95,7 +96,8 @@
       "organizationAddress": "456 Hospital Avenue, Hospitalville",
       "area": "Hospital Area",
       "governorate": "Hospital Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "4",
@@ -111,7 +113,8 @@
       "organizationAddress": "789 Church Street, Churchtown",
       "area": "Church Street",
       "governorate": "Church Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "5",
@@ -127,7 +130,8 @@
       "organizationAddress": "101 Mosque Road, Mosquetown",
       "area": "Mosque Road",
       "governorate": "Mosque Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "6",
@@ -143,7 +147,8 @@
       "organizationAddress": "11 Orphanage Lane, Orphanagetown",
       "area": "Orphanage Lane",
       "governorate": "Orphanage Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "7",
@@ -159,7 +164,8 @@
       "organizationAddress": "22 School Street, Schoolville",
       "area": "School Street",
       "governorate": "School Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "8",
@@ -175,7 +181,8 @@
       "organizationAddress": "33 Community Center Avenue, Communitytown",
       "area": "Community Center Avenue",
       "governorate": "Community Center Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "9",
@@ -191,7 +198,8 @@
       "organizationAddress": "44 Animal Shelter Lane, Animaltown",
       "area": "Animal Shelter Lane",
       "governorate": "Animal Shelter Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "11",
@@ -207,7 +215,8 @@
       "organizationAddress": "55 Food Bank Street, Foodtown",
       "area": "Food Bank Street",
       "governorate": "Food Bank Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "12",
@@ -223,7 +232,8 @@
       "organizationAddress": "66 Community Garden Lane, Gardentown",
       "area": "Community Garden Lane",
       "governorate": "Community Garden Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "13",
@@ -239,7 +249,8 @@
       "organizationAddress": "77 Community Center Road, Roadtown",
       "area": "Community Center Road",
       "governorate": "Community Center Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "14",
@@ -255,7 +266,8 @@
       "organizationAddress": "88 Library Avenue, Librarytown",
       "area": "Library Avenue",
       "governorate": "Library Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "15",
@@ -271,7 +283,8 @@
       "organizationAddress": "99 Animal Shelter Road, Sheltertown",
       "area": "Animal Shelter Road",
       "governorate": "Animal Shelter Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "16",
@@ -287,7 +300,8 @@
       "organizationAddress": "111 School Avenue, Schooldistrict",
       "area": "School Avenue",
       "governorate": "School Governorate",
-      "document": "qualification_proof"
+      "document": "qualification_proof",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "87ca",
@@ -303,8 +317,10 @@
       "organizationAddress": "Some Random Address",
       "area": "dwqqwddqw",
       "governorate": "dqwqwddq",
-      "document": "dqwqwddq_document"
-    },
+      "document": "dqwqwddq_document",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
+    }
+  ,
     {
       "id": "8511",
       "firstName": "Omar",
@@ -320,7 +336,7 @@
       "area": "dqwqwd",
       "governorate": "wqddqw",
       "document": "dwqqwd_document",
-      "googleMapsUrl": "https://www.google.com/maps/?q=30.297017883372074,31.376953125"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     },
     {
       "id": "8f90",
@@ -337,7 +353,7 @@
       "area": "dwaawd",
       "governorate": "dwadaw",
       "document": "dwadwa_document",
-      "googleMapsUrl": "https://www.google.com/maps/?q=29.958429656767485,31.309833526611328"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084"
     }
   ],
   "donors": [
@@ -566,8 +582,8 @@
       "id": "3"
     },
     {
-      "title": "Medical Supplies",
-      "name": "medSupp",
+      "title": "Medical Devices",
+      "name": "medDevice",
       "img": "https://www.ultrateb.com/assets/img/General%20Medical%20Consumables.jpg",
       "id": "4"
     },
@@ -606,6 +622,12 @@
       "name": "Food",
       "img": "https://www.eatingwell.com/thmb/m5xUzIOmhWSoXZnY-oZcO9SdArQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg",
       "id": "10"
+    },
+    {
+    "title": "Medical Equipment",
+    "name": "medEquip",
+    "img": "https://www.ultrateb.com/assets/img/General%20Medical%20Consumables.jpg",
+    "id": "11"
     }
   ],
   "medication": [
@@ -613,31 +635,136 @@
       "id": "1",
       "name": "Fluoxetine",
       "use": "Treatment of depression, anxiety, OCD",
-      "disease": "OCD"
+      "disease": "OCD",
+      "quantity": 10
     },
     {
       "id": "2",
       "name": "Sertraline",
       "use": "Treatment of depression, anxiety, OCD",
-      "disease": "OCD"
+      "disease": "OCD",
+      "quantity": 20
     },
     {
       "id": "3",
       "name": "Escitalopram",
       "use": "Treatment of depression, anxiety",
-      "disease": "Anxiety"
+      "disease": "Anxiety",
+      "quantity": 100
     },
     {
       "id": "4",
       "name": "Citalopram",
       "use": "Treatment of depression, anxiety",
-      "disease": "Anxiety"
+      "disease": "Anxiety",
+      "quantity": 200
     },
     {
       "id": "5",
       "name": "Mirtazapine",
       "use": "Treatment of depression, anxiety, insomnia",
-      "disease": "Insomnia"
+      "disease": "Insomnia",
+      "quantity": 15
+    }
+  ],
+  "donationsOrg": [
+    {
+      "title": "Medication Requests",
+      "name": "medication",
+      "img": "https://www.denverhealthmedicalplan.org/sites/default/files/styles/full_width/public/2020-04/meds.jpg?itok=2vmpbc0T",
+      "id": "1"
+    },
+    {
+      "title": "Blood Donation Requests",
+      "name": "blood",
+      "img": "https://www.osfhealthcare.org/blog/wp-content/uploads/2021/12/shutterstock_1307440612-1.jpg",
+      "id": "2"
+    },
+    {
+      "title": "Teaching Posts",
+      "name": "teaching",
+      "img": "https://degrees.snu.edu/hs-fs/hubfs/AdobeStock_518657595.jpeg",
+      "id": "3"
+    },
+    {
+      "title": "Medical Devices",
+      "name": "medDevice",
+      "img": "https://www.ultrateb.com/assets/img/General%20Medical%20Consumables.jpg",
+      "id": "4"
+    },
+    {
+      "title": "Medical Cases",
+      "name": "medCase",
+      "img": "https://www.shutterstock.com/image-photo/medicine-healthcare-people-concept-female-600nw-2188588635.jpg",
+      "id": "5"
+    },
+    {
+      "title": "Toys",
+      "name": "Toys",
+      "img": "https://live-production.wcms.abc-cdn.net.au/4362dff248e23a046b61041c1d664630?impolicy=wcms_crop_resize&cropH=1080&cropW=1920&xPos=0&yPos=99&width=862&height=485",
+      "id": "6"
+    },
+    {
+      "title": "School Supplies",
+      "name": "schoolSupplies",
+      "img": "https://www.promateworld.com/storage/blog/trendy-stationery-items-01-1.jpg",
+      "id": "7"
+    },
+    {
+      "title": "Clothes",
+      "name": "Clothes",
+      "img": "https://uwaterloo.ca/news/sites/ca.news/files/styles/feature_large/public/perry-merrity-ii-gprji5r4rak-unsplash.jpg?itok=zWvhOwNY",
+      "id": "9"
+    },
+    {
+      "title": "Food",
+      "name": "Food",
+      "img": "https://www.eatingwell.com/thmb/m5xUzIOmhWSoXZnY-oZcO9SdArQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg",
+      "id": "10"
+    },
+    {
+    "title": "Medical Equipment",
+    "name": "medEquip",
+    "img": "https://www.ultrateb.com/assets/img/General%20Medical%20Consumables.jpg",
+    "id": "11"
+    }
+  ],
+
+  "medication": [
+    {
+      "id": "1",
+      "name": "Fluoxetine",
+      "use": "Treatment of depression, anxiety, OCD",
+      "disease": "OCD",
+      "quantity": 10
+    },
+    {
+      "id": "2",
+      "name": "Sertraline",
+      "use": "Treatment of depression, anxiety, OCD",
+      "disease": "OCD",
+      "quantity": 20
+    },
+    {
+      "id": "3",
+      "name": "Escitalopram",
+      "use": "Treatment of depression, anxiety",
+      "disease": "Anxiety",
+      "quantity": 100
+    },
+    {
+      "id": "4",
+      "name": "Citalopram",
+      "use": "Treatment of depression, anxiety",
+      "disease": "Anxiety",
+      "quantity": 200
+    },
+    {
+      "id": "5",
+      "name": "Mirtazapine",
+      "use": "Treatment of depression, anxiety, insomnia",
+      "disease": "Insomnia",
+      "quantity": 15
     }
   ],
   "blood": [
@@ -649,7 +776,8 @@
       "hospital_area": "Downtown",
       "governorate": "New York",
       "hospital_address": "123 Main Street, New York, NY",
-      "location": "https://www.google.com/maps/place/40.7902,-73.9597"
+      "location": "https://www.google.com/maps/place/40.7902,-73.9597",
+      "name" : "O+"
     },
     {
       "id": "2",
@@ -659,7 +787,8 @@
       "hospital_area": "Midtown",
       "governorate": "New York",
       "hospital_address": "456 Broadway, New York, NY",
-      "location": "https://www.google.com/maps/place/40.7580,-73.9854"
+      "location": "https://www.google.com/maps/place/40.7580,-73.9854",
+      "name" : "AB-"
     },
     {
       "id": "3",
@@ -669,7 +798,8 @@
       "hospital_area": "Uptown",
       "governorate": "New York",
       "hospital_address": "789 Elm Street, New York, NY",
-      "location": "https://www.google.com/maps/place/40.7902,-73.9597"
+      "location": "https://www.google.com/maps/place/40.7902,-73.9597",
+      "name" : "A+"
     },
     {
       "id": "4",
@@ -679,49 +809,60 @@
       "hospital_area": "Downtown",
       "governorate": "New York",
       "hospital_address": "321 Oak Street, New York, NY",
-      "location": "https://www.google.com/maps/place/40.7056,-74.0118"
+      "location": "https://www.google.com/maps/place/40.7056,-74.0118",
+      "name" : "B-"
     }
   ],
-  "medicalSupp": [
+  "medicalEquipment": [
     {
-      "name": "Gloves",
-      "use": "Protection for hands during medical procedures",
-      "image": "https://images.wsj.net/im-216848/?width=1280&size=1",
-      "quantity": "200",
+      "name": "Wheelchair",
+      "deviceType": "wheelchair",
+      "use": "for mobility assistance",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRthctF_SB25sZotglqWbld3fEsLLfj2Q7HUwG6ok2CKA&s",
+      "quantity": 5,
+      "id": "1"
+    },
+    {
+      "name": "Oxygen Tank",
+      "deviceType": "oxygen tank",
+      "use": "for respiratory support",
+      "image": "https://m.media-amazon.com/images/I/61Dif262s+L.jpg",
+      "quantity": 10,
+      "id": "2"
+    },
+    {
+      "name": "Hospital Bed",
+      "deviceType": "hospital bed",
+      "use": "for patient care",
+      "image": "https://m.media-amazon.com/images/I/61NYFV+rKRL._AC_SL1500_.jpg",
+      "quantity": 3,
+      "id": "3"
+    }
+  ],
+  "medicalDevices": [
+    {
       "id": "1",
-      "type": "medical equipment"
+      "name": "Heart Aid",
+      "deviceType": "Defibrillator",
+      "use": "For cardiac arrest treatment",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2023/6/315659699/YM/SU/TB/29087894/philips-defibrillator.jpg",
+      "quantity": 5
     },
     {
-      "name": "Gown",
-      "use": "Protection against bodily fluids",
-      "image": "https://static.scientificamerican.com/sciam/cache/file/0FE4B2DD-6F18-4B70-89C069B5928FC4FE_source.jpg?w=600",
-      "quantity": "50",
       "id": "2",
-      "type": "medical equipment"
+      "name": "Insulin Pod",
+      "deviceType": "Insulin Pump",
+      "use": "For diabetes management",
+      "image": "https://www.omnipod.com/sites/default/files/2023-10/Omnipod-5_POD_PDM_Smaller_Shadow_RGB_400x600.png",
+      "quantity": 10
     },
     {
-      "name": "Face Shield",
-      "use": "Protection for face and eyes",
-      "image": "https://eg.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/022536/1.jpg?4084",
-      "quantity": "30",
       "id": "3",
-      "type": "medical equipment"
-    },
-    {
-      "name": "Thermometer",
-      "use": "Measuring body temperature",
-      "image": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/10/thermometers-1296x728-header.jpg?w=1155&h=1528",
-      "quantity": "20",
-      "id": "4",
-      "type": "medical device"
-    },
-    {
-      "name": "Acetaminophen",
-      "use": "Pain relief, fever reduction",
-      "image": "https://www.drugwatch.com/wp-content/uploads/Acetaminophen.jpg",
-      "quantity": "20",
-      "id": "5",
-      "type": "medication"
+      "name": "Airway Support",
+      "deviceType": "Ventilator",
+      "use": "For respiratory support",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Servo_I_Ventilator.jpg",
+      "quantity": 3
     }
   ],
   "teaching": [
@@ -732,8 +873,9 @@
       "governorate": "State",
       "number_of_students": 25,
       "address": "123 Main Street, Cityville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
-      "subjects": "Mathematics"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
+      "subjects": "Mathematics",
+      "name": "Introduction to Mathematics"
     },
     {
       "title": "Basic English Language Skills",
@@ -742,8 +884,9 @@
       "governorate": "Cairo",
       "number_of_students": 20,
       "address": "456 Elm Street, Townsville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
-      "subjects": "English"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
+      "subjects": "English",
+      "name": "Basic English Language Skills"
     },
     {
       "title": "Introduction to Physics",
@@ -752,8 +895,9 @@
       "governorate": "Giza",
       "number_of_students": 18,
       "address": "456 Maple Street, Cityville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=456+Maple+Street+Cityville+State+Country",
-      "subjects": "Physics"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
+      "subjects": "Physics",
+      "name": "Introduction to Physics"
     },
     {
       "title": "Basic Spanish Language Skills",
@@ -762,8 +906,10 @@
       "governorate": "State",
       "number_of_students": 22,
       "address": "987 Birch Street, Townsville, State, Country",
-      "google_map_marker": "https://maps.google.com/?q=987+Birch+Street+Townsville+State+Country",
-      "subjects": "Spanish"
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
+      "subjects": "Spanish",
+      "name": "Basic Spanish Language Skills"
+
     }
   ],
   "medCase": [
@@ -772,39 +918,42 @@
       "age": 30,
       "gender": "Male",
       "weight": "70kg",
-      "location": "https://maps.google.com/?q=123+Main+Street+Cityville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "address": "123 Main Street, Cityville, State, Country",
       "organizationName": "Medical Care Organization",
       "medicalSpecialty": "General Surgery",
       "id": "1",
       "governorate": "Cityville",
-      "area": "Downtown"
+      "area": "Downtown",
+      "name": "John Doe"
     },
     {
       "patientName": "Jane Doe",
       "age": 25,
       "gender": "Female",
       "weight": "60kg",
-      "location": "https://maps.google.com/?q=456+Elm+Street+Townsville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "address": "456 Elm Street, Townsville, State, Country",
       "organizationName": "Healthcare Services",
       "medicalSpecialty": "Cardiology",
       "id": "2",
       "governorate": "Townsville",
-      "area": "Uptown"
+      "area": "Uptown",
+      "name": "Jane Doe"
     },
     {
       "patientName": "Bob Smith",
       "age": 40,
       "gender": "Male",
       "weight": "80kg",
-      "location": "https://maps.google.com/?q=789+Oak+Street+Cityville+State+Country",
+      "googleMapsUrl": "https://www.google.com/maps/?q=29.987350, 31.438084",
       "address": "789 Oak Street, Cityville, State, Country",
       "organizationName": "Medical Care Organization",
       "medicalSpecialty": "Neurology",
       "id": "3",
       "governorate": "Cityville",
-      "area": "Suburbs"
+      "area": "Suburbs",
+      "name": "Bob Smith"
     }
   ],
   "toys": [
@@ -813,56 +962,72 @@
       "name": "Toy 1",
       "age_range": "3-5",
       "gender": "Any",
-      "category": "Board Games"
+      "category": "Board Games",
+      "quantity" : 10,
+      "img": "https://images.saymedia-content.com/.image/t_share/MTc0MzA1MTA4NTg5MjkxMDA0/the-top-ten-board-games-of-all-time.jpg"
     },
     {
       "id": "2",
       "name": "Toy 2",
       "age_range": "6-8",
       "gender": "Male",
-      "category": "Sports"
+      "category": "Sports",
+      "quantity" : 100,
+      "img": "https://www.adityabirlacapital.com/healthinsurance/active-together/wp-content/uploads/2023/09/Sports-1.jpg"
     },
     {
       "id": "3",
       "name": "Toy 3",
       "age_range": "3-5",
       "gender": "Female",
-      "category": "Dolls"
+      "category": "Dolls",
+      "quantity" : 50,
+      "img": "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2023/06/08/6282007f-9a94-45a5-b8d3-2f5c6f7d304a_bed8cd25.jpg?itok=qGjdub56&v=1686206000"
     },
     {
       "id": "4",
       "name": "Toy 4",
       "age_range": "8-10",
       "gender": "Any",
-      "category": "Stuffed Toys"
+      "category": "Stuffed Toys",
+      "quantity" : 10,
+      "img": "https://hansightoy.com/cdn/shop/articles/Who_Owns_The_Most_Plushies_In_The_World_1200x1200.jpg?v=1695612943"
     },
     {
       "id": "5",
       "name": "Toy 5",
       "age_range": "6-8",
       "gender": "Female",
-      "category": "Outdoor"
+      "category": "Outdoor",
+      "quantity" : 200,
+      "img": "https://assets.wfcdn.com/im/27103547/resize-h500-w750%5Ecompr-r85/2477/247796091/default_name.jpg"
     },
     {
       "id": "6",
       "name": "Toy 6",
       "age_range": "8-10",
       "gender": "Male",
-      "category": "Cars"
+      "category": "Cars",
+      "quantity" : 10,
+      "img": "https://i.ytimg.com/vi/EsdyiNQgmIE/maxresdefault.jpg"
     },
     {
       "id": "7",
       "name": "Toy 7",
       "age_range": "3-5",
       "gender": "Any",
-      "category": "Stuffed Toys"
+      "category": "Stuffed Toys",
+      "quantity" : 10,
+      "img": "https://hansightoy.com/cdn/shop/articles/Who_Owns_The_Most_Plushies_In_The_World_1200x1200.jpg?v=1695612943"
     },
     {
       "id": "8",
       "name": "Toy 8",
       "age_range": "8-10",
       "gender": "Female",
-      "category": "Board Games"
+      "category": "Board Games",
+      "quantity" : 10,
+      "img": "https://images.saymedia-content.com/.image/t_share/MTc0MzA1MTA4NTg5MjkxMDA0/the-top-ten-board-games-of-all-time.jpg"
     }
   ],
   "food": [
@@ -905,7 +1070,7 @@
       "language": "English",
       "edition": "3rd Edition",
       "summary": "Introduction to Algorithms is a book on computer programming algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. It is used as the textbook for algorithms courses at many universities and is commonly cited as a reference for algorithms in scientific papers.",
-      "picture": "https://example.com/introduction-to-algorithms.jpg",
+      "picture": "https://scx2.b-cdn.net/gfx/news/2022/the-algorithm-for-publ.jpg",
       "quantity_required": "5"
     },
     {
@@ -915,7 +1080,7 @@
       "language": "English",
       "edition": "10th Edition",
       "summary": "Fundamentals of Physics is a textbook on basic principles of physics. It covers mechanics, thermodynamics, electromagnetism, and optics. The book is widely used in introductory physics courses.",
-      "picture": "https://example.com/fundamentals-of-physics.jpg",
+      "picture": "https://m.media-amazon.com/images/I/81iBEx-cNZS._AC_UF1000,1000_QL80_DpWeblab_.jpg",
       "quantity_required": "7"
     },
     {
@@ -925,7 +1090,7 @@
       "language": "English",
       "edition": "14th Edition",
       "summary": "Chemistry: The Central Science is a comprehensive textbook on chemistry. It covers various topics including atomic structure, chemical bonding, kinetics, thermodynamics, and organic chemistry.",
-      "picture": "https://example.com/chemistry-the-central-science.jpg",
+      "picture": "https://m.media-amazon.com/images/I/816pqWb5T+L._AC_UF1000,1000_QL80_.jpg",
       "quantity_required": "4"
     }
   ],
@@ -1037,6 +1202,48 @@
       "date": "2024-05-12",
       "time": "16:45",
       "location": "9101 Oak Boulevard"
+    }
+  ],
+  "DonationPosts":[
+    {
+      "category":"medication",
+      "objectID": "1"
+    },
+    {
+      "category":"Clothes",
+      "objectID": "2"
+    },
+    {
+      "category":"toys",
+      "objectID": "3"
+    },
+    {
+      "category":"books",
+      "objectID": "3"
+    },
+    {
+      "category":"stationaryItems",
+      "objectID": "3"
+    },
+    {
+      "category":"Food",
+      "objectID": "3"
+    },
+    {
+      "category":"blood",
+      "objectID": "3"
+    },
+    {
+      "category":"medCase",
+      "objectID": "1"
+    },
+    {
+      "category":"medicalEquipment",
+      "objectID": "3"
+    },
+    {
+      "category":"medicalDevices",
+      "objectID": "2"
     }
   ]
 }

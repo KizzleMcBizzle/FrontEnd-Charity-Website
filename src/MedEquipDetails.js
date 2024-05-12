@@ -1,19 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from './useFetch'; // Assuming this is the correct import for useFetch
-import { saveAs } from 'file-saver';
 import Modal from 'react-modal';
 import { XCircleIcon } from "@heroicons/react/16/solid";
 
 Modal.setAppElement('#root');
 
-const ViewBookDetails = () => {
+const ViewMedicalEquipmentDetails = () => {
     const { id } = useParams();
-    const { data: books, error, isPending } = useFetch('http://localhost:4000/books/' + id);
+    const { data: medicalEquipment, error, isPending } = useFetch('http://localhost:4000/medicalEquipment/' + id);
+
     const navigate = useNavigate();
 
-    const [modalIsOpen, setModalIsOpen] = useState(false);
     const [quantity, setQuantity] = useState(1);
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
     const openModal = () => {
         setModalIsOpen(true);
     }
@@ -22,21 +24,20 @@ const ViewBookDetails = () => {
         setModalIsOpen(false);
     }
 
-
     return (
-        <div className="toy-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4 flex">
+        <div className="medical-equipment-details bg-white shadow overflow-hidden sm:rounded-lg mx-4 my-4 p-4 flex">
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {books && (
+            {medicalEquipment && (
                 <>
                     <div className="w-full pr-4 flex flex-col">
                         <div className="bg-white overflow-hidden shadow rounded-lg border flex-grow">
                             <div className="px-4 py-5 sm:px-6">
                                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                                    Book Details
+                                    Medical Equipment Details
                                 </h3>
                                 <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                                    Book details.
+                                    Medical equipment details.
                                 </p>
                             </div>
                             <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
@@ -46,52 +47,31 @@ const ViewBookDetails = () => {
                                             Name
                                         </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {books.name}
+                                            {medicalEquipment.name}
                                         </dd>
                                     </div>
                                     <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-gray-500">
-                                            Author
+                                            Device Type
                                         </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {books.author}
+                                            {medicalEquipment.deviceType}
                                         </dd>
                                     </div>
                                     <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-gray-500">
-                                            Language
+                                            Use
                                         </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {books.language}
+                                            {medicalEquipment.use}
                                         </dd>
                                     </div>
                                     <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                                         <dt className="text-sm font-medium text-gray-500">
-                                            Edition
+                                            Quantity
                                         </dt>
                                         <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {books.edition}
-                                        </dd>
-                                    </div>
-                                    <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
-                                            Summary
-                                        </dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {books.summary}
-                                        </dd>
-                                    </div>
-                                    <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
-                                            Image
-                                        </dt>
-                                    </div>
-                                    <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                        <dt className="text-sm font-medium text-gray-500">
-                                            Required Quantity
-                                        </dt>
-                                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                            {books.quantity_required}
+                                            {medicalEquipment.quantity}
                                         </dd>
                                     </div>
                                 </dl>
@@ -104,28 +84,28 @@ const ViewBookDetails = () => {
                                     <input
                                         type="range"
                                         min="1"
-                                        max={books.quantity}
+                                        max={medicalEquipment.quantity}
                                         value={quantity}
                                         onChange={(e) => setQuantity(e.target.value)}
                                         className="green-thumb-slider slider appearance-none w-64 h-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-full shadow-inner cursor-pointer"
-                                        style={{'WebkitAppearance': 'none'}}
+                                        style={{ 'WebkitAppearance': 'none' }}
                                     />
                                     <div
                                         className="absolute left-0 top-0 h-1 w-full rounded-full"
-                                        style={{width: `${quantity * 5}%`}}></div>
+                                        style={{ width: `${quantity * 5}%` }}></div>
                                 </div>
                                 <p className="text-gray-900">{quantity}</p>
                             </div>
-                            <button onClick={() => navigate('/donor/booking')} 
-                                    className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
+                            <button onClick={() => navigate('/donor/booking')}
+                                className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105">Donate
                             </button>
                         </div>
                     </div>
                     <div className="w-2/5 pl-4 flex flex-col">
                         <div className="flex-grow">
-                            <img src={books.picture} alt={books.name}
-                                 className="object-cover w-64 h-64 rounded-lg shadow-md cursor-pointer"
-                                 onClick={openModal}/>
+                            <img src={medicalEquipment.image} alt={medicalEquipment.name}
+                                className="object-cover w-64 h-64 rounded-lg shadow-md cursor-pointer"
+                                onClick={openModal} />
                         </div>
                     </div>
                     <Modal
@@ -138,9 +118,9 @@ const ViewBookDetails = () => {
                         <div className="bg-gray-300 p-4 rounded-lg relative shadow-lg">
                             <XCircleIcon
                                 className="h-6 w-6 absolute bg-gray-400 top-2 right-2 cursor-pointer text-white hover:bg-gray-500 rounded-full"
-                                onClick={closeModal}/>
-                            <img src={books.picture} alt={books.name}
-                                 className="object-cover w-auto h-auto max-w-2xl max-h-2xl"/>
+                                onClick={closeModal} />
+                            <img src={medicalEquipment.image} alt={medicalEquipment.name}
+                                className="object-cover w-auto h-auto max-w-2xl max-h-2xl" />
                         </div>
                     </Modal>
                 </>
@@ -149,5 +129,4 @@ const ViewBookDetails = () => {
     )
 }
 
-
-export default ViewBookDetails;
+export default ViewMedicalEquipmentDetails;

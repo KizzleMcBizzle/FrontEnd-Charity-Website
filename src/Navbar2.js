@@ -162,8 +162,8 @@ export default function Example() {
                                                             className="mt-6 flex flex-col space-y-6"
                                                         >
                                                             {section.items.map((item) => (
-                                                                <li key={item.name} className="flow-root">
-                                                                    <button onClick={() =>navigate(item.href)} className="-m-2 block p-2 text-gray-500">
+                                                                <li key={item.name} className="flex flex-col p-2 rounded-md">
+                                                                    <button onClick={() =>navigate(item.href)} className="hover:text-gray-800">
                                                                         {item.name}
                                                                     </button>
                                                                 </li>
@@ -285,8 +285,8 @@ export default function Example() {
                                                                                         className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
                                                                                     >
                                                                                         {section.items.map((item) => (
-                                                                                            <li key={item.name} className="flex">
-                                                                                                <button onClick={() =>navigate(item.href)} className="hover:text-gray-800">
+                                                                                            <li key={item.name} className="flex flex-col rounded-md">
+                                                                                                <button onClick={() =>navigate(item.href)} className=" text-left hover:text-gray-800">
                                                                                                     {item.name}
                                                                                                 </button>
                                                                                             </li>

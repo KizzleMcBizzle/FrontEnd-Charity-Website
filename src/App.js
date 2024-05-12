@@ -21,11 +21,9 @@ import ViewOrgsFetch from './ViewOrgsFetch.js';
 import ViewDonorsFetch from './ViewDonorsFetch.js';
 import OrgDetails from './OrgDetails.js';
 import Medication from './Medication';
-import MedSupp from './MedSupp';
 import Teaching from './Teaching';
 import Blood from './Blood';
 import MedCase from './MedCase';
-import MedSuppDetails from './MedSuppDetails';
 import BloodDetails from './BloodDetails';
 import MedicationDetails from './MedicationDetails';
 import TeachingDetails from './TeachingDetails';
@@ -52,7 +50,20 @@ import SchoolStationaryDetails from './SchoolStationaryDetails'
 import VehicleBookingForm from './VehicleBookingForm.js'
 import OrgProfileFetch from './OrgProfileFetch'
 import OrgPassFetch from './OrgPassFetch';
-
+import MedEquip from './MedEquip.js';
+import MedEquipDetails from './MedEquipDetails.js';
+import MedDevice from './MedDevice.js';
+import MedDeviceDetails from './MedDeviceDetails.js';
+import Notification from './Notification.js'
+import BookingForm from './BookingForm'
+import DeliveryApp from './DeliveryApp';
+import DonorProfileFetch from './DonorProfileFetch.js'
+import OrgHomeFetch from './OrgHomeFetch'
+import DonationDetailsForFood from './DonationDetailsForFood'
+import DonationDetailsForMedications from './DonationDetailsForMedications'
+import DonationDetailsForSchoolSupp from './DonationDetailsForSchoolSupp'
+import DonationDetailsForToys from './DonationDetailsForToys';
+import OrgNavbar from './OrgNavbar.js';
 
 
 function App() {
@@ -111,11 +122,14 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="profile" element={<DonorProfileFetch />} />
               <Route path="donor" element={<Donor/>} />
               <Route path="blood" element={<Blood />} />
               <Route path="bloods/:id" element={<BloodDetails />} />
-              <Route path="medSupp" element={<MedSupp />} />
-              <Route path="medSupp/:id" element={<MedSuppDetails />} />
+              <Route path="medEquip" element={<MedEquip />} />
+              <Route path="medEquip/:id" element={<MedEquipDetails />} />
+              <Route path="medDevice" element={<MedDevice />} />
+              <Route path="medDevices/:id" element={<MedDeviceDetails />} />
               <Route path="medCase" element={<MedCase />} />
               <Route path="medCases/:id" element={<MedCaseDetails />} />
               <Route path="medication" element={<Medication />} />
@@ -132,7 +146,15 @@ function App() {
               <Route path="clothes/:id" element={<ViewClothesDetails />} />
               <Route path="schoolStationary" element={<SchoolStationaryFetch />} />
               <Route path="schoolStationary/:id" element={<SchoolStationaryDetails />} />
+              <Route path="booking" element={<BookingForm />} />
+              
 
+              <Route path="view/*" element={<>
+                <Routes>
+                  <Route path="orgs" element={<ViewOrgsFetch />} />
+                  <Route path="orgs/:id" element={<OrgDetails flag={false} />} />
+                </Routes>
+              </>} />
 
             </Routes>
             </>} />
@@ -140,10 +162,25 @@ function App() {
         {/*</Route>*/}
 
         <Route path="/org/*" element={<>
-          
+          <OrgNavbar />
           <Routes>
-          <Route path="/" element={<OrgProfileFetch />} />
-          <Route path="changepass" element={<OrgPassFetch />} />
+          <Route path="/" element={<OrgHomeFetch />} />
+          <Route path="profile" element={<OrgProfileFetch />} />
+
+          
+          <Route path="teaching" element={<OrgPassFetch />} />
+          <Route path="medCase" element={<OrgPassFetch />} />
+          <Route path="medEquip" element={<OrgPassFetch />} />
+          <Route path="medDevice" element={<OrgPassFetch />} />
+
+          <Route path="medication" element={<DonationDetailsForMedications />} />
+          <Route path="Clothes" element={<DonationDetailsForClothes />} />
+          <Route path="Toys" element={<DonationDetailsForToys />} />
+         
+          <Route path="schoolSupplies" element={<DonationDetailsForSchoolSupp />} />
+          <Route path="Food" element={<DonationDetailsForFood />} />
+          <Route path="blood" element={<DonationDetailsForBloodDonation/>} />
+          
           
           </Routes>
           
