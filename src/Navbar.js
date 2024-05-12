@@ -363,8 +363,8 @@ export default function Example() {
                                             >
                                                 <Popover.Panel className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                     <div className="py-1">
-                                                        <Link to="/admin/req/donors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Donor Requests</Link>
-                                                        <Link to="/admin/req/orgs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Organization Requests</Link>
+                                                        <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Driver is arriving in a few minutes!!</p>
+                                                        <p className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Driver has arrived!</p>
                                                     </div>
                                                 </Popover.Panel>
                                             </Transition>
