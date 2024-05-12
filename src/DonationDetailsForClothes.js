@@ -14,6 +14,11 @@ const DonationDetailsForClothes = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !type || !age || !gender || !season || !material || !quantity) {
+      alert('All fields are required');
+      return;
+    }
+    
     console.log('Submitted clothes donation:', { name, type, age, gender, season, material, quantity });
   };
 

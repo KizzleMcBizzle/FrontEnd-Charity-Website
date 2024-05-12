@@ -7,6 +7,11 @@ const DonationDetailsForFood = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!foodType || !name || !quantity) {
+      alert('All fields are required');
+      return;
+    }
+    
     console.log('Submitted food donation:', { foodType, name, quantity });
   };
 

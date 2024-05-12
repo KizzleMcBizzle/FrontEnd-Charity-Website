@@ -12,6 +12,10 @@ const DonationDetailsForToys = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !ageRange || !gender || !category) {
+      alert('All fields are required');
+      return;
+    }
     console.log('Submitted toy donation:', { name, ageRange, gender, category });
   };
 
