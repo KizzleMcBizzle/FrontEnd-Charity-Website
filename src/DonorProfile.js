@@ -57,6 +57,7 @@ const DonorProfile = ({ donor }) => {
                     </dd>
                 </div>
                 
+                
                 <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
 <dt className="text-sm font-medium text-gray-500">
 Address
@@ -84,13 +85,23 @@ Governorate
 
 { doctor && <dl className="sm:divide-y sm:divide-gray-200">
 <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-<dt className="text-sm font-medium text-gray-500">
-Clinic Location
-</dt>
-<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-{donor.clinicLocation}
-</dd>
-</div>
+                        <dt className="text-sm font-medium text-gray-500">
+                            Clinic Location
+                        </dt>
+                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <a href={donor.googleMapsUrl} className="mb-3">Google Maps</a>
+                            <iframe
+                                width="600"
+                                height="450"
+                                frameBorder="0"
+                                style={{border: 0}}
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w&q=29.987350, 31.438084"
+                                allowFullScreen=""
+                                aria-hidden="false"
+                                tabIndex="0"
+                            ></iframe>
+                        </dd>
+                    </div>
 <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
 <dt className="text-sm font-medium text-gray-500">
 Specialty
@@ -134,6 +145,17 @@ Pro Bono Students
 </dd>
 </div></dl>
 }
+<div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt className="text-sm font-medium text-gray-500">
+                            Password
+                        </dt>
+                        <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 flex justify-between items-center">
+                            <span>{passwordEncrypted}</span>
+                            <Link to="/donor/changepass">
+                                <button className="mr-14 relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-custom-green focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-green transition duration-200 ease-in-out transform hover:-translate-y-0.5 hover:scale-102">Change Password</button>
+                            </Link>
+                        </dd>
+                    </div>
             </dl>
         </div>
 
