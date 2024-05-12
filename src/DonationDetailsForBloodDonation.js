@@ -13,6 +13,11 @@ const DonationDetailsForBloodDonation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!patientName || !bloodType || !hospitalName || !hospitalArea || !governorate || !hospitalAddress || !location) {
+      alert('All fields are required');
+      return;
+    }
+    
     console.log('Submitted blood donation:', {
       patientName,
       bloodType,

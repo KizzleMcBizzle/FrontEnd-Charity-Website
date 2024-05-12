@@ -9,10 +9,8 @@ const DonationDetailsForSchoolSupplies = () => {
   const [language, setLanguage] = useState('');
   const [edition, setEdition] = useState('');
   const [summary, setSummary] = useState('');
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState(null);
   const [quantityRequired, setQuantityRequired] = useState('');
-
-  
 
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
@@ -24,13 +22,37 @@ const DonationDetailsForSchoolSupplies = () => {
     setLanguage('');
     setEdition('');
     setSummary('');
-    setImage('');
+    setImage(null);
     setQuantityRequired('');
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted school supplies donation:', { category, name, type, quantity, author, language, edition, summary, image, quantityRequired });
+    // Validation
+    if (!category || !name || !quantityRequired || !image) {
+      alert('All fields are required');
+      return;
+    }
+    const formData = new FormData();
+    formData.append('category', category);
+    formData.append('name', name);
+    formData.append('type', type);
+    formData.append('quantity', quantity);
+    formData.append('author', author);
+    formData.append('language', language);
+    formData.append('edition', edition);
+    formData.append('summary', summary);
+    formData.append('image', image);
+    formData.append('quantityRequired', quantityRequired);
+
+    // Now you can send formData to your backend
+
+    console.log('Submitted school supplies donation:', formData);
   };
 
   return (
@@ -39,56 +61,18 @@ const DonationDetailsForSchoolSupplies = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="category" className="block text-gray-700 mb-2">Category:</label>
-          <select id="category" value={category} onChange={handleCategoryChange} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500">
+          <select id="category" value={category} onChange={handleCategoryChange} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" required>
             <option value="">Select category</option>
             <option value="StationaryItems">Stationary Items</option>
             <option value="Books">Books</option>
           </select>
         </div>
-        {category === 'StationaryItems' && (
-          <>
-            <div className="mb-4">
-              <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
-              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="type" className="block text-gray-700 mb-2">Type:</label>
-              <input type="text" id="type" value={type} onChange={(e) => setType(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter type" />
-            </div>
-          </>
-        )}
-        {category === 'Books' && (
-          <>
-            <div className="mb-4">
-              <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
-              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="author" className="block text-gray-700 mb-2">Author:</label>
-              <input type="text" id="author" value={author} onChange={(e) => setAuthor(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter author" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="language" className="block text-gray-700 mb-2">Language:</label>
-              <input type="text" id="language" value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter language" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="edition" className="block text-gray-700 mb-2">Edition:</label>
-              <input type="text" id="edition" value={edition} onChange={(e) => setEdition(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter edition" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="summary" className="block text-gray-700 mb-2">Summary:</label>
-              <input type="text" id="summary" value={summary} onChange={(e) => setSummary(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter summary" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="image" className="block text-gray-700 mb-2">Image:</label>
-              <input type="text" id="image" value={image} onChange={(e) => setImage(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter image URL" />
-            </div>
-          </>
-        )}
+        {/* Rest of the form fields */}
         <div className="mb-4">
-          <label htmlFor="quantityRequired" className="block text-gray-700 mb-2">Quantity Required:</label>
-          <input type="text" id="quantityRequired" value={quantityRequired} onChange={(e) => setQuantityRequired(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity required" />
+          <label htmlFor="image" className="block text-gray-700 mb-2">Image:</label>
+          <input type="file" id="image" onChange={handleImageChange} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" required />
         </div>
+        {/* Rest of the form fields */}
         <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
       </form>
     </div>

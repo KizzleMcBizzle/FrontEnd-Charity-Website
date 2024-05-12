@@ -9,7 +9,23 @@ const DonationDetailsForMedicalSupp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Validation
+    if (!name || !deviceType || !use || !quantity) {
+      alert('All fields are required');
+      return;
+    }
     console.log('Submitted medical supplies donation:', { name, deviceType, use, image, quantity });
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
@@ -18,23 +34,23 @@ const DonationDetailsForMedicalSupp = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" />
+          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter name" required />
         </div>
         <div className="mb-4">
           <label htmlFor="deviceType" className="block text-gray-700 mb-2">Device Type:</label>
-          <input type="text" id="deviceType" value={deviceType} onChange={(e) => setDeviceType(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter device type" />
+          <input type="text" id="deviceType" value={deviceType} onChange={(e) => setDeviceType(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter device type" required />
         </div>
         <div className="mb-4">
           <label htmlFor="use" className="block text-gray-700 mb-2">Use:</label>
-          <input type="text" id="use" value={use} onChange={(e) => setUse(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter use" />
+          <input type="text" id="use" value={use} onChange={(e) => setUse(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter use" required />
         </div>
         <div className="mb-4">
           <label htmlFor="image" className="block text-gray-700 mb-2">Image:</label>
-          <input type="text" id="image" value={image} onChange={(e) => setImage(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter image URL" />
+          <input type="file" id="image" accept="image/*" onChange={handleImageChange} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" required />
         </div>
         <div className="mb-4">
           <label htmlFor="quantity" className="block text-gray-700 mb-2">Quantity:</label>
-          <input type="text" id="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity" />
+          <input type="text" id="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="w-full bg-white border border-green-300 rounded px-3 py-2 focus:outline-none focus:border-green-500" placeholder="Enter quantity" required />
         </div>
         <button type="submit" className="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
       </form>
@@ -43,3 +59,4 @@ const DonationDetailsForMedicalSupp = () => {
 };
 
 export default DonationDetailsForMedicalSupp;
+
