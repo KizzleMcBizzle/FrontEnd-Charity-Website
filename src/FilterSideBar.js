@@ -23,6 +23,8 @@ import MedCaseList from './MedCaseList'
 import TeachingList from './TeachingList'
 import ClothesDonationList from './ClothesDonationList'
 import SchoolStationaryList from './SchoolStationaryList'
+import MedDeviceList from './MedDeviceList'
+import MedEquipList from './MedEquipList'
 
 
 
@@ -258,6 +260,15 @@ export default function Example({title , results , type}) {
     }else if(type ==='BookDonReq'){
         page = <BookDonReq
                 books= {filteredResults}/>
+
+    }else if(type ==='medDevice'){
+        page = <MedDeviceList
+                medDevices= {filteredResults}/>
+
+    } 
+    else if(type ==='medEquipment'){
+        page = <MedEquipList
+                medEquips= {filteredResults}/>
 
     } 
     else if(type === 'ViewClothes'){
