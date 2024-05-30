@@ -59,7 +59,7 @@ const OrgProfile = ({ org }) => {
                                 height="450"
                                 frameBorder="0"
                                 style={{border: 0}}
-                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w&q=29.987350, 31.438084"
+                                src="https://www.google.com/maps/embed/v1/place?key=Your_Google_Api_Key-7v8N8iG7w&q=29.987350, 31.438084"
                                 allowFullScreen=""
                                 aria-hidden="false"
                                 tabIndex="0"
