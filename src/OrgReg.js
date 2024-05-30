@@ -52,7 +52,7 @@ export default function OrgReg() {
     const navigate = useNavigate();
 
     const getAddress = async (lat, lng) => {
-        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w`);
+        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=Your_Google_Api_Key-7v8N8iG7w`);
         const data = await response.json();
         if (data.results[0]) {
             setAddress(data.results[0].formatted_address);
@@ -207,7 +207,7 @@ export default function OrgReg() {
                             <p className="text-sm font-medium leading-6 text-gray-900">{address}</p>
                         </div>
                         <div className="relative h-64 w-full rounded-md overflow-hidden">
-                            <LoadScript googleMapsApiKey="AIzaSyDAEp4t2VGfhtTwzdOlhpHEs-7v8N8iG7w">
+                            <LoadScript googleMapsApiKey="Your_Google_Api_Key-7v8N8iG7w">
                                 <GoogleMap
                                     mapContainerStyle={{height: "100%", width: "100%"}}
                                     center={markerPosition}
